@@ -1,5 +1,3 @@
-import FadeInBlur from "@/components/ui/FadeInBlur";
-
 const stats = [
   { value: "500+",  label: "Graduates Placed" },
   { value: "150+",  label: "Students Enrolled" },
@@ -13,20 +11,19 @@ export default function StatsBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
           {stats.map((stat, i) => (
-            <FadeInBlur key={stat.label} delay={i * 100}>
-              <div
-                className={`flex flex-col items-center text-center lg:px-8 ${
-                  i < stats.length - 1 ? "lg:border-r lg:border-white/10" : ""
-                }`}
-              >
-                <span className="font-heading font-bold text-4xl lg:text-5xl text-accent leading-none">
-                  {stat.value}
-                </span>
-                <span className="text-xs font-semibold tracking-widest uppercase text-white/50 mt-2">
-                  {stat.label}
-                </span>
-              </div>
-            </FadeInBlur>
+            <div
+              key={stat.label}
+              className={`flex flex-col items-center text-center lg:px-8 ${
+                i < stats.length - 1 ? "lg:border-r lg:border-white/10" : ""
+              }`}
+            >
+              <span className="font-heading font-bold text-4xl lg:text-5xl text-accent leading-none">
+                {stat.value}
+              </span>
+              <span className="text-xs font-semibold tracking-widest uppercase text-white/50 mt-2">
+                {stat.label}
+              </span>
+            </div>
           ))}
         </div>
       </div>
