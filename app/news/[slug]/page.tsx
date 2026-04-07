@@ -65,7 +65,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
           {/* Content overlay */}
           <div className="absolute inset-0 flex flex-col justify-end">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 lg:pb-14 w-full">
+            <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 pb-10 lg:pb-14 w-full">
               <FadeInBlur delay={0} triggerOnScroll={false}>
                 <Link
                   href="/news"
@@ -103,7 +103,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
         {/* Article body */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
 
             {/* Excerpt — styled as lead paragraph */}
             <FadeInBlur delay={0}>
@@ -148,7 +148,7 @@ export default async function NewsDetailPage({ params }: Props) {
         {/* Related articles */}
         {fallbackRelated.length > 0 && (
           <section className="py-16 lg:py-20 bg-gray-50">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
               <div className="flex items-end justify-between gap-4 mb-8">
                 <div>
                   <FadeInBlur delay={0}>
@@ -215,7 +215,7 @@ export default async function NewsDetailPage({ params }: Props) {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Ready to Be Part of the Story?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">

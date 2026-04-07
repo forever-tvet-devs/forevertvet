@@ -55,12 +55,11 @@ export default function FaqsPage() {
           subCopy="Everything you need to know about applying to, studying at, and graduating from Forever Tvet Institute — answered clearly and honestly."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.65}
         />
 
         {/* Intro */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Find Your Answer</span>
             </FadeInBlur>
@@ -81,14 +80,14 @@ export default function FaqsPage() {
 
         {/* FAQ Accordion */}
         <section className="pb-20 lg:pb-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <FaqAccordion />
           </div>
         </section>
 
         {/* Still Have a Question */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Get in Touch</span>
@@ -116,7 +115,7 @@ export default function FaqsPage() {
                       href={opt.href}
                       className="flex flex-col items-center text-center p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full group"
                     >
-                      <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                         <Icon size={22} className="text-accent" />
                       </div>
                       <p className="font-semibold text-primary text-sm mb-1">{opt.label}</p>
@@ -145,7 +144,7 @@ export default function FaqsPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Ready to Apply?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">The application takes less than 20 minutes. Your questions are answered — now take the step.</p>

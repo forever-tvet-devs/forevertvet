@@ -38,12 +38,11 @@ export default function DepartmentsPage() {
           subCopy="Five specialist departments, each designed around a specific industry — with curriculum written by the people who work in it."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image2.png"
-          overlayOpacity={0.65}
         />
 
         {/* Department Accordion */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -72,7 +71,7 @@ export default function DepartmentsPage() {
 
         {/* Instructor Quality Promise */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Our Instructors
@@ -115,7 +114,7 @@ export default function DepartmentsPage() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText
               text="Find the Right Program for You"
               as="h2"

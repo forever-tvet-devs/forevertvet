@@ -24,7 +24,7 @@ export default function LoginPage() {
         />
 
         {/* Dark gradient so text is legible */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
         {/* Top-left logo */}
         <div className="absolute top-8 left-8 z-10">
@@ -87,19 +87,6 @@ export default function LoginPage() {
         {/* Form area */}
         <div className="flex-1 flex items-center justify-center px-6 py-12 sm:px-10">
           <div className="w-full max-w-[400px]">
-
-            {/* Desktop logo (top of form column) */}
-            <div className="hidden lg:block mb-10">
-              <Link href="/">
-                <Image
-                  src="/images/forever_tvet_transparent.png"
-                  alt="Forever Tvet Institute"
-                  width={130}
-                  height={44}
-                  className="object-contain"
-                />
-              </Link>
-            </div>
 
             <div className="mb-8">
               <h1 className="font-heading font-bold text-2xl lg:text-3xl text-body leading-tight">

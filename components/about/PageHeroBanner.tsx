@@ -14,7 +14,6 @@ interface PageHeroBannerProps {
   subCopy: string;
   breadcrumb: BreadcrumbItem[];
   backgroundImage?: string;
-  overlayOpacity?: number;
 }
 
 export default function PageHeroBanner({
@@ -23,7 +22,6 @@ export default function PageHeroBanner({
   subCopy,
   breadcrumb,
   backgroundImage,
-  overlayOpacity = 0.65,
 }: PageHeroBannerProps) {
   return (
     <section className="relative min-h-[340px] lg:min-h-[420px] flex items-center bg-primary overflow-hidden">
@@ -39,24 +37,22 @@ export default function PageHeroBanner({
         />
       )}
 
-      {/* Overlay */}
+      {/* Overlays */}
       <div
-        className="absolute inset-0 bg-primary"
-        style={{ opacity: backgroundImage ? overlayOpacity : 1 }}
+        className="absolute inset-0"
+        style={{ background: "rgba(0,0,0,0.45)" }}
       />
-
-      {/* Subtle pattern */}
       <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, #D4A843 0, #D4A843 1px, transparent 0, transparent 50%)",
-          backgroundSize: "20px 20px",
-        }}
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 40%)" }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 40%)" }}
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20">
         <div className="max-w-2xl">
           {/* Breadcrumb */}
           <FadeInBlur delay={100} triggerOnScroll={false}>

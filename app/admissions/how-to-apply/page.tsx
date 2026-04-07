@@ -69,12 +69,11 @@ export default function HowToApplyPage() {
           subCopy="The application process is straightforward. Here is exactly what to do, step by step — from choosing your program to receiving your offer letter."
           breadcrumb={breadcrumb}
           backgroundImage="/images/PeopleLookAtTrainingDevice.png"
-          overlayOpacity={0.68}
         />
 
         {/* Before You Apply */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Before You Begin
@@ -120,7 +119,7 @@ export default function HowToApplyPage() {
 
         {/* Steps */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -146,7 +145,7 @@ export default function HowToApplyPage() {
 
         {/* Intake Dates */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -164,7 +163,7 @@ export default function HowToApplyPage() {
 
             <div className="grid lg:grid-cols-2 gap-7">
               {[
-                { label: "Intake 1", month: "January 2026", status: "Applications Open", statusCls: "bg-green-100 text-green-700", accentColor: "bg-accent", dates: intake1Dates },
+                { label: "Intake 1", month: "January 2026", status: "Applications Open", statusCls: "bg-green-100 text-green-700", accentColor: "bg-primary", dates: intake1Dates },
                 { label: "Intake 2", month: "July 2026",    status: "Opens April 2026",  statusCls: "bg-amber-100 text-amber-700",  accentColor: "bg-primary", dates: intake2Dates },
               ].map((intake, i) => (
                 <FadeInBlur key={intake.label} delay={300 + i * 150}>
@@ -202,7 +201,7 @@ export default function HowToApplyPage() {
 
         {/* Mini FAQs */}
         <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Quick Answers
@@ -233,7 +232,7 @@ export default function HowToApplyPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Ready? Start Your Application" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">It takes less than 20 minutes. Your future starts today.</p>

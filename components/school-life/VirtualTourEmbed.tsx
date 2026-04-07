@@ -34,7 +34,7 @@ export default function VirtualTourEmbed() {
         />
         {/* Centered content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <div className="w-20 h-20 rounded-full bg-accent flex items-center justify-center mb-5 shadow-xl">
+          <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-5 shadow-xl">
             <Play size={32} className="text-white ml-1" />
           </div>
           <p className="text-white font-heading font-bold text-2xl lg:text-3xl mb-2">Interactive 360° Tour</p>

@@ -47,7 +47,7 @@ export default function FeesTable() {
         {programs.map((p) => (
           <div key={p.name} className="p-5 bg-white">
             <div className="flex items-start gap-3 mb-3">
-              <div className="w-1 self-stretch rounded-full bg-accent flex-shrink-0" />
+              <div className="w-1 self-stretch rounded-full bg-primary flex-shrink-0" />
               <p className="font-semibold text-primary text-sm leading-snug">{p.name}</p>
             </div>
             <div className="grid grid-cols-2 gap-2 text-xs">

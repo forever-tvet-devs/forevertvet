@@ -77,12 +77,11 @@ export default function OurStoryPage() {
           subCopy="From humble beginnings to Rwanda's leading vocational institution — a story of purpose, grit, and the relentless belief that practical education changes lives."
           breadcrumb={breadcrumb}
           backgroundImage="/images/PeopleLookAtTrainingDevice.png"
-          overlayOpacity={0.7}
         />
 
         {/* Founding Story */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
               {/* Text column */}
@@ -162,7 +161,7 @@ export default function OurStoryPage() {
 
         {/* Timeline */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-16">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -211,7 +210,7 @@ export default function OurStoryPage() {
 
         {/* Stats Strip */}
         <section className="bg-primary-dark py-14">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
               {aboutStats.map((stat, i) => (
                 <FadeInBlur key={stat.label} delay={i * 100}>
@@ -239,7 +238,7 @@ export default function OurStoryPage() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText
               text="Ready to Be Part of Our Story?"
               as="h2"

@@ -82,7 +82,7 @@ export default function ClubsGrid() {
               <div className="rounded-xl bg-white border border-gray-100 shadow-sm p-5 flex flex-col h-full hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                 {/* Badge */}
                 <div className="flex items-start justify-between mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Icon size={20} className="text-accent" />
                   </div>
                   <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${categoryStyles[club.category]}`}>

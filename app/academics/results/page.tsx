@@ -85,12 +85,11 @@ export default function ResultsPage() {
           subCopy="Numbers do not lie. Here is the evidence that our approach to vocational training delivers real, lasting results for our students and Rwanda's economy."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.65}
         />
 
         {/* Headline Stats */}
         <section className="py-20 lg:py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -125,7 +124,7 @@ export default function ResultsPage() {
 
         {/* Employment by Department */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -156,7 +155,7 @@ export default function ResultsPage() {
 
         {/* Exam Results */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -215,7 +214,7 @@ export default function ResultsPage() {
 
         {/* Alumni Spotlight */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -269,7 +268,7 @@ export default function ResultsPage() {
 
         {/* Awards */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -289,7 +288,7 @@ export default function ResultsPage() {
               {awards.map((award, i) => (
                 <FadeInBlur key={award.title} delay={300 + i * 100}>
                   <div className="rounded-xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200 bg-white h-full flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                       <Award size={22} className="text-accent" />
                     </div>
                     <span className="text-xs text-gray-400 uppercase tracking-wide font-medium">{award.year}</span>
@@ -311,7 +310,7 @@ export default function ResultsPage() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText
               text="The Results Speak. Your Child's Turn."
               as="h2"

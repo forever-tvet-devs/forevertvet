@@ -37,12 +37,11 @@ export default function ClubsPage() {
           subCopy="Your skills extend far beyond your program. Clubs are where curiosity turns into capability — and where friendships last a lifetime."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.65}
         />
 
         {/* Why Join */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Why It Matters</span>
@@ -55,7 +54,7 @@ export default function ClubsPage() {
                 return (
                   <FadeInBlur key={b.title} delay={300 + i * 100}>
                     <div className="rounded-xl bg-gray-50 border border-gray-100 p-6 text-center h-full">
-                      <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                      <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <Icon size={22} className="text-accent" />
                       </div>
                       <p className="font-semibold text-primary text-sm mb-2">{b.title}</p>
@@ -70,7 +69,7 @@ export default function ClubsPage() {
 
         {/* Clubs Grid */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Clubs</span>
@@ -88,7 +87,7 @@ export default function ClubsPage() {
 
         {/* Start a Club */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Start Something New</span>
             </FadeInBlur>
@@ -112,7 +111,7 @@ export default function ClubsPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="More Than Training — A Community" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Students who engage outside the classroom graduate with more. Apply and become part of it.</p></FadeInBlur>
             <FadeInBlur delay={550}>

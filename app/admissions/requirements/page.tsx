@@ -56,12 +56,11 @@ export default function RequirementsPage() {
           subCopy="We set clear, fair entry standards that ensure every student is set up to succeed — not to filter people out, but to prepare them properly."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.65}
         />
 
         {/* General Requirements */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Programs</span>
             </FadeInBlur>
@@ -90,7 +89,7 @@ export default function RequirementsPage() {
 
         {/* Per-Program Requirements */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">By Program</span>
@@ -108,7 +107,7 @@ export default function RequirementsPage() {
 
         {/* Document Checklist */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Documents</span>
@@ -158,7 +157,7 @@ export default function RequirementsPage() {
 
         {/* Don't Qualify section */}
         <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Not Sure You Qualify?</span>
             </FadeInBlur>
@@ -184,7 +183,7 @@ export default function RequirementsPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Met the Requirements? Apply Today." as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Places are limited. Do not wait until the intake is full.</p></FadeInBlur>
             <FadeInBlur delay={550}>

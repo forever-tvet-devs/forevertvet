@@ -37,19 +37,18 @@ export default function FacilitiesPage() {
           subCopy="Our facilities are not just spaces — they are the tools that turn theory into practice. Every lab is equipped to professional industry standard."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image2(ElecticalControlCabinate).png"
-          overlayOpacity={0.6}
         />
 
         {/* Philosophy */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid sm:grid-cols-3 gap-6">
               {philosophy.map((p, i) => {
                 const Icon = p.icon;
                 return (
                   <FadeInBlur key={p.title} delay={300 + i * 100}>
                     <div className="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100 h-full">
-                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Icon size={20} className="text-accent" />
                       </div>
                       <div>
@@ -66,7 +65,7 @@ export default function FacilitiesPage() {
 
         {/* Facilities showcase */}
         <section className="py-4 lg:py-8 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-4">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">What We Have</span>
@@ -80,7 +79,7 @@ export default function FacilitiesPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Train With the Best Equipment in Rwanda" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Our facilities set graduates apart. Apply and gain access from day one of your program.</p></FadeInBlur>
             <FadeInBlur delay={550}>

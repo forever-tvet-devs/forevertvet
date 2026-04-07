@@ -53,12 +53,11 @@ export default function SchoolLifePage() {
           subCopy="Beyond the classroom, our students grow as people — through sport, creativity, community, and hands-on experiences that define who they become."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.62}
         />
 
         {/* Life Snapshot */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Why It Matters</span>
@@ -77,7 +76,7 @@ export default function SchoolLifePage() {
                 return (
                   <FadeInBlur key={h.stat} delay={300 + i * 100}>
                     <div className="rounded-2xl bg-gray-50 border border-gray-100 p-7 text-center hover:shadow-md transition-shadow duration-200">
-                      <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <Icon size={24} className="text-accent" />
                       </div>
                       <p className="font-heading font-bold text-xl text-primary mb-2">{h.stat}</p>
@@ -92,7 +91,7 @@ export default function SchoolLifePage() {
 
         {/* Six Area Cards */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">What We Offer</span>
@@ -109,7 +108,7 @@ export default function SchoolLifePage() {
                       href={area.href}
                       className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6 flex flex-col group hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
                     >
-                      <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                      <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                         <Icon size={22} className="text-accent" />
                       </div>
                       <p className="font-heading font-bold text-lg text-primary mb-2">{area.label}</p>
@@ -127,7 +126,7 @@ export default function SchoolLifePage() {
 
         {/* Student Voices */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Student Life</span>
@@ -160,7 +159,7 @@ export default function SchoolLifePage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Your Story Starts Here" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Join a campus where ambition meets opportunity every single day.</p></FadeInBlur>
             <FadeInBlur delay={550}>

@@ -109,7 +109,7 @@ export default function FacilitiesShowcase() {
 
               {/* Content */}
               <FadeInBlur delay={250} className={isEven ? "lg:order-1" : ""}>
-                <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded-full mb-3">
+                <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent bg-primary/10 px-3 py-1 rounded-full mb-3">
                   {facility.tag}
                 </span>
                 <h3 className="font-heading font-bold text-2xl lg:text-3xl text-primary mb-4 leading-tight">

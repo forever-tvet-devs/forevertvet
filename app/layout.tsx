@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { DM_Sans, Aboreto, Geist } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import SmoothScroll from "@/components/ui/SmoothScroll"
+import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const aboreto = Aboreto({
+  variable: "--font-aboreto",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -27,8 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+    <html lang="en" className={cn("font-sans", geist.variable)}>
+      <body className={`${dmSans.variable} ${aboreto.variable} font-sans antialiased`}>
+        <SmoothScroll />
         {children}
         <Analytics />
       </body>

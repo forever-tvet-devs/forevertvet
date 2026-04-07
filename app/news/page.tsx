@@ -34,12 +34,11 @@ export default function NewsPage() {
           subCopy="The latest from Forever Tvet Institute — achievements, events, admissions, and community news."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.62}
         />
 
         {/* Featured Article */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-6">Featured Story</span>
             </FadeInBlur>
@@ -93,7 +92,7 @@ export default function NewsPage() {
 
         {/* All Articles Grid */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Articles</span>
@@ -117,7 +116,7 @@ export default function NewsPage() {
 
         {/* Newsletter Strip */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Stay Updated</span>
             </FadeInBlur>
@@ -147,7 +146,7 @@ export default function NewsPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Impressed by What We've Achieved?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">

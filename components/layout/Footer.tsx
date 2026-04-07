@@ -46,10 +46,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ background: "#071640" }}>
+    <footer style={{ background: "#163560" }}>
 
       {/* Main footer body */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 pt-16 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
 
           {/* Brand column — spans 2 on lg */}
@@ -184,7 +184,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/30">
             © {year} Forever Tvet Institute. All rights reserved.
           </p>
@@ -202,7 +202,7 @@ export default function Footer() {
         </div>
 
         {/* Oversized brand name */}
-        <div className="overflow-hidden px-4 sm:px-6 lg:px-8 select-none pointer-events-none text-center" aria-hidden="true">
+        <div className="overflow-hidden px-3 sm:px-4 md:px-4 lg:px-4 select-none pointer-events-none text-center" aria-hidden="true">
           <p
             className="font-heading font-bold leading-none tracking-tighter whitespace-nowrap"
             style={{

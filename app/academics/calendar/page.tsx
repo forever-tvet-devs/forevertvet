@@ -85,11 +85,12 @@ export default function CalendarPage() {
           title="Academic Calendar"
           subCopy="Plan ahead with confidence — all key dates for intakes, term breaks, examinations, and school events in one place."
           breadcrumb={breadcrumb}
+          backgroundImage="/images/image2.png"
         />
 
         {/* Year at a Glance */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -109,7 +110,7 @@ export default function CalendarPage() {
               {/* Intake 1 */}
               <FadeInBlur delay={300}>
                 <div className="rounded-xl border border-gray-100 shadow-sm overflow-hidden bg-white">
-                  <div className="h-2 bg-accent" />
+                  <div className="h-2 bg-primary" />
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-5">
                       <div>
@@ -165,7 +166,7 @@ export default function CalendarPage() {
 
         {/* Month Grid */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -192,7 +193,7 @@ export default function CalendarPage() {
 
         {/* Important Dates Table */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -248,7 +249,7 @@ export default function CalendarPage() {
 
         {/* Download Strip */}
         <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -268,7 +269,7 @@ export default function CalendarPage() {
               {downloads.map((doc, i) => (
                 <FadeInBlur key={doc.title} delay={300 + i * 150}>
                   <div className="bg-white rounded-xl border border-gray-100 p-6 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow duration-200">
-                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <FileText size={22} className="text-accent" />
                     </div>
                     <div className="flex-1">
@@ -300,7 +301,7 @@ export default function CalendarPage() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText
               text="Applications for January 2026 Are Now Open"
               as="h2"

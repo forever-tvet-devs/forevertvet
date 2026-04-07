@@ -46,7 +46,7 @@ export default function CurriculumPhases() {
                   <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm">
                     <span className="text-xs font-bold text-white">{phase.number}</span>
                   </div>
-                  <span className="text-xs font-semibold rounded-full bg-accent/15 text-amber-700 px-3 py-1 whitespace-nowrap">
+                  <span className="text-xs font-semibold rounded-full bg-primary/15 text-amber-700 px-3 py-1 whitespace-nowrap">
                     {phase.duration}
                   </span>
                 </div>

@@ -69,12 +69,11 @@ export default function HeadmasterPage() {
           subCopy="A message from the heart of our school — the values, dreams, and direction that shape every student's journey."
           breadcrumb={breadcrumb}
           backgroundImage="/images/LandSurveyingLecturer.jpg"
-          overlayOpacity={0.72}
         />
 
         {/* Profile Section */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
 
               {/* Left — portrait + name card */}
@@ -165,7 +164,7 @@ export default function HeadmasterPage() {
 
         {/* Headmaster's Letter */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-8 text-center">
                 A Message from the Headmaster
@@ -192,7 +191,7 @@ export default function HeadmasterPage() {
             {/* Signature */}
             <FadeInBlur delay={900}>
               <div className="mt-10 pt-8 border-t border-gray-200">
-                <div className="w-16 h-1 bg-accent rounded-full mb-6" />
+                <div className="w-16 h-1 bg-primary rounded-full mb-6" />
                 <p className="font-heading text-2xl italic text-primary font-bold">Jean-Baptiste Nkurunziza</p>
                 <p className="text-sm text-gray-500 mt-1">Headmaster, Forever Tvet Institute</p>
                 <p className="text-xs text-gray-400 mt-0.5">Kigali, Rwanda · 2025</p>
@@ -210,7 +209,7 @@ export default function HeadmasterPage() {
               backgroundSize: "20px 20px",
             }}
           />
-          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <div className="font-heading font-black text-8xl leading-none text-accent/30 select-none mb-2" aria-hidden="true">
                 "
@@ -227,7 +226,7 @@ export default function HeadmasterPage() {
 
         {/* Achievements */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -247,7 +246,7 @@ export default function HeadmasterPage() {
               {achievements.map((award, i) => (
                 <FadeInBlur key={award.title} delay={300 + i * 100}>
                   <div className="rounded-xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200 bg-white h-full flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                       <Award size={22} className="text-accent" />
                     </div>
                     <span className="text-xs text-gray-400 uppercase tracking-wide font-medium">{award.year}</span>
@@ -262,7 +261,7 @@ export default function HeadmasterPage() {
 
         {/* CTA */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <Star size={36} className="text-accent mx-auto mb-4" />
             </FadeInBlur>

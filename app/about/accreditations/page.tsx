@@ -102,11 +102,12 @@ export default function AccreditationsPage() {
           title="Accreditations & Partnerships"
           subCopy="Our commitment to excellence is verified by the most respected educational bodies — independently, rigorously, and on an ongoing basis."
           breadcrumb={breadcrumb}
+          backgroundImage="/images/SolarPanelsTechnologyImage.png"
         />
 
         {/* Why Accreditation Matters */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Why It Matters
@@ -149,7 +150,7 @@ export default function AccreditationsPage() {
 
         {/* Primary Accreditations */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -196,7 +197,7 @@ export default function AccreditationsPage() {
 
         {/* Memberships & Affiliations — logo wall */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -234,7 +235,7 @@ export default function AccreditationsPage() {
 
         {/* Compliance & Reports */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -291,7 +292,7 @@ export default function AccreditationsPage() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <div className="flex justify-center mb-4">
                 <div className="w-14 h-14 rounded-full border-2 border-accent/40 flex items-center justify-center">

@@ -47,11 +47,12 @@ export default function FeesPage() {
           title="Fees Structure"
           subCopy="We believe that cost should never be the reason a talented student does not pursue their future. Our fees are transparent, competitive, and flexible."
           breadcrumb={breadcrumb}
+          backgroundImage="/images/PeopleLookAtTrainingDevice.png"
         />
 
         {/* Trust Statement */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Promise</span>
             </FadeInBlur>
@@ -67,7 +68,7 @@ export default function FeesPage() {
                 return (
                   <FadeInBlur key={tile.title} delay={500 + i * 100}>
                     <div className="rounded-xl bg-gray-50 border border-gray-100 p-5 text-center">
-                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-3">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
                         <Icon size={20} className="text-accent" />
                       </div>
                       <p className="font-semibold text-primary text-sm mb-1">{tile.title}</p>
@@ -82,7 +83,7 @@ export default function FeesPage() {
 
         {/* Fees Table */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Programs</span>
@@ -100,7 +101,7 @@ export default function FeesPage() {
 
         {/* What's Included */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">What You Get</span>
@@ -130,7 +131,7 @@ export default function FeesPage() {
 
         {/* Payment Options */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Flexibility</span>
@@ -165,7 +166,7 @@ export default function FeesPage() {
               {/* Two Instalments */}
               <FadeInBlur delay={450}>
                 <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden h-full flex flex-col">
-                  <div className="h-2 bg-accent" />
+                  <div className="h-2 bg-primary" />
                   <div className="p-6 flex-1 flex flex-col">
                     <h3 className="font-heading font-bold text-xl text-primary mb-4">Two Instalments</h3>
                     <div className="space-y-0 mb-5">
@@ -191,7 +192,7 @@ export default function FeesPage() {
 
         {/* Scholarships */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-5">
                 <FadeInBlur delay={0}>
@@ -240,7 +241,7 @@ export default function FeesPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Invest in a Guaranteed Future" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">94% of our graduates are employed within 6 months. The return on this investment is measurable.</p></FadeInBlur>
             <FadeInBlur delay={550}>

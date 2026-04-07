@@ -10,7 +10,7 @@ const testimonials = [
     name: "Mrs. Amara Nkosi",
     role: "Parent — Road Construction Graduate",
     initials: "AN",
-    bg: "#0C2461",
+    bg: "#214B82",
   },
   {
     quote:
@@ -56,7 +56,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-20 lg:py-28 bg-primary/[0.03] border-y border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
 
         {/* Header */}
         <div className="text-center mb-14">

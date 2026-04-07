@@ -41,11 +41,12 @@ export default function VirtualTourPage() {
           title="360° Virtual Tour"
           subCopy="Can't visit in person? Walk through our labs, classrooms, and campus from anywhere in the world."
           breadcrumb={breadcrumb}
+          backgroundImage="/images/image2.png"
         />
 
         {/* Tour embed */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Interactive Tour</span>
@@ -65,7 +66,7 @@ export default function VirtualTourPage() {
 
         {/* Highlights */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Highlights</span>
@@ -79,7 +80,7 @@ export default function VirtualTourPage() {
                 return (
                   <FadeInBlur key={h.label} delay={300 + i * 80}>
                     <div className="rounded-xl bg-white border border-gray-100 shadow-sm p-5 flex items-start gap-4 h-full">
-                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Icon size={20} className="text-accent" />
                       </div>
                       <div>
@@ -97,7 +98,7 @@ export default function VirtualTourPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Ready to Join Our Community?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">You have seen the campus — now take the next step toward making it yours.</p></FadeInBlur>
             <FadeInBlur delay={550}>

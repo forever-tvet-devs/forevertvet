@@ -74,12 +74,11 @@ export default function ParentsPage() {
           subCopy="Parents are partners in every student's success. This is your space — to connect, to raise concerns, and to stay informed about everything happening at Forever Tvet Institute."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.65}
         />
 
         {/* Welcome Message */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-14 items-start">
               {/* Left */}
               <div>
@@ -99,7 +98,7 @@ export default function ParentsPage() {
 
               {/* Right — quote card */}
               <FadeInBlur delay={200}>
-                <div className="rounded-2xl bg-accent/5 border border-accent/20 p-7">
+                <div className="rounded-2xl bg-primary/5 border border-accent/20 p-7">
                   <p className="text-4xl font-black text-accent/40 leading-none mb-3">&ldquo;</p>
                   <p className="text-base text-gray-700 leading-relaxed italic">
                     The relationship between parents and the school is a partnership — not a transaction. Your child's growth is our shared mission.
@@ -113,7 +112,7 @@ export default function ParentsPage() {
 
         {/* Meet the Head Parent */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Your Representative</span>
@@ -195,7 +194,7 @@ export default function ParentsPage() {
 
         {/* Committee Structure */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left — copy */}
               <div>
@@ -220,7 +219,7 @@ export default function ParentsPage() {
                   return (
                     <FadeInBlur key={r.role} delay={300 + i * 80}>
                       <div className="flex items-start gap-4 rounded-xl bg-gray-50 border border-gray-100 p-4">
-                        <div className="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <Icon size={17} className="text-accent" />
                         </div>
                         <div>
@@ -238,7 +237,7 @@ export default function ParentsPage() {
 
         {/* Communication Channels */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Stay Connected</span>
@@ -252,7 +251,7 @@ export default function ParentsPage() {
                 return (
                   <FadeInBlur key={ch.title} delay={300 + i * 100}>
                     <div className="rounded-xl bg-white border border-gray-100 shadow-sm p-6 flex flex-col h-full">
-                      <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                      <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                         <Icon size={22} className="text-accent" />
                       </div>
                       <p className="font-semibold text-primary text-sm mb-2">{ch.title}</p>
@@ -273,7 +272,7 @@ export default function ParentsPage() {
 
         {/* Submit a Concern */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-10">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">We&apos;re Listening</span>
@@ -295,7 +294,7 @@ export default function ParentsPage() {
 
         {/* Key School Contacts */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Who to Call</span>
@@ -307,7 +306,7 @@ export default function ParentsPage() {
               {keyContacts.map((c, i) => (
                 <FadeInBlur key={c.role} delay={300 + i * 60}>
                   <div className="rounded-xl bg-white border border-gray-100 shadow-sm overflow-hidden flex">
-                    <div className="w-1 bg-accent flex-shrink-0" />
+                    <div className="w-1 bg-primary flex-shrink-0" />
                     <div className="p-4 flex-1">
                       <p className="font-semibold text-primary text-sm">{c.role}</p>
                       <p className="text-xs text-gray-400 mt-0.5 mb-2">{c.desc}</p>
@@ -325,7 +324,7 @@ export default function ParentsPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Invested in Your Child's Future" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">

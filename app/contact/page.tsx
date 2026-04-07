@@ -104,11 +104,12 @@ export default function ContactPage() {
           title="Contact Us"
           subCopy="Whether you have a question about admissions, fees, programs, or anything else — we are here and we respond promptly."
           breadcrumb={breadcrumb}
+          backgroundImage="/images/image1.png"
         />
 
         {/* Quick Contact Strip */}
         <section className="py-14 lg:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {quickTiles.map((tile, i) => {
                 const Icon = tile.icon;
@@ -118,7 +119,7 @@ export default function ContactPage() {
                       href={tile.href}
                       className="rounded-xl border border-gray-100 bg-gray-50 p-5 flex flex-col items-center text-center group hover:bg-white hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
                     >
-                      <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-3 group-hover:bg-accent/20 transition-colors">
+                      <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
                         <Icon size={22} className="text-accent" />
                       </div>
                       <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">{tile.label}</p>
@@ -134,7 +135,7 @@ export default function ContactPage() {
 
         {/* Contact Form + Sidebar */}
         <section className="py-12 lg:py-20 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-[1fr_300px] gap-10 items-start">
 
               {/* Form */}
@@ -217,7 +218,7 @@ export default function ContactPage() {
 
         {/* Map */}
         <section id="map" className="py-16 lg:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-8">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Location</span>
@@ -259,7 +260,7 @@ export default function ContactPage() {
 
         {/* Department Directory */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Departments</span>
@@ -278,10 +279,10 @@ export default function ContactPage() {
                 return (
                   <FadeInBlur key={dept.name} delay={200 + i * 80}>
                     <div className="rounded-xl bg-white border border-gray-100 shadow-sm overflow-hidden flex flex-col h-full">
-                      <div className="h-0.5 bg-accent" />
+                      <div className="h-0.5 bg-primary" />
                       <div className="p-5 flex-1 flex flex-col">
                         <div className="flex items-start gap-3 mb-3">
-                          <div className="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                          <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon size={17} className="text-accent" />
                           </div>
                           <p className="font-semibold text-primary text-sm leading-snug">{dept.name}</p>

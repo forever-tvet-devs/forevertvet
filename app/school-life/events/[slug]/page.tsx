@@ -55,7 +55,7 @@ export default async function EventDetailPage({ params }: Props) {
         {/* Hero banner */}
         <div className="bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div className="relative max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20">
             <FadeInBlur delay={0} triggerOnScroll={false}>
               <Link
                 href="/school-life/events"
@@ -109,7 +109,7 @@ export default async function EventDetailPage({ params }: Props) {
 
         {/* Content + sidebar */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-[1fr_260px] gap-12 items-start">
 
               {/* Body */}
@@ -236,7 +236,7 @@ export default async function EventDetailPage({ params }: Props) {
         {/* Related events */}
         {related.length > 0 && (
           <section className="py-16 lg:py-20 bg-gray-50">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
               <div className="flex items-end justify-between gap-4 mb-8">
                 <div>
                   <FadeInBlur delay={0}>
@@ -310,7 +310,7 @@ export default async function EventDetailPage({ params }: Props) {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Interested in Joining Our Community?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">

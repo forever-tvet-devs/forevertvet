@@ -9,7 +9,7 @@ export default function AdmissionsCTA() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          background: "linear-gradient(135deg, #071640 0%, #0C2461 50%, #1A3D7C 100%)",
+          background: "linear-gradient(135deg, #163560 0%, #214B82 50%, #3A6BA8 100%)",
         }}
       />
 
@@ -31,7 +31,7 @@ export default function AdmissionsCTA() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
         <span className="text-xs font-semibold tracking-widest uppercase text-white/50">
           Academic Year 2026–2027
         </span>

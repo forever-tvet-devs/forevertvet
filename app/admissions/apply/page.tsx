@@ -46,12 +46,11 @@ export default function ApplyPage() {
           subCopy="Complete the form below to apply for your chosen program. All fields marked as required must be filled. We will respond within 3–5 working days."
           breadcrumb={breadcrumb}
           backgroundImage="/images/PeopleLookAtTrainingDevice.png"
-          overlayOpacity={0.68}
         />
 
         {/* Trust bar */}
         <section className="py-8 bg-primary/5 border-b border-primary/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {trustPoints.map((tp, i) => {
                 const Icon = tp.icon;
@@ -70,7 +69,7 @@ export default function ApplyPage() {
 
         {/* Main content: form + sidebar */}
         <section className="py-16 lg:py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-[1fr_300px] gap-10 items-start">
 
               {/* Form */}
@@ -100,7 +99,7 @@ export default function ApplyPage() {
                 {/* Current Intake */}
                 <FadeInBlur delay={200}>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-                    <div className="h-1.5 bg-accent" />
+                    <div className="h-1.5 bg-primary" />
                     <div className="p-5">
                       <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Current Intake</p>
                       <p className="font-heading font-bold text-xl text-primary mb-1">Intake 1 — January 2026</p>

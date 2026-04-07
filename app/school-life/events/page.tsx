@@ -30,12 +30,11 @@ export default function EventsPage() {
           subCopy="From orientation ceremonies to national competitions — something is always happening at Forever Tvet Institute."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.65}
         />
 
         {/* Intro */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Calendar</span>
             </FadeInBlur>
@@ -50,7 +49,7 @@ export default function EventsPage() {
 
         {/* Events calendar */}
         <section className="py-4 pb-20 lg:pb-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <EventsCalendar />
           </div>
         </section>
@@ -58,7 +57,7 @@ export default function EventsPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Don't Miss the Next Intake" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Orientation Day for Intake 1 is 5 January 2026. Places are limited — secure yours now.</p></FadeInBlur>
             <FadeInBlur delay={550}>

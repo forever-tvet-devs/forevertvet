@@ -87,11 +87,12 @@ export default function VisionMissionPage() {
           title="Vision & Mission"
           subCopy="The principles that guide every decision, every lesson, and every relationship within our school community."
           breadcrumb={breadcrumb}
+          backgroundImage="/images/image1.png"
         />
 
         {/* Mission Statement */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-8">
                 Our Mission
@@ -112,14 +113,14 @@ export default function VisionMissionPage() {
             </FadeInBlur>
 
             <FadeInBlur delay={500}>
-              <div className="w-16 h-1 bg-accent mx-auto mt-10 rounded-full" />
+              <div className="w-16 h-1 bg-primary mx-auto mt-10 rounded-full" />
             </FadeInBlur>
           </div>
         </section>
 
         {/* Vision Statement */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
               {/* Image */}
@@ -180,7 +181,7 @@ export default function VisionMissionPage() {
 
         {/* Core Values */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -202,7 +203,7 @@ export default function VisionMissionPage() {
                 return (
                   <FadeInBlur key={value.name} delay={400 + i * 80}>
                     <div className="group rounded-xl border border-gray-100 p-6 bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full">
-                      <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-4 group-hover:bg-accent/15 transition-colors duration-200">
+                      <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors duration-200">
                         <Icon size={20} className="text-accent" />
                       </div>
                       <h3 className="text-lg font-semibold text-primary mb-2">{value.name}</h3>
@@ -217,7 +218,7 @@ export default function VisionMissionPage() {
 
         {/* Strategic Goals */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -265,7 +266,7 @@ export default function VisionMissionPage() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <div className="flex justify-center mb-4">
                 <CheckCircle size={40} className="text-accent" />

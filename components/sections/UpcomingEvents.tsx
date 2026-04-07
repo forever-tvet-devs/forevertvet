@@ -12,7 +12,7 @@ const displayedEvents = upcoming.length > 0 ? upcoming : events.slice(0, 3);
 export default function UpcomingEvents() {
   return (
     <section className="py-20 lg:py-28 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
 
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">

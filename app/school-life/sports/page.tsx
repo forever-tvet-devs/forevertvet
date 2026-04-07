@@ -38,12 +38,11 @@ export default function SportsPage() {
           subCopy="Physical fitness and team sport are part of a complete education. Our students compete, train, and push their limits — on and off the field."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image1.png"
-          overlayOpacity={0.65}
         />
 
         {/* Philosophy + Stats */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-14 items-start">
               {/* Copy */}
               <div>
@@ -68,7 +67,7 @@ export default function SportsPage() {
                   return (
                     <FadeInBlur key={s.label} delay={300 + i * 80}>
                       <div className="rounded-xl bg-gray-50 border border-gray-100 p-5 text-center">
-                        <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-3">
+                        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
                           <Icon size={20} className="text-accent" />
                         </div>
                         <p className="font-heading font-black text-3xl text-primary mb-1">{s.value}</p>
@@ -84,7 +83,7 @@ export default function SportsPage() {
 
         {/* Sports List */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Sports</span>
@@ -99,7 +98,7 @@ export default function SportsPage() {
 
         {/* Annual Competition */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <FadeInBlur delay={0}>
@@ -141,7 +140,7 @@ export default function SportsPage() {
 
         {/* Get Involved */}
         <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-2xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Get Involved</span>
             </FadeInBlur>
@@ -165,7 +164,7 @@ export default function SportsPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Train Hard. Study Harder. Graduate Ready." as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Forever Tvet graduates are prepared in every dimension — technically, professionally, and physically.</p></FadeInBlur>
             <FadeInBlur delay={550}>

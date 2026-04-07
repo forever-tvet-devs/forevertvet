@@ -336,3 +336,11 @@ export const MessageCircle = ({ size = 24, className = "" }: IconProps) => (
     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
   </svg>
 );
+
+export const LogIn = ({ size = 24, className = "" }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4" />
+    <polyline points="10 17 15 12 10 7" />
+    <line x1="15" y1="12" x2="3" y2="12" />
+  </svg>
+);

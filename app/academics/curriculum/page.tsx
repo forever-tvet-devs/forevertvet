@@ -64,12 +64,11 @@ export default function CurriculumPage() {
           subCopy="A structured, industry-validated curriculum that takes every student from classroom theory to job-ready competence — in months, not years."
           breadcrumb={breadcrumb}
           backgroundImage="/images/PeopleLookAtTrainingDevice.png"
-          overlayOpacity={0.68}
         />
 
         {/* Philosophy */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <FadeInBlur delay={0}>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Our Approach
@@ -118,7 +117,7 @@ export default function CurriculumPage() {
 
         {/* Four Phases */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -145,7 +144,7 @@ export default function CurriculumPage() {
 
         {/* Assessment & Certification */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
 
               {/* Left */}
@@ -215,7 +214,7 @@ export default function CurriculumPage() {
                     <p className="font-heading text-2xl font-bold text-white leading-tight mb-3">
                       National TVET Certificate
                     </p>
-                    <span className="inline-block rounded-full bg-accent text-primary text-xs px-4 py-1.5 font-semibold mb-6">
+                    <span className="inline-block rounded-full bg-primary text-primary text-xs px-4 py-1.5 font-semibold mb-6">
                       RQF Level 3 / Level 4
                     </span>
 
@@ -244,7 +243,7 @@ export default function CurriculumPage() {
 
         {/* Program Comparison */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <FadeInBlur delay={0}>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -311,7 +310,7 @@ export default function CurriculumPage() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText
               text="Ready to Choose Your Program?"
               as="h2"
