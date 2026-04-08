@@ -13,10 +13,23 @@ export default function CookieConsent() {
 
   useEffect(() => {
     const consent = localStorage.getItem(STORAGE_KEY);
-    if (!consent) {
-      const timer = setTimeout(() => setMounted(true), 1500);
+    if (consent) return;
+
+    // Wait for splash screen to finish, then delay 2.5s before showing
+    const show = () => {
+      const timer = setTimeout(() => setMounted(true), 2500);
       return () => clearTimeout(timer);
-    }
+    };
+
+    let cleanup: (() => void) | undefined;
+    const handler = () => { cleanup = show(); };
+
+    window.addEventListener("splash-done", handler, { once: true });
+
+    return () => {
+      window.removeEventListener("splash-done", handler);
+      cleanup?.();
+    };
   }, []);
 
   const dismiss = useCallback((choice: "accepted" | "declined") => {

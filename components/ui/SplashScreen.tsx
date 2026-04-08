@@ -50,7 +50,10 @@ export default function SplashScreen() {
 
   useEffect(() => {
     // Only show splash once per session
-    if (sessionStorage.getItem("splash_shown")) return;
+    if (sessionStorage.getItem("splash_shown")) {
+      window.dispatchEvent(new Event("splash-done"));
+      return;
+    }
     sessionStorage.setItem("splash_shown", "1");
     setShow(true);
   }, []);
@@ -71,7 +74,10 @@ export default function SplashScreen() {
             yPercent: -100,
             duration: 0.5,
             ease: "power3.inOut",
-            onComplete: () => setShow(false),
+            onComplete: () => {
+              window.dispatchEvent(new Event("splash-done"));
+              setShow(false);
+            },
           });
         },
       });
