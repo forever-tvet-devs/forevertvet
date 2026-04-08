@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { ChevronDown, CheckCircle, ArrowRight, Globe, Flask, BookOpen, GraduationCap } from "@/components/ui/Icons";
 import { departmentColors } from "@/components/academics/departmentColors";
 
@@ -183,7 +182,7 @@ export default function DepartmentAccordion() {
         const isOpen = openIndex === i;
 
         return (
-          <FadeInBlur key={dept.name} delay={300 + i * 100}>
+          <div key={i}>
             <div className={`bg-white rounded-xl border transition-shadow duration-200 overflow-hidden ${isOpen ? "border-gray-200 shadow-md" : "border-gray-100 shadow-sm hover:shadow-md"}`}>
               {/* Card header — always visible */}
               <button
@@ -295,7 +294,7 @@ export default function DepartmentAccordion() {
                 </div>
               </div>
             </div>
-          </FadeInBlur>
+          </div>
         );
       })}
     </div>

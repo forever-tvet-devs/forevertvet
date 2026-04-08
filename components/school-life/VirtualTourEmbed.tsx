@@ -89,7 +89,7 @@ export default function VirtualTourEmbed() {
 
           <button
             type="submit"
-            className="mt-6 w-full py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors text-sm"
+            className="bg-primary mt-6 w-full py-3 text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors text-sm"
           >
             Request Visit
           </button>

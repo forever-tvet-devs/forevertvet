@@ -1,5 +1,4 @@
 import Link from "next/link";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { ArrowRight } from "@/components/ui/Icons";
 
 interface Step {
@@ -63,7 +62,7 @@ export default function ApplicationSteps() {
   return (
     <div className="space-y-4">
       {steps.map((step, i) => (
-        <FadeInBlur key={step.number} delay={300 + i * 120}>
+        <div key={i}>
           <div className="flex gap-6 items-start">
             {/* Step indicator column */}
             <div className="flex flex-col items-center flex-shrink-0">
@@ -95,7 +94,7 @@ export default function ApplicationSteps() {
               )}
             </div>
           </div>
-        </FadeInBlur>
+        </div>
       ))}
     </div>
   );

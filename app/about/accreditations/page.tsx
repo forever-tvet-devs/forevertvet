@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import {
   CheckCircle,
   Award,
@@ -108,11 +107,11 @@ export default function AccreditationsPage() {
         {/* Why Accreditation Matters */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Why It Matters
               </span>
-            </FadeInBlur>
+            </div>
 
             <AnimatedText
               text="Independently Verified. Consistently Excellent."
@@ -122,26 +121,26 @@ export default function AccreditationsPage() {
               stagger={60}
             />
 
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-6 text-left sm:text-center">
                 Accreditation means that our institution, our programs, and our qualifications have been independently assessed against national and international standards — and found to meet or exceed them. It is not self-declared excellence; it is verified excellence.
               </p>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-4 text-left sm:text-center">
                 For students and parents, accreditation means that the qualification you earn here will be recognised by employers, government agencies, and further education institutions — not just in Rwanda, but across the region and beyond.
               </p>
-            </FadeInBlur>
+            </div>
 
             {/* 3-feature row */}
             <div className="grid sm:grid-cols-3 gap-6 mt-12">
               {whyItMattersFeatures.map((feat, i) => {
                 const Icon = feat.icon;
                 return (
-                  <FadeInBlur key={i} delay={500 + i * 100}>
+                  <div key={i}>
                     <div className="bg-gray-50 rounded-xl p-6 text-left h-full">
                       <Icon size={24} className="text-accent mb-3" />
                       <p className="text-sm text-gray-600 leading-relaxed">{feat.text}</p>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -152,11 +151,11 @@ export default function AccreditationsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Official Accreditations
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Certified by Rwanda's Leading Educational Bodies"
                 as="h2"
@@ -168,7 +167,7 @@ export default function AccreditationsPage() {
 
             <div className="grid lg:grid-cols-3 gap-6">
               {primaryAccreditations.map((acc, i) => (
-                <FadeInBlur key={acc.acronym} delay={300 + i * 120}>
+                <div key={i}>
                   <div className="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm hover:shadow-md transition-shadow duration-200 h-full flex flex-col">
                     {/* Logo placeholder */}
                     <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center mb-5 flex-shrink-0">
@@ -189,7 +188,7 @@ export default function AccreditationsPage() {
 
                     <p className="text-sm text-gray-600 leading-relaxed flex-1">{acc.desc}</p>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -199,11 +198,11 @@ export default function AccreditationsPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Memberships & Affiliations
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Part of a Wider Network of Excellence"
                 as="h2"
@@ -211,14 +210,14 @@ export default function AccreditationsPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 mt-4 max-w-xl mx-auto leading-relaxed">
                   We are proud members of a broad network of educational, industry, and civic organisations that keep us connected, relevant, and accountable.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
-            <FadeInBlur delay={300}>
+            <div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {affiliations.map((name) => (
                   <div
@@ -229,7 +228,7 @@ export default function AccreditationsPage() {
                   </div>
                 ))}
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -237,11 +236,11 @@ export default function AccreditationsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Transparency
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Compliance Reports & Documents"
                 as="h2"
@@ -249,16 +248,16 @@ export default function AccreditationsPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4">
                   We believe transparency is part of accountability. Our key compliance reports are available for download — for parents, prospective students, partners, and regulators.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
               {reports.map((report, i) => (
-                <FadeInBlur key={report.name} delay={300 + i * 80}>
+                <div key={i}>
                   <div className={`flex items-center justify-between px-6 py-4 hover:bg-primary/3 transition-colors ${i < reports.length - 1 ? "border-b border-gray-100" : ""}`}>
                     <div className="flex items-center gap-3 min-w-0">
                       <FileText size={18} className="text-accent flex-shrink-0" />
@@ -277,7 +276,7 @@ export default function AccreditationsPage() {
                       Download
                     </a>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -293,13 +292,13 @@ export default function AccreditationsPage() {
             }}
           />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <div className="flex justify-center mb-4">
                 <div className="w-14 h-14 rounded-full border-2 border-accent/40 flex items-center justify-center">
                   <Award size={26} className="text-accent" />
                 </div>
               </div>
-            </FadeInBlur>
+            </div>
 
             <AnimatedText
               text="Accredited. Trusted. Ready for Your Child."
@@ -309,13 +308,13 @@ export default function AccreditationsPage() {
               stagger={55}
             />
 
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 Join a school where excellence is not a claim — it is a verified, independently certified standard. Enrolment is now open.
               </p>
-            </FadeInBlur>
+            </div>
 
-            <FadeInBlur delay={550}>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions/apply"
@@ -331,7 +330,7 @@ export default function AccreditationsPage() {
                   Download Prospectus
                 </a>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

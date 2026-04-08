@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { ArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
@@ -88,11 +87,11 @@ export default function PartnersPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="max-w-3xl mb-16">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Why Partnerships Matter
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Connected to Industry from Day One"
                 as="h2"
@@ -100,23 +99,23 @@ export default function PartnersPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base lg:text-lg text-gray-500 mt-4 leading-relaxed">
                   Our partnerships aren't just logos on a page — they shape what we teach, how we teach it, and where our graduates go. Every program at Forever Tvet Institute is built in close collaboration with the employers who hire our students.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             {/* Industry Partners */}
             <div className="mb-20">
-              <FadeInBlur delay={0}>
+              <div>
                 <h3 className="font-heading font-bold text-2xl text-body mb-8 pb-4 border-b border-gray-100">
                   Industry Partners
                 </h3>
-              </FadeInBlur>
+              </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {industryPartners.map((partner, i) => (
-                  <FadeInBlur key={partner.name} delay={i * 80}>
+                  <div key={i}>
                     <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow duration-200 h-full flex flex-col">
                       <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-3">
                         {partner.sector}
@@ -124,21 +123,21 @@ export default function PartnersPage() {
                       <h4 className="font-heading font-bold text-lg text-body mb-2">{partner.name}</h4>
                       <p className="text-sm text-gray-500 leading-relaxed flex-1">{partner.desc}</p>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* Academic Partners */}
             <div>
-              <FadeInBlur delay={0}>
+              <div>
                 <h3 className="font-heading font-bold text-2xl text-body mb-8 pb-4 border-b border-gray-100">
                   Academic & Institutional Partners
                 </h3>
-              </FadeInBlur>
+              </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {academicPartners.map((partner, i) => (
-                  <FadeInBlur key={partner.name} delay={i * 80}>
+                  <div key={i}>
                     <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:shadow-md transition-shadow duration-200 h-full flex flex-col">
                       <span className="text-xs font-semibold tracking-widest uppercase text-primary block mb-3">
                         {partner.country}
@@ -146,7 +145,7 @@ export default function PartnersPage() {
                       <h4 className="font-heading font-bold text-lg text-body mb-2">{partner.name}</h4>
                       <p className="text-sm text-gray-500 leading-relaxed flex-1">{partner.desc}</p>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 ))}
               </div>
             </div>
@@ -163,7 +162,7 @@ export default function PartnersPage() {
                 { value: "94%", label: "Graduate Employment Rate" },
                 { value: "2019", label: "First Partnership Signed" },
               ].map((stat, i) => (
-                <FadeInBlur key={stat.label} delay={i * 100}>
+                <div key={i}>
                   <div className={`flex flex-col items-center text-center lg:px-8 ${i < 3 ? "lg:border-r lg:border-white/10" : ""}`}>
                     <span className="font-heading font-bold text-4xl lg:text-5xl text-accent leading-none">
                       {stat.value}
@@ -172,7 +171,7 @@ export default function PartnersPage() {
                       {stat.label}
                     </span>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -188,7 +187,7 @@ export default function PartnersPage() {
               baseDelay={0}
               stagger={60}
             />
-            <FadeInBlur delay={300}>
+            <div>
               <p className="text-base text-gray-500 leading-relaxed mb-8">
                 Interested in partnering with Forever Tvet Institute? We welcome new industry and academic collaborations that benefit our students and Rwanda's workforce.
               </p>
@@ -199,7 +198,7 @@ export default function PartnersPage() {
                 Get in Touch
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

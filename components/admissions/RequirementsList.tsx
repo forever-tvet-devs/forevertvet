@@ -1,4 +1,3 @@
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { CheckCircle } from "@/components/ui/Icons";
 import { departmentColors } from "@/components/academics/departmentColors";
 
@@ -88,7 +87,7 @@ export default function RequirementsList() {
       {programs.map((prog, i) => {
         const color = departmentColors[prog.name];
         return (
-          <FadeInBlur key={prog.name} delay={300 + i * 100}>
+          <div key={i}>
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
               {/* Header */}
               <div className="flex items-center gap-4 p-6 pb-5">
@@ -138,7 +137,7 @@ export default function RequirementsList() {
                 </div>
               </div>
             </div>
-          </FadeInBlur>
+          </div>
         );
       })}
     </div>

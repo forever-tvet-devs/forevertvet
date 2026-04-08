@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import FadeInBlur from "@/components/ui/FadeInBlur";
-
 interface CalendarEvent {
   label: string;
   type: "classes" | "exam" | "break" | "intake" | "graduation";
@@ -59,7 +57,7 @@ export default function CalendarGrid() {
   return (
     <div>
       {/* Tabs */}
-      <FadeInBlur delay={0}>
+      <div>
         <div className="flex gap-2 mb-8">
           {[
             { key: "intake1", label: "Intake 1 — January 2026" },
@@ -78,10 +76,10 @@ export default function CalendarGrid() {
             </button>
           ))}
         </div>
-      </FadeInBlur>
+      </div>
 
       {/* Month grid */}
-      <FadeInBlur delay={200} key={activeTab}>
+      <div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {months.map((month) => (
             <div
@@ -108,10 +106,10 @@ export default function CalendarGrid() {
             </div>
           ))}
         </div>
-      </FadeInBlur>
+      </div>
 
       {/* Legend */}
-      <FadeInBlur delay={400}>
+      <div>
         <div className="flex flex-wrap gap-3 mt-6">
           {(Object.entries(typeStyles) as [CalendarEvent["type"], string][]).map(([type, cls]) => (
             <div key={type} className="flex items-center gap-1.5">
@@ -120,7 +118,7 @@ export default function CalendarGrid() {
             </div>
           ))}
         </div>
-      </FadeInBlur>
+      </div>
     </div>
   );
 }

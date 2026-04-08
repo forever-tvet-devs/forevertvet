@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import FeesTable from "@/components/admissions/FeesTable";
 import { Shield, Award, CheckCircle, Calendar } from "@/components/ui/Icons";
 
@@ -53,20 +52,20 @@ export default function FeesPage() {
         {/* Trust Statement */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Promise</span>
-            </FadeInBlur>
+            </div>
             <AnimatedText text="No Hidden Fees. No Surprises." as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-6">
                 Every cost associated with your enrolment at Forever Tvet Institute is listed on this page. What you see is what you pay. The fee shown for each program includes tuition, lab usage, materials, and your industry internship placement service. There are no add-on charges.
               </p>
-            </FadeInBlur>
+            </div>
             <div className="grid sm:grid-cols-3 gap-5 mt-10">
               {trustTiles.map((tile, i) => {
                 const Icon = tile.icon;
                 return (
-                  <FadeInBlur key={tile.title} delay={500 + i * 100}>
+                  <div key={i}>
                     <div className="rounded-xl bg-gray-50 border border-gray-100 p-5 text-center">
                       <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
                         <Icon size={20} className="text-accent" />
@@ -74,7 +73,7 @@ export default function FeesPage() {
                       <p className="font-semibold text-primary text-sm mb-1">{tile.title}</p>
                       <p className="text-xs text-gray-500 leading-relaxed">{tile.desc}</p>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -85,17 +84,17 @@ export default function FeesPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Programs</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Program Fees at a Glance" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
-            <FadeInBlur delay={300}><FeesTable /></FadeInBlur>
-            <FadeInBlur delay={450}>
+            <div><FeesTable /></div>
+            <div>
               <p className="text-sm text-gray-400 mt-4 text-center italic">
                 Fees are quoted in Rwandan Francs (RWF) and are fixed for the academic year at time of enrolment. Registration fee (RWF 50,000) is non-refundable and deducted from the total program fee.
               </p>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -103,29 +102,29 @@ export default function FeesPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">What You Get</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Everything the Fee Covers" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               {included.map((item, i) => (
-                <FadeInBlur key={item.item} delay={300 + i * 60}>
+                <div key={i}>
                   <div className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 h-full">
                     <CheckCircle size={16} className="text-accent flex-shrink-0 mt-0.5" />
-                    <div>
+                    <div key={i}>
                       <p className="text-sm font-medium text-primary">{item.item}</p>
                       <p className="text-xs text-gray-500 mt-0.5 leading-snug">{item.note}</p>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
-            <FadeInBlur delay={800}>
+            <div>
               <p className="text-sm text-gray-400 mt-5 text-center">
                 <span className="font-medium text-gray-500">Not included:</span> Accommodation, personal meals, transport to internship site, and uniform (optional — available for purchase at RWF 15,000).
               </p>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -133,15 +132,15 @@ export default function FeesPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Flexibility</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Payment Options" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               {/* Full Payment */}
-              <FadeInBlur delay={300}>
+              <div>
                 <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden h-full flex flex-col">
                   <div className="h-2 bg-primary" />
                   <div className="p-6 flex-1 flex flex-col">
@@ -161,10 +160,10 @@ export default function FeesPage() {
                     </div>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
 
               {/* Two Instalments */}
-              <FadeInBlur delay={450}>
+              <div>
                 <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden h-full flex flex-col">
                   <div className="h-2 bg-primary" />
                   <div className="p-6 flex-1 flex flex-col">
@@ -185,7 +184,7 @@ export default function FeesPage() {
                     </p>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
             </div>
           </div>
         </section>
@@ -195,11 +194,11 @@ export default function FeesPage() {
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-5">
-                <FadeInBlur delay={0}>
+                <div>
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent">Financial Support</span>
-                </FadeInBlur>
+                </div>
                 <AnimatedText text="Merit Scholarships Available" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-                <FadeInBlur delay={400}>
+                <div>
                   <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
                     Each intake, Forever Tvet Institute awards a limited number of partial merit scholarships to outstanding applicants who demonstrate exceptional potential but face financial hardship. Scholarships cover 25–50% of total program fees.
                   </p>
@@ -216,10 +215,10 @@ export default function FeesPage() {
                       </li>
                     ))}
                   </ul>
-                </FadeInBlur>
+                </div>
               </div>
 
-              <FadeInBlur delay={200}>
+              <div>
                 <div className="rounded-2xl bg-gray-50 border border-gray-100 p-8 text-center">
                   <Award size={36} className="text-accent mx-auto mb-4" />
                   <p className="font-heading font-black text-5xl text-primary mb-1">25–50%</p>
@@ -233,7 +232,7 @@ export default function FeesPage() {
                     </p>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
             </div>
           </div>
         </section>
@@ -243,13 +242,13 @@ export default function FeesPage() {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Invest in a Guaranteed Future" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
-            <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">94% of our graduates are employed within 6 months. The return on this investment is measurable.</p></FadeInBlur>
-            <FadeInBlur delay={550}>
+            <div><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">94% of our graduates are employed within 6 months. The return on this investment is measurable.</p></div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Apply Now</Link>
                 <Link href="/contact" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">Contact Us About Fees</Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

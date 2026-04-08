@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import DepartmentAccordion from "@/components/academics/DepartmentAccordion";
 import { ArrowRight } from "@/components/ui/Icons";
 
@@ -44,11 +43,11 @@ export default function DepartmentsPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Our Programs
                 </span>
-              </FadeInBlur>
+              </div>
 
               <AnimatedText
                 text="The People Behind Your Education"
@@ -58,11 +57,11 @@ export default function DepartmentsPage() {
                 stagger={60}
               />
 
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base lg:text-lg text-gray-500 mt-4 max-w-2xl leading-relaxed">
                   Click on any department to expand the full subject list, career pathways, and lead instructor profile. Every program is structured around the job it leads to.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <DepartmentAccordion />
@@ -72,11 +71,11 @@ export default function DepartmentsPage() {
         {/* Instructor Quality Promise */}
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Our Instructors
               </span>
-            </FadeInBlur>
+            </div>
 
             <AnimatedText
               text="Every Instructor Has Done the Job"
@@ -86,20 +85,20 @@ export default function DepartmentsPage() {
               stagger={60}
             />
 
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-6 max-w-2xl mx-auto">
                 We do not hire people who have only ever taught. Every instructor in every department has spent significant time working in the industry they now teach — a minimum of five years in the field before they ever entered a classroom.
               </p>
-            </FadeInBlur>
+            </div>
 
             <div className="grid sm:grid-cols-3 gap-5 mt-10">
               {instructorStats.map((stat, i) => (
-                <FadeInBlur key={stat.label} delay={500 + i * 100}>
+                <div key={i}>
                   <div className="rounded-xl bg-white border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200">
                     <p className="font-heading font-bold text-3xl text-accent">{stat.value}</p>
                     <p className="text-xs text-gray-500 uppercase tracking-wide mt-1 leading-snug">{stat.label}</p>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -122,12 +121,12 @@ export default function DepartmentsPage() {
               baseDelay={0}
               stagger={55}
             />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 Not sure which department fits your career goals? Talk to our admissions team — they will help you decide.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions/apply"
@@ -143,7 +142,7 @@ export default function DepartmentsPage() {
                   <ArrowRight size={16} />
                 </Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

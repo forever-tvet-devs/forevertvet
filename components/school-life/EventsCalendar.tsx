@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { Clock, MapPin, ArrowRight } from "@/components/ui/Icons";
 import { events, categoryStyles } from "@/components/school-life/eventsData";
 import type { CalendarEvent } from "@/components/school-life/eventsData";
@@ -32,7 +31,7 @@ export default function EventsCalendar() {
   return (
     <div>
       {/* Tabs */}
-      <FadeInBlur delay={0}>
+      <div>
         <div className="flex gap-2 mb-8">
           {(["Upcoming", "All"] as Tab[]).map((t) => (
             <button
@@ -46,22 +45,22 @@ export default function EventsCalendar() {
             </button>
           ))}
         </div>
-      </FadeInBlur>
+      </div>
 
       {/* Empty state */}
       {displayed.length === 0 && (
-        <FadeInBlur delay={200}>
+        <div>
           <div className="text-center py-16 rounded-xl bg-gray-50 border border-gray-100">
             <p className="text-lg font-semibold text-primary mb-2">No upcoming events right now</p>
             <p className="text-sm text-gray-500">Check back soon, or view all events using the tab above.</p>
           </div>
-        </FadeInBlur>
+        </div>
       )}
 
       {/* Grouped list */}
       <div key={tab} className="space-y-10">
         {Object.entries(grouped).map(([month, monthEvents], gi) => (
-          <FadeInBlur key={month} delay={gi * 80}>
+          <div key={month}>
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 pb-2 border-b border-gray-100">
                 {month}
@@ -111,20 +110,20 @@ export default function EventsCalendar() {
                 ))}
               </div>
             </div>
-          </FadeInBlur>
+          </div>
         ))}
       </div>
 
       {/* Registration note */}
       {displayed.length > 0 && (
-        <FadeInBlur delay={500}>
+        <div>
           <p className="text-xs text-gray-400 mt-8 text-center">
             To register for public events, contact us at{" "}
             <a href="mailto:events@forevertvet.rw" className="text-accent hover:underline">events@forevertvet.rw</a>
             {" "}or call{" "}
             <a href="tel:+250788000000" className="text-accent hover:underline">+250 788 000 000</a>.
           </p>
-        </FadeInBlur>
+        </div>
       )}
     </div>
   );

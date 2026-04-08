@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import ApplicationForm from "@/components/admissions/ApplicationForm";
 import { CheckCircle, Shield, Award, Users, ArrowRight } from "@/components/ui/Icons";
 
@@ -55,12 +54,12 @@ export default function ApplyPage() {
               {trustPoints.map((tp, i) => {
                 const Icon = tp.icon;
                 return (
-                  <FadeInBlur key={tp.text} delay={i * 80}>
+                  <div key={i}>
                     <div className="flex items-center gap-2.5">
                       <Icon size={16} className="text-accent flex-shrink-0" />
                       <span className="text-xs font-medium text-primary/80">{tp.text}</span>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -74,7 +73,7 @@ export default function ApplyPage() {
 
               {/* Form */}
               <div>
-                <FadeInBlur delay={0}>
+                <div>
                   <div className="mb-6">
                     <AnimatedText
                       text="Your Application"
@@ -83,13 +82,13 @@ export default function ApplyPage() {
                       baseDelay={0}
                       stagger={55}
                     />
-                    <FadeInBlur delay={200}>
+                    <div>
                       <p className="text-sm text-gray-500 mt-2">
                         Complete all four steps below. You can navigate back to earlier steps at any time before submitting.
                       </p>
-                    </FadeInBlur>
+                    </div>
                   </div>
-                </FadeInBlur>
+                </div>
                 <ApplicationForm />
               </div>
 
@@ -97,7 +96,7 @@ export default function ApplyPage() {
               <aside className="lg:sticky lg:top-24 space-y-5">
 
                 {/* Current Intake */}
-                <FadeInBlur delay={200}>
+                <div>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
                     <div className="h-1.5 bg-primary" />
                     <div className="p-5">
@@ -120,10 +119,10 @@ export default function ApplyPage() {
                       </div>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
 
                 {/* Registration Fee Notice */}
-                <FadeInBlur delay={300}>
+                <div>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Registration Fee</p>
                     <p className="font-heading font-bold text-2xl text-primary mb-1">RWF 50,000</p>
@@ -131,10 +130,10 @@ export default function ApplyPage() {
                       Due after offer letter acceptance. Non-refundable. Deducted from total program fee at enrolment.
                     </p>
                   </div>
-                </FadeInBlur>
+                </div>
 
                 {/* Need Help */}
-                <FadeInBlur delay={400}>
+                <div>
                   <div className="bg-primary rounded-xl p-5">
                     <p className="font-semibold text-white text-sm mb-2">Need help applying?</p>
                     <p className="text-xs text-white/70 leading-relaxed mb-4">
@@ -147,10 +146,10 @@ export default function ApplyPage() {
                       Contact Us <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                     </Link>
                   </div>
-                </FadeInBlur>
+                </div>
 
                 {/* Quick links */}
-                <FadeInBlur delay={500}>
+                <div>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Useful Links</p>
                     <div className="space-y-1">
@@ -166,7 +165,7 @@ export default function ApplyPage() {
                       ))}
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               </aside>
             </div>
           </div>

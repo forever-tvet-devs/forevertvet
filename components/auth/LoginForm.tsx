@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface FormState {
   email: string;
@@ -14,6 +15,7 @@ interface Errors {
 }
 
 export default function LoginForm() {
+  const router = useRouter();
   const [form, setForm] = useState<FormState>({ email: "", password: "" });
   const [errors, setErrors] = useState<Errors>({});
   const [showPassword, setShowPassword] = useState(false);
@@ -43,10 +45,9 @@ export default function LoginForm() {
     }
     setErrors({});
     setLoading(true);
-    // Simulate auth call
-    await new Promise((r) => setTimeout(r, 1200));
+    await new Promise((r) => setTimeout(r, 800));
     setLoading(false);
-    setErrors({ general: "Invalid email or password. Please try again." });
+    router.push("/portal");
   }
 
   function handleChange(field: keyof FormState, value: string) {
@@ -145,7 +146,7 @@ export default function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-3.5 bg-primary text-white font-semibold text-sm rounded-lg hover:bg-primary-light transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className="bg-primary w-full py-3.5 text-white font-semibold text-sm rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
         {loading ? (
           <>

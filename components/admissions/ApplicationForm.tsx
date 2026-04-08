@@ -48,7 +48,7 @@ function ProgressBar({ step }: { step: number }) {
       </div>
       <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
         <div
-          className="h-full bg-primary rounded-full transition-all duration-500"
+          className="h-full bg-primary rounded-full hover:bg-primary-dark transition-all duration-500"
           style={{ width: `${(step / 4) * 100}%` }}
         />
       </div>
@@ -369,7 +369,7 @@ export default function ApplicationForm() {
           <button
             onClick={() => setStep((s) => s + 1)}
             disabled={!canNext()}
-            className="px-8 py-2.5 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-primary-dark transition-colors shadow-sm disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            className="bg-primary px-8 py-2.5 rounded-xl text-white font-semibold text-sm hover:bg-primary-dark transition-colors shadow-sm disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
           >
             Next →
           </button>
@@ -377,7 +377,7 @@ export default function ApplicationForm() {
           <button
             onClick={() => setSubmitted(true)}
             disabled={!canNext()}
-            className="flex-1 py-4 rounded-xl bg-primary text-white font-semibold text-base hover:bg-primary-dark transition-colors shadow-md disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            className="bg-primary flex-1 py-4 rounded-xl text-white font-semibold text-base hover:bg-primary-dark transition-colors shadow-md disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
           >
             Submit Application
           </button>

@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import RequirementsList from "@/components/admissions/RequirementsList";
 import { CheckCircle, Download, ArrowRight } from "@/components/ui/Icons";
 
@@ -61,19 +60,19 @@ export default function RequirementsPage() {
         {/* General Requirements */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Programs</span>
-            </FadeInBlur>
+            </div>
             <AnimatedText text="General Entry Requirements" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-5 mb-8">
                 The following requirements apply to every applicant, regardless of which program you choose. Meeting these requirements means you are eligible to apply — selection is then based on your application review.
               </p>
-            </FadeInBlur>
+            </div>
 
             <div className="divide-y divide-gray-100 border border-gray-100 rounded-xl overflow-hidden bg-white shadow-sm">
               {generalReqs.map((item, i) => (
-                <FadeInBlur key={item.req} delay={500 + i * 80}>
+                <div key={i}>
                   <div className="flex items-start gap-4 py-4 px-5 hover:bg-gray-50/60 transition-colors">
                     <CheckCircle size={20} className="text-accent flex-shrink-0 mt-0.5" />
                     <div>
@@ -81,7 +80,7 @@ export default function RequirementsPage() {
                       <p className="text-xs text-gray-500 mt-0.5">{item.note}</p>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -91,15 +90,15 @@ export default function RequirementsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">By Program</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Program-Specific Requirements" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4 max-w-2xl">
                   Level 4 programs (Industrial Electricity and Computer Engineering) have additional academic prerequisites due to the technical depth of their curriculum.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
             <RequirementsList />
           </div>
@@ -109,13 +108,13 @@ export default function RequirementsPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Documents</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Your Document Checklist" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4">Make sure you have everything ready before you apply — and before you arrive on Orientation Day.</p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -123,7 +122,7 @@ export default function RequirementsPage() {
                 { title: "At Application", items: atApplication, delay: 300 },
                 { title: "On Orientation Day", items: atOrientation, delay: 450 },
               ].map((col) => (
-                <FadeInBlur key={col.title} delay={col.delay}>
+                <div key={col.title}>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 h-full">
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">{col.title}</p>
                     <div className="divide-y divide-gray-50">
@@ -135,11 +134,11 @@ export default function RequirementsPage() {
                       ))}
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
 
-            <FadeInBlur delay={600}>
+            <div>
               <div className="mt-6 flex justify-center">
                 <a
                   href="#"
@@ -151,23 +150,23 @@ export default function RequirementsPage() {
                   Download Full Checklist (PDF)
                 </a>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
         {/* Don't Qualify section */}
         <section className="py-16 lg:py-20 bg-gray-50">
           <div className="max-w-2xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Not Sure You Qualify?</span>
-            </FadeInBlur>
+            </div>
             <AnimatedText text="Talk to Us First" as="h2" className="font-heading font-bold text-2xl lg:text-3xl text-body leading-tight" baseDelay={100} stagger={60} />
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base text-gray-600 leading-relaxed mt-5 mb-8">
                 Requirements exist to ensure every student can succeed in the program they choose — not to exclude people unfairly. If you are unsure whether your qualifications meet our criteria, contact our admissions team directly. In many cases, we can offer a short assessment or recommend a preparatory pathway.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={600}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group text-sm">
                   Contact Admissions <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -176,7 +175,7 @@ export default function RequirementsPage() {
                   View All Programs <ArrowRight size={16} />
                 </Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -185,15 +184,15 @@ export default function RequirementsPage() {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Met the Requirements? Apply Today." as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
-            <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Places are limited. Do not wait until the intake is full.</p></FadeInBlur>
-            <FadeInBlur delay={550}>
+            <div><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Places are limited. Do not wait until the intake is full.</p></div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Apply Now</Link>
                 <a href="#" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
                   <Download size={16} /> Download Requirements PDF
                 </a>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans, Aboreto, Geist } from "next/font/google";
+import { DM_Sans, Aboreto } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import SmoothScroll from "@/components/ui/SmoothScroll"
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+import CookieConsent from "@/components/ui/CookieConsent"
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -32,10 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en">
       <body className={`${dmSans.variable} ${aboreto.variable} font-sans antialiased`}>
         <SmoothScroll />
         {children}
+        <CookieConsent />
         <Analytics />
       </body>
     </html>

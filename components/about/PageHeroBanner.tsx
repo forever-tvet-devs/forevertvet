@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
-
 interface BreadcrumbItem {
   label: string;
   href: string;
@@ -55,7 +53,7 @@ export default function PageHeroBanner({
       <div className="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20">
         <div className="max-w-2xl">
           {/* Breadcrumb */}
-          <FadeInBlur delay={100} triggerOnScroll={false}>
+          <div>
             <nav className="flex items-center gap-0 mb-6 flex-wrap">
               {breadcrumb.map((crumb, i) => (
                 <span key={crumb.href} className="flex items-center">
@@ -75,14 +73,14 @@ export default function PageHeroBanner({
                 </span>
               ))}
             </nav>
-          </FadeInBlur>
+          </div>
 
           {/* Label */}
-          <FadeInBlur delay={200} triggerOnScroll={false}>
+          <div>
             <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
               {label}
             </span>
-          </FadeInBlur>
+          </div>
 
           {/* Title */}
           <AnimatedText
@@ -95,11 +93,11 @@ export default function PageHeroBanner({
           />
 
           {/* Sub-copy */}
-          <FadeInBlur delay={500} triggerOnScroll={false}>
+          <div>
             <p className="text-base lg:text-lg text-white/70 leading-relaxed max-w-xl">
               {subCopy}
             </p>
-          </FadeInBlur>
+          </div>
         </div>
       </div>
     </section>

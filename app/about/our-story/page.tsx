@@ -5,7 +5,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { ArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
@@ -86,11 +85,11 @@ export default function OurStoryPage() {
 
               {/* Text column */}
               <div className="space-y-6">
-                <FadeInBlur delay={0}>
+                <div>
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent">
                     Where It All Began
                   </span>
-                </FadeInBlur>
+                </div>
 
                 <AnimatedText
                   text="Established with a Vision, Built on Values"
@@ -100,7 +99,7 @@ export default function OurStoryPage() {
                   stagger={60}
                 />
 
-                <FadeInBlur delay={400}>
+                <div>
                   <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
                     In 2018, Beijing Forever Technology Co., Ltd. saw an opportunity that others had overlooked: Rwanda's youth were brimming with potential, but the gap between classroom theory and industry-ready skills was leaving too many behind. They decided to do something about it.
                   </p>
@@ -118,9 +117,9 @@ export default function OurStoryPage() {
                   <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-4">
                     Today, with over 500 graduates placed in meaningful employment and 30+ industry partners, that vision has become a living, growing reality across Kigali and beyond.
                   </p>
-                </FadeInBlur>
+                </div>
 
-                <FadeInBlur delay={600}>
+                <div>
                   <Link
                     href="/about/vision-mission"
                     className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group"
@@ -128,11 +127,11 @@ export default function OurStoryPage() {
                     Explore Our Vision & Mission
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
-                </FadeInBlur>
+                </div>
               </div>
 
               {/* Image column */}
-              <FadeInBlur delay={200}>
+              <div>
                 <div className="relative">
                   {/* Decorative offset border */}
                   <div className="absolute -top-4 -right-4 w-full h-full rounded-2xl border-2 border-accent/30 z-0" />
@@ -153,7 +152,7 @@ export default function OurStoryPage() {
                     <span className="font-heading font-bold text-white text-3xl leading-none">2018</span>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
 
             </div>
           </div>
@@ -163,11 +162,11 @@ export default function OurStoryPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-16">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Milestones
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Seven Years of Growth & Impact"
                 as="h2"
@@ -183,7 +182,7 @@ export default function OurStoryPage() {
 
               <div className="space-y-10">
                 {timeline.map((item, i) => (
-                  <FadeInBlur key={item.year} delay={300 + i * 120}>
+                  <div key={i}>
                     <div className="flex gap-6 items-start">
                       {/* Year dot */}
                       <div className="relative flex-shrink-0 hidden sm:flex flex-col items-center">
@@ -201,7 +200,7 @@ export default function OurStoryPage() {
                         <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 ))}
               </div>
             </div>
@@ -213,7 +212,7 @@ export default function OurStoryPage() {
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
               {aboutStats.map((stat, i) => (
-                <FadeInBlur key={stat.label} delay={i * 100}>
+                <div key={i}>
                   <div className={`flex flex-col items-center text-center lg:px-8 ${i < aboutStats.length - 1 ? "lg:border-r lg:border-white/10" : ""}`}>
                     <span className="font-heading font-bold text-4xl lg:text-5xl text-accent leading-none">
                       {stat.value}
@@ -222,7 +221,7 @@ export default function OurStoryPage() {
                       {stat.label}
                     </span>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -246,12 +245,12 @@ export default function OurStoryPage() {
               baseDelay={0}
               stagger={55}
             />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 Join thousands of students who turned their ambition into a career. Applications for the next intake are now open.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions/apply"
@@ -266,7 +265,7 @@ export default function OurStoryPage() {
                   Contact Us
                 </Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

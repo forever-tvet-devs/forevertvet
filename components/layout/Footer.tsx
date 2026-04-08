@@ -89,6 +89,25 @@ export default function Footer() {
               </li>
             </ul>
 
+            {/* Parent company */}
+            <a
+              href="http://www.ieforever.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 mb-6 group"
+            >
+              <div className="flex flex-col gap-2">
+                <span className="text-xs text-white/40">A subsidiary of</span>
+                <Image
+                  src="/images/forever-technology-logo.jpg"
+                  alt="Beijing Forever Technology Co., Ltd."
+                  width={160}
+                  height={40}
+                  className="rounded-md object-contain bg-white/90 px-2 py-1.5"
+                />
+              </div>
+            </a>
+
             {/* Socials */}
             <div className="flex items-center gap-2">
               {socials.map((s) => {
@@ -189,14 +208,14 @@ export default function Footer() {
             © {year} Forever Tvet Institute. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
-            <Link href="/contact" className="text-xs text-white/30 hover:text-white/60 transition-colors">
-              Contact
+            <Link href="/privacy-policy" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+              Privacy Policy
             </Link>
-            <Link href="/admissions/faqs" className="text-xs text-white/30 hover:text-white/60 transition-colors">
-              FAQs
+            <Link href="/cookies" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+              Cookies
             </Link>
-            <Link href="/admissions/apply" className="text-xs text-white/30 hover:text-white/60 transition-colors">
-              Apply Now
+            <Link href="/terms" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+              Terms of Use
             </Link>
           </div>
         </div>

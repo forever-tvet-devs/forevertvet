@@ -1,4 +1,3 @@
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { BookOpen, Flask, Users, Briefcase, ChevronRight } from "@/components/ui/Icons";
 
 const phases = [
@@ -39,7 +38,7 @@ export default function CurriculumPhases() {
         const Icon = phase.icon;
         return (
           <div key={phase.number} className="flex flex-col lg:flex-row items-stretch flex-1">
-            <FadeInBlur delay={300 + i * 120} className="flex-1">
+            <div className="flex-1">
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 h-full flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
                 {/* Header */}
                 <div className="flex items-start justify-between gap-3">
@@ -60,7 +59,7 @@ export default function CurriculumPhases() {
                 {/* Description */}
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{phase.desc}</p>
               </div>
-            </FadeInBlur>
+            </div>
 
             {/* Connector arrow — desktop only, not after last item */}
             {i < phases.length - 1 && (

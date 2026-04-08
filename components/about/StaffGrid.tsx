@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import FadeInBlur from "@/components/ui/FadeInBlur";
-
 interface StaffMember {
   name: string;
   role: string;
@@ -48,7 +46,7 @@ export default function StaffGrid() {
   return (
     <div>
       {/* Filter bar */}
-      <FadeInBlur delay={0}>
+      <div>
         <div className="overflow-x-auto -mx-4 px-4 pb-2 mb-10">
           <div className="flex gap-2 min-w-max">
             {departments.map((dept) => (
@@ -66,7 +64,7 @@ export default function StaffGrid() {
             ))}
           </div>
         </div>
-      </FadeInBlur>
+      </div>
 
       {/* Grid */}
       {filtered.length === 0 ? (
@@ -76,7 +74,7 @@ export default function StaffGrid() {
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
           {filtered.map((member, i) => (
-            <FadeInBlur key={member.name} delay={300 + i * 50}>
+            <div key={i}>
               <div className="group bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 text-center h-full flex flex-col">
                 {/* Photo */}
                 <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100 flex-shrink-0">
@@ -99,7 +97,7 @@ export default function StaffGrid() {
                   </span>
                 </div>
               </div>
-            </FadeInBlur>
+            </div>
           ))}
         </div>
       )}

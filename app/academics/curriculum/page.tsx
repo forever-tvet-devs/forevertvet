@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import CurriculumPhases from "@/components/academics/CurriculumPhases";
 import { BookOpen, Layers, Briefcase, CheckCircle, Download, ArrowRight } from "@/components/ui/Icons";
 
@@ -69,11 +68,11 @@ export default function CurriculumPage() {
         {/* Philosophy */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Our Approach
               </span>
-            </FadeInBlur>
+            </div>
 
             <AnimatedText
               text="Built by Industry, Verified by Results"
@@ -83,7 +82,7 @@ export default function CurriculumPage() {
               stagger={60}
             />
 
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-6">
                 Our curriculum was not written by academics in isolation. It was designed in direct partnership with Rwandan and international industry leaders — the people who actually hire our graduates — to ensure that every hour of study translates into practical, employer-valued competence.
               </p>
@@ -93,14 +92,14 @@ export default function CurriculumPage() {
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-4">
                 No student leaves our institution without having done the real job. That is not a marketing claim — it is a structural guarantee built into every program.
               </p>
-            </FadeInBlur>
+            </div>
 
             {/* 3-column highlights */}
             <div className="grid sm:grid-cols-3 gap-6 mt-12">
               {philosophyHighlights.map((h, i) => {
                 const Icon = h.icon;
                 return (
-                  <FadeInBlur key={h.label} delay={500 + i * 100}>
+                  <div key={i}>
                     <div className="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-gray-50">
                       <div className="w-12 h-12 rounded-xl bg-primary/8 flex items-center justify-center">
                         <Icon size={22} className="text-accent" />
@@ -108,7 +107,7 @@ export default function CurriculumPage() {
                       <p className="font-semibold text-primary text-sm">{h.label}</p>
                       <p className="text-xs text-gray-500 leading-relaxed">{h.desc}</p>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -119,11 +118,11 @@ export default function CurriculumPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   The Learning Journey
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Four Phases from Classroom to Career"
                 as="h2"
@@ -131,11 +130,11 @@ export default function CurriculumPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base lg:text-lg text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
                   Every program follows the same four-phase structure. The phases are sequential and cumulative — each one builds directly on the last.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <CurriculumPhases />
@@ -149,11 +148,11 @@ export default function CurriculumPage() {
 
               {/* Left */}
               <div className="space-y-6">
-                <FadeInBlur delay={0}>
+                <div>
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent">
                     Assessment & Qualifications
                   </span>
-                </FadeInBlur>
+                </div>
 
                 <AnimatedText
                   text="What Your Child Earns"
@@ -163,7 +162,7 @@ export default function CurriculumPage() {
                   stagger={60}
                 />
 
-                <FadeInBlur delay={400}>
+                <div>
                   <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
                     Assessment at Forever Tvet is holistic and continuous — not just a single end-of-year exam. Your performance is tracked across three dimensions throughout the program.
                   </p>
@@ -185,9 +184,9 @@ export default function CurriculumPage() {
                       </div>
                     ))}
                   </div>
-                </FadeInBlur>
+                </div>
 
-                <FadeInBlur delay={600}>
+                <div>
                   <Link
                     href="/about/accreditations"
                     className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group"
@@ -195,11 +194,11 @@ export default function CurriculumPage() {
                     View Accreditations
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
-                </FadeInBlur>
+                </div>
               </div>
 
               {/* Right — cert card */}
-              <FadeInBlur delay={200}>
+              <div>
                 <div className="relative rounded-2xl bg-primary p-8 text-white shadow-xl overflow-hidden">
                   {/* Pattern overlay */}
                   <div
@@ -236,7 +235,7 @@ export default function CurriculumPage() {
                     </p>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
             </div>
           </div>
         </section>
@@ -245,11 +244,11 @@ export default function CurriculumPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   All Programs
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Compare Our Five Programs"
                 as="h2"
@@ -259,7 +258,7 @@ export default function CurriculumPage() {
               />
             </div>
 
-            <FadeInBlur delay={300}>
+            <div>
               <div className="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
                 <table className="w-full text-sm">
                   <thead>
@@ -285,9 +284,9 @@ export default function CurriculumPage() {
                   </tbody>
                 </table>
               </div>
-            </FadeInBlur>
+            </div>
 
-            <FadeInBlur delay={500}>
+            <div>
               <div className="text-center mt-8">
                 <Link
                   href="/academics/departments"
@@ -297,7 +296,7 @@ export default function CurriculumPage() {
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -318,12 +317,12 @@ export default function CurriculumPage() {
               baseDelay={0}
               stagger={55}
             />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 Intake opens twice a year. Secure your place before applications close.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions/apply"
@@ -339,7 +338,7 @@ export default function CurriculumPage() {
                   Download Prospectus
                 </a>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

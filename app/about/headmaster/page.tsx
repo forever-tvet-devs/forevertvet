@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { Award, Star, Mail } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
@@ -77,7 +76,7 @@ export default function HeadmasterPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
 
               {/* Left — portrait + name card */}
-              <FadeInBlur delay={100}>
+              <div>
                 <div className="space-y-6">
                   {/* Portrait */}
                   <div className="relative">
@@ -101,7 +100,7 @@ export default function HeadmasterPage() {
                   </div>
 
                   {/* Credentials strip */}
-                  <FadeInBlur delay={300}>
+                  <div>
                     <div className="flex flex-wrap gap-2">
                       {credentials.map((c) => (
                         <span
@@ -112,10 +111,10 @@ export default function HeadmasterPage() {
                         </span>
                       ))}
                     </div>
-                  </FadeInBlur>
+                  </div>
 
                   {/* Contact */}
-                  <FadeInBlur delay={450}>
+                  <div>
                     <a
                       href="mailto:headmaster@forevertvet.rw"
                       className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors"
@@ -123,17 +122,17 @@ export default function HeadmasterPage() {
                       <Mail size={16} />
                       headmaster@forevertvet.rw
                     </a>
-                  </FadeInBlur>
+                  </div>
                 </div>
-              </FadeInBlur>
+              </div>
 
               {/* Right — bio */}
               <div className="space-y-6">
-                <FadeInBlur delay={0}>
+                <div>
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent">
                     School Leadership
                   </span>
-                </FadeInBlur>
+                </div>
 
                 <AnimatedText
                   text="Mr. Jean-Baptiste Nkurunziza, Headmaster"
@@ -143,7 +142,7 @@ export default function HeadmasterPage() {
                   stagger={60}
                 />
 
-                <FadeInBlur delay={400}>
+                <div>
                   <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
                     Mr. Nkurunziza brings over 16 years of experience in technical and vocational education, with a career that spans classroom instruction, curriculum design, and high-level industry partnership development across East Africa.
                   </p>
@@ -156,7 +155,7 @@ export default function HeadmasterPage() {
                   <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-4">
                     He is known across the institution not for his credentials, but for the fact that he knows every student by name — and means it.
                   </p>
-                </FadeInBlur>
+                </div>
               </div>
             </div>
           </div>
@@ -165,38 +164,38 @@ export default function HeadmasterPage() {
         {/* Headmaster's Letter */}
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-8 text-center">
                 A Message from the Headmaster
               </span>
-            </FadeInBlur>
+            </div>
 
             {/* Quote mark */}
-            <FadeInBlur delay={100}>
+            <div>
               <div className="font-heading font-black text-8xl leading-none text-accent/20 select-none mb-0" aria-hidden="true">
                 "
               </div>
-            </FadeInBlur>
+            </div>
 
             <div className="space-y-5">
               {letterParagraphs.map((para, i) => (
-                <FadeInBlur key={i} delay={200 + i * 150}>
+                <div key={i}>
                   <p className={`text-base lg:text-lg text-gray-700 leading-relaxed ${i === 0 ? "italic font-medium" : ""}`}>
                     {para}
                   </p>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
 
             {/* Signature */}
-            <FadeInBlur delay={900}>
+            <div>
               <div className="mt-10 pt-8 border-t border-gray-200">
                 <div className="w-16 h-1 bg-primary rounded-full mb-6" />
                 <p className="font-heading text-2xl italic text-primary font-bold">Jean-Baptiste Nkurunziza</p>
                 <p className="text-sm text-gray-500 mt-1">Headmaster, Forever Tvet Institute</p>
                 <p className="text-xs text-gray-400 mt-0.5">Kigali, Rwanda · 2025</p>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -210,7 +209,7 @@ export default function HeadmasterPage() {
             }}
           />
           <div className="relative max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <div className="font-heading font-black text-8xl leading-none text-accent/30 select-none mb-2" aria-hidden="true">
                 "
               </div>
@@ -220,7 +219,7 @@ export default function HeadmasterPage() {
               <p className="text-sm text-white/50 mt-6">
                 — Mr. Jean-Baptiste Nkurunziza, Headmaster
               </p>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -228,11 +227,11 @@ export default function HeadmasterPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Recognition
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Awards & Professional Recognition"
                 as="h2"
@@ -244,7 +243,7 @@ export default function HeadmasterPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((award, i) => (
-                <FadeInBlur key={award.title} delay={300 + i * 100}>
+                <div key={i}>
                   <div className="rounded-xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200 bg-white h-full flex flex-col items-center">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                       <Award size={22} className="text-accent" />
@@ -253,7 +252,7 @@ export default function HeadmasterPage() {
                     <h3 className="text-base font-semibold text-primary mt-2 mb-1 leading-snug">{award.title}</h3>
                     <p className="text-xs text-gray-500 leading-relaxed">{award.body}</p>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -262,9 +261,9 @@ export default function HeadmasterPage() {
         {/* CTA */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <Star size={36} className="text-accent mx-auto mb-4" />
-            </FadeInBlur>
+            </div>
             <AnimatedText
               text="Meet the Full Leadership Team"
               as="h2"
@@ -272,19 +271,19 @@ export default function HeadmasterPage() {
               baseDelay={100}
               stagger={60}
             />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base text-gray-500 mb-8">
                 Beyond the headmaster, our institution is driven by a dedicated team of educators, department heads, and administrative staff.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={500}>
+            </div>
+            <div>
               <a
                 href="/about/staff-faculty"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors shadow-md"
+                className="bg-primary inline-flex items-center gap-2 px-8 py-3.5 text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors shadow-md"
               >
                 Meet Staff & Faculty
               </a>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

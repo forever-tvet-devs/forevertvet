@@ -215,7 +215,7 @@ export default function ParentContactForm() {
 
       <button
         type="submit"
-        className="w-full py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors text-sm shadow-sm mt-2"
+        className="bg-primary w-full py-3 text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors text-sm shadow-sm mt-2"
       >
         Submit Concern
       </button>

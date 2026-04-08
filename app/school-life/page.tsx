@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import {
   Camera, Play, Palette, Building, Calendar, Trophy,
   Users, Star, BookOpen, ArrowRight,
@@ -59,22 +58,22 @@ export default function SchoolLifePage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Why It Matters</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="More Than a Training School" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-              <FadeInBlur delay={400}>
+              <div>
                 <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-5 max-w-2xl mx-auto">
                   Great technicians are built in labs. Complete professionals are built through the full breadth of campus life — sport, community, creativity, and challenge.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-6">
               {highlights.map((h, i) => {
                 const Icon = h.icon;
                 return (
-                  <FadeInBlur key={h.stat} delay={300 + i * 100}>
+                  <div key={i}>
                     <div className="rounded-2xl bg-gray-50 border border-gray-100 p-7 text-center hover:shadow-md transition-shadow duration-200">
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <Icon size={24} className="text-accent" />
@@ -82,7 +81,7 @@ export default function SchoolLifePage() {
                       <p className="font-heading font-bold text-xl text-primary mb-2">{h.stat}</p>
                       <p className="text-sm text-gray-500 leading-relaxed">{h.desc}</p>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -93,9 +92,9 @@ export default function SchoolLifePage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">What We Offer</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Explore Every Dimension of Campus Life" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
 
@@ -103,7 +102,7 @@ export default function SchoolLifePage() {
               {areas.map((area, i) => {
                 const Icon = area.icon;
                 return (
-                  <FadeInBlur key={area.label} delay={300 + i * 80}>
+                  <div key={i}>
                     <Link
                       href={area.href}
                       className="rounded-2xl bg-white border border-gray-100 shadow-sm p-6 flex flex-col group hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
@@ -117,7 +116,7 @@ export default function SchoolLifePage() {
                         Explore <ArrowRight size={15} />
                       </div>
                     </Link>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -128,15 +127,15 @@ export default function SchoolLifePage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Student Life</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Hear From Our Students" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
 
             <div className="grid md:grid-cols-3 gap-5">
               {quotes.map((q, i) => (
-                <FadeInBlur key={q.name} delay={300 + i * 120}>
+                <div key={i}>
                   <div className="rounded-xl bg-gray-50 border border-gray-100 p-6 flex flex-col h-full">
                     <p className="text-4xl font-black text-accent/30 leading-none mb-2">&ldquo;</p>
                     <p className="text-sm text-gray-700 leading-relaxed italic flex-1">{q.text}</p>
@@ -150,7 +149,7 @@ export default function SchoolLifePage() {
                       </div>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -161,13 +160,13 @@ export default function SchoolLifePage() {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Your Story Starts Here" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
-            <FadeInBlur delay={350}><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Join a campus where ambition meets opportunity every single day.</p></FadeInBlur>
-            <FadeInBlur delay={550}>
+            <div><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Join a campus where ambition meets opportunity every single day.</p></div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Apply Now</Link>
                 <Link href="/academics/departments" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">Explore Programs</Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

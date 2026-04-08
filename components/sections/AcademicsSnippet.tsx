@@ -51,6 +51,10 @@ export default function AcademicsSnippet() {
     const track = trackRef.current;
     if (!section || !track) return;
 
+    // Disable horizontal scroll animation on mobile
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return;
+
     const totalScroll = track.scrollWidth - window.innerWidth;
 
     const tween = gsap.to(track, {
@@ -73,10 +77,10 @@ export default function AcademicsSnippet() {
 
   return (
     <section ref={sectionRef} className="overflow-hidden bg-gray-50">
-      <div ref={trackRef} className="flex items-stretch h-screen will-change-transform">
+      <div ref={trackRef} className="flex flex-col md:flex-row md:items-stretch md:h-screen will-change-transform">
 
         {/* Intro panel */}
-        <div className="shrink-0 w-screen h-full flex items-center px-3 sm:px-4 md:px-4 lg:px-4">
+        <div className="shrink-0 w-full md:w-screen py-16 md:py-0 md:h-full flex items-center px-3 sm:px-4 md:px-4 lg:px-4">
           <div className="max-w-7xl mx-auto w-full">
             <div className="max-w-xl">
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -89,7 +93,7 @@ export default function AcademicsSnippet() {
                 Each programme moves from theory to simulation to practical operation,
                 then into paid internships with partner companies.
               </p>
-              <div className="flex items-center gap-3 mt-8 text-gray-400 animate-[nudge_2s_ease-in-out_infinite]">
+              <div className="hidden md:flex items-center gap-3 mt-8 text-gray-400 animate-[nudge_2s_ease-in-out_infinite]">
                 <span className="text-sm">Scroll to explore</span>
                 <ArrowRight size={16} />
               </div>
@@ -107,9 +111,9 @@ export default function AcademicsSnippet() {
         {departments.map((dept, i) => (
           <div
             key={dept.title}
-            className="shrink-0 w-[85vw] sm:w-[70vw] lg:w-[45vw] h-full flex items-center px-3 sm:px-4"
+            className="shrink-0 w-full md:w-[70vw] lg:w-[45vw] md:h-full flex items-center px-3 sm:px-4 pb-4 md:pb-0"
           >
-            <div className="relative w-full h-[70vh] rounded-2xl overflow-hidden group">
+            <div className="relative w-full h-[60vh] md:h-[70vh] rounded-2xl overflow-hidden group">
               {/* Image */}
               <Image
                 src={dept.image}
@@ -150,7 +154,7 @@ export default function AcademicsSnippet() {
         ))}
 
         {/* End CTA panel */}
-        <div className="shrink-0 w-screen h-full flex items-center justify-center px-3 sm:px-4 md:px-4 lg:px-4">
+        <div className="shrink-0 w-full md:w-screen py-16 md:py-0 md:h-full flex items-center justify-center px-3 sm:px-4 md:px-4 lg:px-4">
           <div className="text-center">
             <h3 className="font-heading font-bold text-3xl lg:text-5xl text-body leading-tight mb-6">
               Ready to Start?

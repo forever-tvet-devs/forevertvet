@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import ResultsChart from "@/components/academics/ResultsChart";
 import { Award, ArrowRight } from "@/components/ui/Icons";
 
@@ -91,11 +90,11 @@ export default function ResultsPage() {
         <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   By the Numbers
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="The Proof Is in the Outcomes"
                 as="h2"
@@ -107,7 +106,7 @@ export default function ResultsPage() {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
               {headlineStats.map((stat, i) => (
-                <FadeInBlur key={stat.label} delay={i * 100}>
+                <div key={i}>
                   <div className={`flex flex-col items-center text-center lg:px-8 ${i < headlineStats.length - 1 ? "lg:border-r lg:border-gray-100" : ""}`}>
                     <span className="font-heading font-black text-5xl lg:text-6xl text-primary leading-none">
                       {stat.value}
@@ -116,7 +115,7 @@ export default function ResultsPage() {
                       {stat.label}
                     </span>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -126,11 +125,11 @@ export default function ResultsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Employment Outcomes
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Graduate Employment Rate by Department"
                 as="h2"
@@ -138,18 +137,18 @@ export default function ResultsPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4 max-w-xl">
                   Employment rates are calculated 6 months after graduation. A graduate is counted as employed when working in a field directly related to their program.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
-            <FadeInBlur delay={300}>
+            <div>
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 lg:p-8">
                 <ResultsChart />
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -157,11 +156,11 @@ export default function ResultsPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   National Examinations
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Three Years of Examination Results"
                 as="h2"
@@ -171,7 +170,7 @@ export default function ResultsPage() {
               />
             </div>
 
-            <FadeInBlur delay={300}>
+            <div>
               <div className="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
                 <table className="w-full text-sm">
                   <thead>
@@ -198,17 +197,17 @@ export default function ResultsPage() {
                   </tbody>
                 </table>
               </div>
-            </FadeInBlur>
+            </div>
 
             {/* Auditor quote */}
-            <FadeInBlur delay={500}>
+            <div>
               <blockquote className="border-l-4 border-accent pl-6 mt-8 italic text-gray-700 text-base lg:text-lg leading-relaxed">
                 "Forever Tvet consistently demonstrates pass rates in the top quartile of registered TVET institutions in Rwanda, with year-on-year improvement across all assessment categories."
                 <footer className="mt-2 text-sm text-gray-400 not-italic">
                   — Rwanda WDA Quality Audit Report, 2024
                 </footer>
               </blockquote>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -216,11 +215,11 @@ export default function ResultsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Alumni Stories
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="The People Behind the Numbers"
                 as="h2"
@@ -232,7 +231,7 @@ export default function ResultsPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {alumni.map((person, i) => (
-                <FadeInBlur key={person.name} delay={300 + i * 150}>
+                <div key={i}>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6 h-full flex flex-col">
                     {/* Avatar + name */}
                     <div className="flex items-center gap-4 mb-4">
@@ -260,7 +259,7 @@ export default function ResultsPage() {
 
                     <p className="text-xs text-gray-400 mt-4">Graduate {person.year}</p>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -270,11 +269,11 @@ export default function ResultsPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-14">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Recognition
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Awards & External Recognition"
                 as="h2"
@@ -286,7 +285,7 @@ export default function ResultsPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {awards.map((award, i) => (
-                <FadeInBlur key={award.title} delay={300 + i * 100}>
+                <div key={i}>
                   <div className="rounded-xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200 bg-white h-full flex flex-col items-center">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                       <Award size={22} className="text-accent" />
@@ -295,7 +294,7 @@ export default function ResultsPage() {
                     <h3 className="text-sm font-semibold text-primary mt-2 mb-1 leading-snug">{award.title}</h3>
                     <p className="text-xs text-gray-400 leading-snug">{award.body}</p>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -318,12 +317,12 @@ export default function ResultsPage() {
               baseDelay={0}
               stagger={55}
             />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 Join the institution with Rwanda's highest TVET graduate employment rate.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions/apply"
@@ -339,7 +338,7 @@ export default function ResultsPage() {
                   <ArrowRight size={16} />
                 </Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

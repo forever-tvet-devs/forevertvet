@@ -1,5 +1,4 @@
 import Image from "next/image";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { CheckCircle } from "@/components/ui/Icons";
 
 interface Facility {
@@ -94,7 +93,7 @@ export default function FacilitiesShowcase() {
           <div key={facility.name} className="py-16 lg:py-20">
             <div className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center`}>
               {/* Image */}
-              <FadeInBlur delay={100} className={isEven ? "lg:order-2" : ""}>
+              <div className={isEven ? "lg:order-2" : ""}>
                 <div className="rounded-2xl overflow-hidden aspect-[4/3] relative shadow-md">
                   <Image
                     src={facility.image}
@@ -105,10 +104,10 @@ export default function FacilitiesShowcase() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-              </FadeInBlur>
+              </div>
 
               {/* Content */}
-              <FadeInBlur delay={250} className={isEven ? "lg:order-1" : ""}>
+              <div className={isEven ? "lg:order-1" : ""}>
                 <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent bg-primary/10 px-3 py-1 rounded-full mb-3">
                   {facility.tag}
                 </span>
@@ -126,7 +125,7 @@ export default function FacilitiesShowcase() {
                     </li>
                   ))}
                 </ul>
-              </FadeInBlur>
+              </div>
             </div>
           </div>
         );

@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import FaqAccordion from "@/components/admissions/FaqAccordion";
 import { Phone, Mail, MapPin, ArrowRight } from "@/components/ui/Icons";
 
@@ -60,9 +59,9 @@ export default function FaqsPage() {
         {/* Intro */}
         <section className="py-16 lg:py-20 bg-white">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Find Your Answer</span>
-            </FadeInBlur>
+            </div>
             <AnimatedText
               text="We Have Answered the Most Common Questions"
               as="h2"
@@ -70,11 +69,11 @@ export default function FaqsPage() {
               baseDelay={100}
               stagger={60}
             />
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-5">
                 Use the category filters below to find answers quickly. If your question is not listed, our admissions team is always reachable — you will never be left without a response.
               </p>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -89,9 +88,9 @@ export default function FaqsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Get in Touch</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Still Have a Question?"
                 as="h2"
@@ -99,18 +98,18 @@ export default function FaqsPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4 max-w-xl mx-auto">
                   Our admissions team is small, experienced, and genuinely happy to help. Reach us however is most convenient for you.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-5">
               {contactOptions.map((opt, i) => {
                 const Icon = opt.icon;
                 return (
-                  <FadeInBlur key={opt.label} delay={400 + i * 100}>
+                  <div key={i}>
                     <a
                       href={opt.href}
                       className="flex flex-col items-center text-center p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full group"
@@ -122,12 +121,12 @@ export default function FaqsPage() {
                       <p className="text-sm font-medium text-accent mb-1">{opt.value}</p>
                       <p className="text-xs text-gray-400 leading-snug">{opt.note}</p>
                     </a>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
 
-            <FadeInBlur delay={700}>
+            <div>
               <div className="mt-10 text-center">
                 <Link
                   href="/contact"
@@ -137,7 +136,7 @@ export default function FaqsPage() {
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -146,15 +145,15 @@ export default function FaqsPage() {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Ready to Apply?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">The application takes less than 20 minutes. Your questions are answered — now take the step.</p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Start Application</Link>
                 <Link href="/admissions/how-to-apply" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">How to Apply</Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

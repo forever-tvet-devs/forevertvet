@@ -8,6 +8,7 @@ import LatestNews from "@/components/sections/LatestNews";
 import UpcomingEvents from "@/components/sections/UpcomingEvents";
 import GalleryPreview from "@/components/sections/GalleryPreview";
 import Testimonials from "@/components/sections/Testimonials";
+import PartnersMarquee from "@/components/sections/PartnersMarquee";
 import AdmissionsCTA from "@/components/sections/AdmissionsCTA";
 import ContactSnippet from "@/components/sections/ContactSnippet";
 
@@ -24,6 +25,7 @@ export default function Home() {
         <UpcomingEvents />
         <GalleryPreview />
         <Testimonials />
+        <PartnersMarquee />
         <AdmissionsCTA />
         <ContactSnippet />
       </main>

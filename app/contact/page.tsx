@@ -3,7 +3,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import ContactForm from "@/components/contact/ContactForm";
 import {
   Phone, Mail, MapPin, Clock, GraduationCap, Users,
@@ -114,7 +113,7 @@ export default function ContactPage() {
               {quickTiles.map((tile, i) => {
                 const Icon = tile.icon;
                 return (
-                  <FadeInBlur key={tile.label} delay={200 + i * 80}>
+                  <div key={i}>
                     <a
                       href={tile.href}
                       className="rounded-xl border border-gray-100 bg-gray-50 p-5 flex flex-col items-center text-center group hover:bg-white hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 h-full"
@@ -126,7 +125,7 @@ export default function ContactPage() {
                       <p className="font-semibold text-primary text-sm leading-snug mb-1">{tile.value}</p>
                       <p className="text-xs text-gray-400">{tile.sub}</p>
                     </a>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -139,17 +138,17 @@ export default function ContactPage() {
             <div className="grid lg:grid-cols-[1fr_300px] gap-10 items-start">
 
               {/* Form */}
-              <FadeInBlur delay={0}>
+              <div>
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 lg:p-8">
                   <ContactForm />
                 </div>
-              </FadeInBlur>
+              </div>
 
               {/* Sidebar */}
               <aside className="space-y-4 lg:sticky lg:top-24">
 
                 {/* Office Hours */}
-                <FadeInBlur delay={200}>
+                <div>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
                     <div className="flex items-center gap-2.5 mb-4">
                       <Clock size={16} className="text-accent" />
@@ -165,10 +164,10 @@ export default function ContactPage() {
                     </div>
                     <p className="text-xs text-gray-400 mt-3">Walk-ins welcome during office hours.</p>
                   </div>
-                </FadeInBlur>
+                </div>
 
                 {/* Direct Contacts */}
-                <FadeInBlur delay={300}>
+                <div>
                   <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
                     <p className="font-semibold text-primary text-sm mb-4">Direct Contacts</p>
                     <div className="space-y-2">
@@ -187,10 +186,10 @@ export default function ContactPage() {
                       ))}
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
 
                 {/* Social */}
-                <FadeInBlur delay={400}>
+                <div>
                   <div className="bg-primary rounded-xl p-5">
                     <p className="font-semibold text-white text-sm mb-1">Follow Us</p>
                     <p className="text-xs text-white/60 leading-relaxed mb-4">Stay updated on news, events, and achievements.</p>
@@ -210,7 +209,7 @@ export default function ContactPage() {
                       })}
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               </aside>
             </div>
           </div>
@@ -220,11 +219,11 @@ export default function ContactPage() {
         <section id="map" className="py-16 lg:py-20 bg-white">
           <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-8">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Location</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Find Us" as="h2" className="font-heading font-bold text-2xl lg:text-3xl text-body leading-tight" baseDelay={100} stagger={60} />
-              <FadeInBlur delay={300}>
+              <div>
                 <div className="flex items-center justify-center gap-2 mt-3">
                   <MapPin size={15} className="text-accent flex-shrink-0" />
                   <p className="text-sm text-gray-600">KG 15 Ave, Kigali, Rwanda</p>
@@ -237,10 +236,10 @@ export default function ContactPage() {
                     Get directions ↗
                   </a>
                 </div>
-              </FadeInBlur>
+              </div>
             </div>
 
-            <FadeInBlur delay={300}>
+            <div>
               <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm" style={{ height: "480px" }}>
                 <iframe
                   title="Forever Tvet Institute location"
@@ -254,7 +253,7 @@ export default function ContactPage() {
                 />
               </div>
               <p className="text-xs text-gray-400 mt-3 text-center">Approximately 10 minutes from Kigali city centre by taxi.</p>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -262,22 +261,22 @@ export default function ContactPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Departments</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Contact the Right Department" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4 max-w-xl mx-auto">
                   Know exactly who you need? Go straight to the right person.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {departments.map((dept, i) => {
                 const Icon = dept.icon;
                 return (
-                  <FadeInBlur key={dept.name} delay={200 + i * 80}>
+                  <div key={i}>
                     <div className="rounded-xl bg-white border border-gray-100 shadow-sm overflow-hidden flex flex-col h-full">
                       <div className="h-0.5 bg-primary" />
                       <div className="p-5 flex-1 flex flex-col">
@@ -296,7 +295,7 @@ export default function ContactPage() {
                         </div>
                       </div>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>

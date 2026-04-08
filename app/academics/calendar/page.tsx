@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import CalendarGrid from "@/components/academics/CalendarGrid";
 import { FileText, Download } from "@/components/ui/Icons";
 
@@ -92,11 +91,11 @@ export default function CalendarPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Academic Year 2026
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Two Intakes. One Year. Your Future."
                 as="h2"
@@ -108,7 +107,7 @@ export default function CalendarPage() {
 
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Intake 1 */}
-              <FadeInBlur delay={300}>
+              <div>
                 <div className="rounded-xl border border-gray-100 shadow-sm overflow-hidden bg-white">
                   <div className="h-2 bg-primary" />
                   <div className="p-6">
@@ -132,10 +131,10 @@ export default function CalendarPage() {
                     </div>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
 
               {/* Intake 2 */}
-              <FadeInBlur delay={450}>
+              <div>
                 <div className="rounded-xl border border-gray-100 shadow-sm overflow-hidden bg-white">
                   <div className="h-2 bg-primary" />
                   <div className="p-6">
@@ -159,7 +158,7 @@ export default function CalendarPage() {
                     </div>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
             </div>
           </div>
         </section>
@@ -168,11 +167,11 @@ export default function CalendarPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Month by Month
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Full Year Calendar View"
                 as="h2"
@@ -180,11 +179,11 @@ export default function CalendarPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 mt-4 leading-relaxed max-w-xl">
                   Switch between intakes to see what happens each month across the academic year.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             <CalendarGrid />
@@ -195,11 +194,11 @@ export default function CalendarPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Quick Reference
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Key Dates at a Glance"
                 as="h2"
@@ -209,7 +208,7 @@ export default function CalendarPage() {
               />
             </div>
 
-            <FadeInBlur delay={300}>
+            <div>
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
                 <table className="w-full text-sm">
                   <thead>
@@ -243,7 +242,7 @@ export default function CalendarPage() {
                   </tbody>
                 </table>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -251,11 +250,11 @@ export default function CalendarPage() {
         <section className="py-16 lg:py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-10">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Downloads
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Take the Calendar With You"
                 as="h2"
@@ -267,7 +266,7 @@ export default function CalendarPage() {
 
             <div className="grid sm:grid-cols-2 gap-5">
               {downloads.map((doc, i) => (
-                <FadeInBlur key={doc.title} delay={300 + i * 150}>
+                <div key={i}>
                   <div className="bg-white rounded-xl border border-gray-100 p-6 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow duration-200">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <FileText size={22} className="text-accent" />
@@ -286,7 +285,7 @@ export default function CalendarPage() {
                       </a>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -309,12 +308,12 @@ export default function CalendarPage() {
               baseDelay={0}
               stagger={55}
             />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 Places are limited to 20 students per program. Do not miss the intake.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/admissions/apply"
@@ -329,7 +328,7 @@ export default function CalendarPage() {
                   Contact Admissions
                 </Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

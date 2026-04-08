@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { Cpu, Palette, Trophy, Tree, MessageCircle, Music, Users } from "@/components/ui/Icons";
 
 type ClubCategory = "Technology" | "Creative" | "Sports" | "Environment" | "Community";
@@ -46,7 +45,7 @@ export default function ClubsGrid() {
   return (
     <div>
       {/* Filter tabs */}
-      <FadeInBlur delay={0}>
+      <div>
         <div className="overflow-x-auto -mx-4 px-4 pb-2 mb-8">
           <div className="flex gap-2 min-w-max">
             {filters.map((f) => (
@@ -64,7 +63,7 @@ export default function ClubsGrid() {
             ))}
           </div>
         </div>
-      </FadeInBlur>
+      </div>
 
       {/* Empty state */}
       {displayed.length === 0 && (
@@ -78,7 +77,7 @@ export default function ClubsGrid() {
         {displayed.map((club, i) => {
           const Icon = club.icon;
           return (
-            <FadeInBlur key={club.name} delay={i * 60}>
+            <div key={i}>
               <div className="rounded-xl bg-white border border-gray-100 shadow-sm p-5 flex flex-col h-full hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
                 {/* Badge */}
                 <div className="flex items-start justify-between mb-3">
@@ -115,7 +114,7 @@ export default function ClubsGrid() {
                   </a>
                 )}
               </div>
-            </FadeInBlur>
+            </div>
           );
         })}
       </div>

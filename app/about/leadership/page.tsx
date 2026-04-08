@@ -3,8 +3,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
-
 export const metadata: Metadata = {
   title: "Our Leadership Team — Forever Tvet Institute",
   description:
@@ -80,11 +78,11 @@ export default function LeadershipPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="max-w-3xl mb-16">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Who We Are
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Guided by Experience, Driven by Purpose"
                 as="h2"
@@ -92,17 +90,17 @@ export default function LeadershipPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base lg:text-lg text-gray-500 mt-4 leading-relaxed">
                   Our leadership team combines decades of expertise in vocational education, industry partnerships, and institutional management. Together, they ensure Forever Tvet Institute remains at the forefront of practical skills training in Rwanda.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
 
             {/* Leadership Grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {leaders.map((leader, i) => (
-                <FadeInBlur key={leader.name} delay={i * 100}>
+                <div key={i}>
                   <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow duration-200">
                     {/* Avatar */}
                     <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-4">
@@ -116,7 +114,7 @@ export default function LeadershipPage() {
                     <p className="text-sm font-medium text-primary mb-3">{leader.role}</p>
                     <p className="text-sm text-gray-500 leading-relaxed">{leader.bio}</p>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -132,7 +130,7 @@ export default function LeadershipPage() {
                 { value: "3", label: "Countries Represented" },
                 { value: "100%", label: "Industry Background" },
               ].map((stat, i) => (
-                <FadeInBlur key={stat.label} delay={i * 100}>
+                <div key={i}>
                   <div className={`flex flex-col items-center text-center lg:px-8 ${i < 3 ? "lg:border-r lg:border-white/10" : ""}`}>
                     <span className="font-heading font-bold text-4xl lg:text-5xl text-accent leading-none">
                       {stat.value}
@@ -141,7 +139,7 @@ export default function LeadershipPage() {
                       {stat.label}
                     </span>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>

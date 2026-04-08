@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { ChevronDown } from "@/components/ui/Icons";
 
 type Category = "All" | "Eligibility" | "Application" | "Fees & Payment" | "Programs" | "Student Life";
@@ -64,7 +63,7 @@ export default function FaqAccordion() {
   return (
     <div>
       {/* Category filter */}
-      <FadeInBlur delay={0}>
+      <div>
         <div className="overflow-x-auto -mx-4 px-4 pb-2 mb-8">
           <div className="flex gap-2 min-w-max">
             {categories.map((cat) => (
@@ -82,10 +81,10 @@ export default function FaqAccordion() {
             ))}
           </div>
         </div>
-      </FadeInBlur>
+      </div>
 
       {/* Accordion */}
-      <FadeInBlur delay={200} key={activeCategory}>
+      <div>
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
           {filtered.map((faq, i) => {
             const isOpen = openIndex === i;
@@ -117,7 +116,7 @@ export default function FaqAccordion() {
             );
           })}
         </div>
-      </FadeInBlur>
+      </div>
     </div>
   );
 }

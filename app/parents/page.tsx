@@ -5,7 +5,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import ParentContactForm from "@/components/parents/ParentContactForm";
 import {
   Calendar, Phone, Mail, Users, Shield, CheckCircle, ArrowRight,
@@ -82,22 +81,22 @@ export default function ParentsPage() {
             <div className="grid lg:grid-cols-[3fr_2fr] gap-10 lg:gap-14 items-start">
               {/* Left */}
               <div>
-                <FadeInBlur delay={0}>
+                <div>
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">A Message to Our Parent Community</span>
-                </FadeInBlur>
+                </div>
                 <AnimatedText text="You Are Part of This" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-                <FadeInBlur delay={400}>
+                <div>
                   <p className="text-base text-gray-600 leading-relaxed mt-5">
                     At Forever Tvet Institute, we believe that a student's success is a shared responsibility — shared between the student, the school, and their family. We do not treat parents as passive observers. You are active participants in your child's journey, and we have built the structures to make that real.
                   </p>
                   <p className="text-base text-gray-600 leading-relaxed mt-4">
                     This page is your resource hub. You will find the people to speak to, the channels to use, and the meetings to attend. If something concerns you, we want to hear it early — not after it has grown.
                   </p>
-                </FadeInBlur>
+                </div>
               </div>
 
               {/* Right — quote card */}
-              <FadeInBlur delay={200}>
+              <div>
                 <div className="rounded-2xl bg-primary/5 border border-accent/20 p-7">
                   <p className="text-4xl font-black text-accent/40 leading-none mb-3">&ldquo;</p>
                   <p className="text-base text-gray-700 leading-relaxed italic">
@@ -105,7 +104,7 @@ export default function ParentsPage() {
                   </p>
                   <p className="text-xs font-semibold text-gray-400 mt-4 uppercase tracking-wide">— The Headmaster, Forever Tvet Institute</p>
                 </div>
-              </FadeInBlur>
+              </div>
             </div>
           </div>
         </section>
@@ -114,15 +113,15 @@ export default function ParentsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Your Representative</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Meet the Head Parent" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
 
             <div className="grid lg:grid-cols-[2fr_3fr] gap-10 lg:gap-14 items-start">
               {/* Photo */}
-              <FadeInBlur delay={100}>
+              <div>
                 <div>
                   <div className="rounded-2xl overflow-hidden aspect-[3/4] relative shadow-md">
                     <Image
@@ -139,13 +138,13 @@ export default function ParentsPage() {
                     <p className="text-sm font-bold">2026 Academic Year</p>
                   </div>
                 </div>
-              </FadeInBlur>
+              </div>
 
               {/* Profile */}
               <div>
-                <FadeInBlur delay={0}>
+                <div>
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-3">Head Parent — Intake 2026</span>
-                </FadeInBlur>
+                </div>
                 <AnimatedText
                   text="Mme. Chantal Uwimana"
                   as="h3"
@@ -153,7 +152,7 @@ export default function ParentsPage() {
                   baseDelay={100}
                   stagger={55}
                 />
-                <FadeInBlur delay={400}>
+                <div>
                   <p className="text-base text-gray-600 leading-relaxed mt-5">
                     Mme. Uwimana is a qualified accountant with over 15 years of experience in Rwanda's public and private sectors. She is the parent of a current Industrial Electricity student at Forever Tvet Institute.
                   </p>
@@ -163,10 +162,10 @@ export default function ParentsPage() {
                   <p className="text-base text-gray-600 leading-relaxed mt-4">
                     She was elected unanimously by the Intake 2026 parent body at Orientation Day. Her priority for the year is improving parent communication channels and ensuring every concern is acknowledged within 48 hours.
                   </p>
-                </FadeInBlur>
+                </div>
 
                 {/* Contact card */}
-                <FadeInBlur delay={600}>
+                <div>
                   <div className="mt-6 rounded-xl bg-white border border-gray-100 shadow-sm p-5 space-y-3">
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Direct Contact</p>
                     <a href="tel:+250788000001" className="flex items-center gap-3 text-sm text-primary hover:text-accent transition-colors group">
@@ -186,7 +185,7 @@ export default function ParentsPage() {
                       Use the form below first for general concerns.
                     </p>
                   </div>
-                </FadeInBlur>
+                </div>
               </div>
             </div>
           </div>
@@ -198,18 +197,18 @@ export default function ParentsPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left — copy */}
               <div>
-                <FadeInBlur delay={0}>
+                <div>
                   <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Governance</span>
-                </FadeInBlur>
+                </div>
                 <AnimatedText text="How the Parent Committee Works" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-                <FadeInBlur delay={400}>
+                <div>
                   <p className="text-base text-gray-600 leading-relaxed mt-5">
                     The Parent Committee is constituted at the start of each academic year. It includes the Head Parent, two Deputy Head Parents (one per program group), and class representatives. The committee meets monthly with the Dean of Students and quarterly with the Headmaster.
                   </p>
                   <p className="text-base text-gray-600 leading-relaxed mt-4">
                     Meetings are minuted, and outcomes are communicated to all parents within 5 working days of each session. Any parent may raise an agenda item by submitting it to the Head Parent at least 3 days before the scheduled meeting.
                   </p>
-                </FadeInBlur>
+                </div>
               </div>
 
               {/* Right — roles */}
@@ -217,7 +216,7 @@ export default function ParentsPage() {
                 {committeeRoles.map((r, i) => {
                   const Icon = r.icon;
                   return (
-                    <FadeInBlur key={r.role} delay={300 + i * 80}>
+                    <div key={i}>
                       <div className="flex items-start gap-4 rounded-xl bg-gray-50 border border-gray-100 p-4">
                         <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <Icon size={17} className="text-accent" />
@@ -227,7 +226,7 @@ export default function ParentsPage() {
                           <p className="text-xs text-gray-500 mt-0.5 leading-snug">{r.desc}</p>
                         </div>
                       </div>
-                    </FadeInBlur>
+                    </div>
                   );
                 })}
               </div>
@@ -239,9 +238,9 @@ export default function ParentsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Stay Connected</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="How to Reach Us" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
 
@@ -249,7 +248,7 @@ export default function ParentsPage() {
               {channels.map((ch, i) => {
                 const Icon = ch.icon;
                 return (
-                  <FadeInBlur key={ch.title} delay={300 + i * 100}>
+                  <div key={i}>
                     <div className="rounded-xl bg-white border border-gray-100 shadow-sm p-6 flex flex-col h-full">
                       <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                         <Icon size={22} className="text-accent" />
@@ -263,7 +262,7 @@ export default function ParentsPage() {
                         {ch.cta} <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                       </a>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 );
               })}
             </div>
@@ -274,21 +273,21 @@ export default function ParentsPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-10">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">We&apos;re Listening</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Submit a Concern or Question" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4">
                   All submissions are reviewed by the Head Parent and the Dean of Students. You will receive a response within 2 working days.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
-            <FadeInBlur delay={400}>
+            <div>
               <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 lg:p-8">
                 <ParentContactForm />
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -296,15 +295,15 @@ export default function ParentsPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Who to Call</span>
-              </FadeInBlur>
+              </div>
               <AnimatedText text="Key Contacts at Forever Tvet" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
               {keyContacts.map((c, i) => (
-                <FadeInBlur key={c.role} delay={300 + i * 60}>
+                <div key={i}>
                   <div className="rounded-xl bg-white border border-gray-100 shadow-sm overflow-hidden flex">
                     <div className="w-1 bg-primary flex-shrink-0" />
                     <div className="p-4 flex-1">
@@ -315,7 +314,7 @@ export default function ParentsPage() {
                       </a>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -326,17 +325,17 @@ export default function ParentsPage() {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Invested in Your Child's Future" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 So are we. Every enrolled student has a team of educators, mentors, and a parent community working for their success.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Contact the School</Link>
                 <Link href="/academics/departments" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">View Academic Programs</Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

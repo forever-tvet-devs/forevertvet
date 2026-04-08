@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import ApplicationSteps from "@/components/admissions/ApplicationSteps";
 import { CheckCircle, Info, ArrowRight } from "@/components/ui/Icons";
 
@@ -74,11 +73,11 @@ export default function HowToApplyPage() {
         {/* Before You Apply */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Before You Begin
               </span>
-            </FadeInBlur>
+            </div>
             <AnimatedText
               text="What You Will Need"
               as="h2"
@@ -86,13 +85,13 @@ export default function HowToApplyPage() {
               baseDelay={100}
               stagger={60}
             />
-            <FadeInBlur delay={400}>
+            <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-5 mb-7">
                 The application takes approximately 15–20 minutes to complete online. Before you start, make sure you have the following ready:
               </p>
-            </FadeInBlur>
+            </div>
 
-            <FadeInBlur delay={500}>
+            <div>
               <div className="grid sm:grid-cols-2 gap-3 mb-6">
                 {checklist.map((c) => (
                   <div key={c.item} className="flex items-start gap-3 p-3.5 rounded-xl bg-gray-50">
@@ -104,16 +103,16 @@ export default function HowToApplyPage() {
                   </div>
                 ))}
               </div>
-            </FadeInBlur>
+            </div>
 
-            <FadeInBlur delay={650}>
+            <div>
               <div className="flex items-start gap-3 rounded-xl bg-primary/6 border border-primary/15 p-4">
                 <Info size={20} className="text-primary flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-primary/80 leading-relaxed">
                   If you do not have all documents ready, you can save your application and return to it within 7 days. No progress will be lost.
                 </p>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -121,11 +120,11 @@ export default function HowToApplyPage() {
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Step by Step
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Six Steps to Your Place"
                 as="h2"
@@ -133,11 +132,11 @@ export default function HowToApplyPage() {
                 baseDelay={100}
                 stagger={60}
               />
-              <FadeInBlur delay={350}>
+              <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4">
                   Follow each step in order. Most applicants complete the entire process in under 30 minutes.
                 </p>
-              </FadeInBlur>
+              </div>
             </div>
             <ApplicationSteps />
           </div>
@@ -147,11 +146,11 @@ export default function HowToApplyPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
-              <FadeInBlur delay={0}>
+              <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   When to Apply
                 </span>
-              </FadeInBlur>
+              </div>
               <AnimatedText
                 text="Choose Your Intake"
                 as="h2"
@@ -166,12 +165,12 @@ export default function HowToApplyPage() {
                 { label: "Intake 1", month: "January 2026", status: "Applications Open", statusCls: "bg-green-100 text-green-700", accentColor: "bg-primary", dates: intake1Dates },
                 { label: "Intake 2", month: "July 2026",    status: "Opens April 2026",  statusCls: "bg-amber-100 text-amber-700",  accentColor: "bg-primary", dates: intake2Dates },
               ].map((intake, i) => (
-                <FadeInBlur key={intake.label} delay={300 + i * 150}>
+                <div key={i}>
                   <div className="rounded-xl border border-gray-100 shadow-sm overflow-hidden bg-white">
                     <div className={`h-2 ${intake.accentColor}`} />
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-5">
-                        <div>
+                        <div key={i}>
                           <span className="text-xs uppercase tracking-widest font-semibold text-accent block mb-1">{intake.label}</span>
                           <p className="font-heading font-bold text-2xl text-primary">{intake.month}</p>
                         </div>
@@ -187,13 +186,13 @@ export default function HowToApplyPage() {
                       </div>
                       <Link
                         href="/admissions/apply"
-                        className="block text-center bg-primary text-white rounded-lg px-5 py-2.5 text-sm font-semibold hover:bg-primary-dark transition-colors"
+                        className="bg-primary block text-center text-white rounded-lg px-5 py-2.5 text-sm font-semibold hover:bg-primary-dark transition-colors"
                       >
                         Apply for This Intake
                       </Link>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
           </div>
@@ -202,22 +201,22 @@ export default function HowToApplyPage() {
         {/* Mini FAQs */}
         <section className="py-16 lg:py-20 bg-gray-50">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <FadeInBlur delay={0}>
+            <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Quick Answers
               </span>
-            </FadeInBlur>
+            </div>
             <div className="space-y-4 mb-8">
               {miniFaqs.map((faq, i) => (
-                <FadeInBlur key={faq.q} delay={i * 150}>
+                <div key={i}>
                   <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
                     <p className="font-semibold text-primary text-sm mb-1">{faq.q}</p>
                     <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
                   </div>
-                </FadeInBlur>
+                </div>
               ))}
             </div>
-            <FadeInBlur delay={500}>
+            <div>
               <Link
                 href="/admissions/faqs"
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group text-sm"
@@ -225,7 +224,7 @@ export default function HowToApplyPage() {
                 View all FAQs
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
@@ -234,15 +233,15 @@ export default function HowToApplyPage() {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Ready? Start Your Application" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">It takes less than 20 minutes. Your future starts today.</p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Start Application</Link>
                 <Link href="/contact" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">Contact Admissions</Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
       </main>

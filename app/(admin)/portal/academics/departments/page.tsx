@@ -1,0 +1,161 @@
+"use client";
+
+import { useState } from "react";
+import {
+  ContentManager,
+  type ContentItem,
+} from "@/components/admin/panels/ContentManager";
+import { Label } from "@/components/admin/ui/Label";
+import { Textarea } from "@/components/admin/ui/Textarea";
+import { RichTextEditor } from "@/components/admin/ui/RichTextEditor";
+import { Input } from "@/components/ui/input";
+
+const initialDepartments: ContentItem[] = [
+  {
+    id: "dept-1",
+    label: "Heavy Machinery Operation",
+    subtitle: "Level 4 — Jean-Claude Habimana",
+    status: "published",
+    name: "Heavy Machinery Operation",
+    level: "Level 4",
+    head: "Jean-Claude Habimana",
+    description:
+      "<p>Hands-on training in the operation, maintenance, and safety of heavy construction equipment including excavators, bulldozers, and loaders.</p>",
+    programs: "Excavator Operation\nBulldozer & Loader Operation\nCrane Operation",
+  },
+  {
+    id: "dept-2",
+    label: "Land Survey & Geomatics",
+    subtitle: "Level 5 — Marie-Claire Uwimana",
+    status: "published",
+    name: "Land Survey & Geomatics",
+    level: "Level 5",
+    head: "Marie-Claire Uwimana",
+    description:
+      "<p>Comprehensive surveying and geomatics program covering land measurement, mapping, and GIS technologies for modern infrastructure development.</p>",
+    programs: "Topographic Surveying\nGIS & Remote Sensing",
+  },
+  {
+    id: "dept-3",
+    label: "Industrial Electricity",
+    subtitle: "Level 4 — Patrick Ndayisaba",
+    status: "published",
+    name: "Industrial Electricity",
+    level: "Level 4",
+    head: "Patrick Ndayisaba",
+    description:
+      "<p>Training in industrial electrical installations, maintenance, and troubleshooting for manufacturing and construction environments.</p>",
+    programs:
+      "Electrical Installation\nIndustrial Wiring\nPLC Programming\nElectrical Maintenance",
+  },
+  {
+    id: "dept-4",
+    label: "Road Construction & Maintenance",
+    subtitle: "Level 4 — Emmanuel Mugisha",
+    status: "draft",
+    name: "Road Construction & Maintenance",
+    level: "Level 4",
+    head: "Emmanuel Mugisha",
+    description:
+      "<p>Practical skills in road design, construction techniques, and maintenance procedures for Rwanda's growing road network.</p>",
+    programs: "Road Construction Techniques\nAsphalt & Concrete Works",
+  },
+  {
+    id: "dept-5",
+    label: "Computer Engineering",
+    subtitle: "Level 5 — Grace Ingabire",
+    status: "draft",
+    name: "Computer Engineering",
+    level: "Level 5",
+    head: "Grace Ingabire",
+    description:
+      "<p>Modern computer engineering program covering hardware, networking, and software fundamentals for the technology sector.</p>",
+    programs:
+      "Hardware & Networking\nSoftware Development\nIT Support & Administration",
+  },
+];
+
+export default function DepartmentsPage() {
+  const [departments, setDepartments] = useState(initialDepartments);
+
+  return (
+    <ContentManager
+      title="Departments"
+      description="Manage academic departments and their programs."
+      items={departments}
+      addLabel="Add Department"
+      renderForm={(item, onChange) => (
+        <div className="space-y-4">
+          <div className="space-y-1.5">
+            <Label>Department Name</Label>
+            <Input
+              value={String(item.name ?? "")}
+              onChange={(e) =>
+                onChange({ ...item, name: e.target.value, label: e.target.value })
+              }
+            />
+          </div>
+          <div className="space-y-1.5">
+            <Label>Level</Label>
+            <Input
+              value={String(item.level ?? "")}
+              onChange={(e) => onChange({ ...item, level: e.target.value })}
+              placeholder="e.g. Level 5"
+            />
+          </div>
+          <div className="space-y-1.5">
+            <Label>Head of Department</Label>
+            <Input
+              value={String(item.head ?? "")}
+              onChange={(e) => onChange({ ...item, head: e.target.value })}
+            />
+          </div>
+          <div className="space-y-1.5">
+            <Label>Description</Label>
+            <RichTextEditor
+              defaultValue={String(item.description ?? "")}
+              onChange={(html) => onChange({ ...item, description: html })}
+              placeholder="Describe this department..."
+            />
+          </div>
+          <div className="space-y-1.5">
+            <Label>Programs</Label>
+            <Textarea
+              rows={3}
+              value={String(item.programs ?? "")}
+              onChange={(e) => onChange({ ...item, programs: e.target.value })}
+              placeholder="One program per line"
+            />
+          </div>
+        </div>
+      )}
+      onCreateItem={() => {
+        const newItem: ContentItem = {
+          id: `dept-${Date.now()}`,
+          label: "New Department",
+          status: "draft",
+          name: "",
+          level: "",
+          head: "",
+          description: "",
+          programs: "",
+        };
+        setDepartments((prev) => [...prev, newItem]);
+        return newItem;
+      }}
+      onSaveItem={(item) => {
+        setDepartments((prev) =>
+          prev.map((d) => (d.id === item.id ? item : d))
+        );
+      }}
+      onDeleteItem={(id) => {
+        setDepartments((prev) => prev.filter((d) => d.id !== id));
+      }}
+      onStatusChangeItem={(id, status) => {
+        setDepartments((prev) =>
+          prev.map((d) => (d.id === id ? { ...d, status } : d))
+        );
+      }}
+    />
+  );
+}

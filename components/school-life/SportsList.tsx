@@ -1,4 +1,3 @@
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { Trophy, Dumbbell, Users, Clock } from "@/components/ui/Icons";
 
 type SportType = "Team" | "Individual" | "Fitness";
@@ -70,7 +69,7 @@ export default function SportsList() {
       {sports.map((sport, i) => {
         const Icon = typeIcon[sport.type];
         return (
-          <FadeInBlur key={sport.name} delay={200 + i * 80}>
+          <div key={i}>
             <div className="flex items-start gap-5 py-7">
               {/* Icon */}
               <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -99,7 +98,7 @@ export default function SportsList() {
                 </div>
               </div>
             </div>
-          </FadeInBlur>
+          </div>
         );
       })}
     </div>

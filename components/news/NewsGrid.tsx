@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { Calendar, ArrowRight } from "@/components/ui/Icons";
 import { posts } from "@/components/news/newsData";
 
@@ -28,7 +27,7 @@ export default function NewsGrid({ excludeFeatured = true }: NewsGridProps) {
   return (
     <div>
       {/* Filter tabs */}
-      <FadeInBlur delay={0}>
+      <div>
         <div className="overflow-x-auto -mx-4 px-4 pb-2 mb-8">
           <div className="flex gap-2 min-w-max">
             {categories.map((cat) => (
@@ -46,27 +45,27 @@ export default function NewsGrid({ excludeFeatured = true }: NewsGridProps) {
             ))}
           </div>
         </div>
-      </FadeInBlur>
+      </div>
 
       {/* Count */}
-      <FadeInBlur delay={100}>
+      <div>
         <p className="text-xs text-gray-400 mb-6">Showing {displayed.length} article{displayed.length !== 1 ? "s" : ""}</p>
-      </FadeInBlur>
+      </div>
 
       {/* Empty state */}
       {displayed.length === 0 && (
-        <FadeInBlur delay={200}>
+        <div>
           <div className="text-center py-16 rounded-xl bg-white border border-gray-100">
             <p className="text-base font-semibold text-primary mb-2">No articles in this category yet</p>
             <p className="text-sm text-gray-400">Check back soon — we publish regularly.</p>
           </div>
-        </FadeInBlur>
+        </div>
       )}
 
       {/* Grid */}
       <div key={active} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {displayed.map((post, i) => (
-          <FadeInBlur key={post.slug} delay={i * 80}>
+          <div key={i}>
             <Link
               href={`/news/${post.slug}`}
               className="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col"
@@ -106,7 +105,7 @@ export default function NewsGrid({ excludeFeatured = true }: NewsGridProps) {
                 </span>
               </div>
             </Link>
-          </FadeInBlur>
+          </div>
         ))}
       </div>
     </div>

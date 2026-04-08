@@ -4,7 +4,6 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedText from "@/components/ui/AnimatedText";
-import FadeInBlur from "@/components/ui/FadeInBlur";
 import { events, categoryStyles } from "@/components/school-life/eventsData";
 import { Calendar, Clock, MapPin, ChevronLeft, ArrowRight, Users } from "@/components/ui/Icons";
 
@@ -56,16 +55,16 @@ export default async function EventDetailPage({ params }: Props) {
         <div className="bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20">
-            <FadeInBlur delay={0} triggerOnScroll={false}>
+            <div>
               <Link
                 href="/school-life/events"
                 className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-medium transition-colors mb-6"
               >
                 <ChevronLeft size={14} /> Back to Events
               </Link>
-            </FadeInBlur>
+            </div>
 
-            <FadeInBlur delay={100} triggerOnScroll={false}>
+            <div>
               <div className="flex flex-wrap items-center gap-3 mb-5">
                 <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryStyles[event.category]}`}>
                   {event.category}
@@ -76,7 +75,7 @@ export default async function EventDetailPage({ params }: Props) {
                   </span>
                 )}
               </div>
-            </FadeInBlur>
+            </div>
 
             <AnimatedText
               text={event.title}
@@ -88,7 +87,7 @@ export default async function EventDetailPage({ params }: Props) {
             />
 
             {/* Meta strip */}
-            <FadeInBlur delay={400} triggerOnScroll={false}>
+            <div>
               <div className="flex flex-wrap gap-5">
                 <span className="flex items-center gap-2 text-sm text-white/70">
                   <Calendar size={15} className="text-accent flex-shrink-0" />
@@ -103,7 +102,7 @@ export default async function EventDetailPage({ params }: Props) {
                   {event.location}
                 </span>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </div>
 
@@ -114,22 +113,22 @@ export default async function EventDetailPage({ params }: Props) {
 
               {/* Body */}
               <div>
-                <FadeInBlur delay={0}>
+                <div>
                   <p className="text-lg lg:text-xl text-gray-700 leading-relaxed font-medium border-l-4 border-accent pl-5 mb-10">
                     {event.description}
                   </p>
-                </FadeInBlur>
+                </div>
 
                 <div className="space-y-6">
                   {event.body.map((para, i) => (
-                    <FadeInBlur key={i} delay={i * 60}>
+                    <div key={i}>
                       <p className="text-base text-gray-600 leading-relaxed">{para}</p>
-                    </FadeInBlur>
+                    </div>
                   ))}
                 </div>
 
                 {/* Footer */}
-                <FadeInBlur delay={400}>
+                <div>
                   <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
@@ -148,14 +147,14 @@ export default async function EventDetailPage({ params }: Props) {
                       All Events
                     </Link>
                   </div>
-                </FadeInBlur>
+                </div>
               </div>
 
               {/* Sidebar */}
               <aside className="lg:sticky lg:top-24 space-y-4">
 
                 {/* Event details card */}
-                <FadeInBlur delay={200}>
+                <div>
                   <div className="bg-gray-50 rounded-2xl border border-gray-100 p-5 space-y-4">
                     <p className="font-semibold text-primary text-sm">Event Details</p>
 
@@ -192,11 +191,11 @@ export default async function EventDetailPage({ params }: Props) {
                       </div>
                     </div>
                   </div>
-                </FadeInBlur>
+                </div>
 
                 {/* Register / contact card */}
                 {event.open && (
-                  <FadeInBlur delay={300}>
+                  <div>
                     <div className="bg-primary rounded-2xl p-5">
                       <p className="font-semibold text-white text-sm mb-1">Attending this event?</p>
                       <p className="text-xs text-white/60 leading-relaxed mb-4">
@@ -215,11 +214,11 @@ export default async function EventDetailPage({ params }: Props) {
                         +250 788 000 000
                       </a>
                     </div>
-                  </FadeInBlur>
+                  </div>
                 )}
 
                 {/* All events link */}
-                <FadeInBlur delay={350}>
+                <div>
                   <Link
                     href="/school-life/events"
                     className="flex items-center justify-between gap-2 bg-white rounded-xl border border-gray-100 p-4 group hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
@@ -227,7 +226,7 @@ export default async function EventDetailPage({ params }: Props) {
                     <span className="text-sm font-semibold text-primary group-hover:text-accent transition-colors">View all events</span>
                     <ArrowRight size={14} className="text-gray-300 group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
                   </Link>
-                </FadeInBlur>
+                </div>
               </aside>
             </div>
           </div>
@@ -239,9 +238,9 @@ export default async function EventDetailPage({ params }: Props) {
             <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
               <div className="flex items-end justify-between gap-4 mb-8">
                 <div>
-                  <FadeInBlur delay={0}>
+                  <div>
                     <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-2">More Events</span>
-                  </FadeInBlur>
+                  </div>
                   <AnimatedText
                     text="Other Events"
                     as="h2"
@@ -250,19 +249,19 @@ export default async function EventDetailPage({ params }: Props) {
                     stagger={55}
                   />
                 </div>
-                <FadeInBlur delay={200}>
+                <div>
                   <Link
                     href="/school-life/events"
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-all group flex-shrink-0"
                   >
                     View All <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
                   </Link>
-                </FadeInBlur>
+                </div>
               </div>
 
               <div className="grid md:grid-cols-3 gap-5">
                 {related.map((rel, i) => (
-                  <FadeInBlur key={rel.slug} delay={300 + i * 100}>
+                  <div key={i}>
                     <Link
                       href={`/school-life/events/${rel.slug}`}
                       className="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col"
@@ -300,7 +299,7 @@ export default async function EventDetailPage({ params }: Props) {
                         </span>
                       </div>
                     </Link>
-                  </FadeInBlur>
+                  </div>
                 ))}
               </div>
             </div>
@@ -312,17 +311,17 @@ export default async function EventDetailPage({ params }: Props) {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Interested in Joining Our Community?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
-            <FadeInBlur delay={350}>
+            <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
                 Apply to Forever Tvet Institute and become part of a school where things happen.
               </p>
-            </FadeInBlur>
-            <FadeInBlur delay={550}>
+            </div>
+            <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Apply Now</Link>
                 <Link href="/school-life/events" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">All Events</Link>
               </div>
-            </FadeInBlur>
+            </div>
           </div>
         </section>
 
