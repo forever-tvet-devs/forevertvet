@@ -10,13 +10,9 @@ function CornerLines() {
   const stroke = 1.5;
 
   const corners = [
-    // top-left
     { className: "top-6 left-6", d: `M0,${size} L0,0 L${size},0` },
-    // top-right
     { className: "top-6 right-6", d: `M${size},${size} L${size},0 L0,0` },
-    // bottom-left
     { className: "bottom-6 left-6", d: `M0,0 L0,${size} L${size},${size}` },
-    // bottom-right
     { className: "bottom-6 right-6", d: `M${size},0 L${size},${size} L0,${size}` },
   ];
 
@@ -50,11 +46,19 @@ export default function SplashScreen() {
   const nameRef = useRef<HTMLHeadingElement>(null);
   const sloganRef = useRef<HTMLParagraphElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
-  const [dismissed, setDismissed] = useState(false);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
+    // Only show splash once per session
+    if (sessionStorage.getItem("splash_shown")) return;
+    sessionStorage.setItem("splash_shown", "1");
+    setShow(true);
+  }, []);
+
+  useEffect(() => {
+    if (!show) return;
+
     const ctx = gsap.context(() => {
-      /* ---- Animate corner SVG paths (stroke-dasharray draw-on) ---- */
       const paths = containerRef.current!.querySelectorAll(".corner-line path");
       paths.forEach((p) => {
         const len = (p as SVGPathElement).getTotalLength();
@@ -67,12 +71,11 @@ export default function SplashScreen() {
             yPercent: -100,
             duration: 0.5,
             ease: "power3.inOut",
-            onComplete: () => setDismissed(true),
+            onComplete: () => setShow(false),
           });
         },
       });
 
-      // 1. Corner lines draw in
       tl.to(paths, {
         strokeDashoffset: 0,
         duration: 0.7,
@@ -80,7 +83,6 @@ export default function SplashScreen() {
         stagger: 0.08,
       });
 
-      // 2. Logo scales up and fades in
       tl.fromTo(
         logoRef.current,
         { scale: 0.6, opacity: 0 },
@@ -88,7 +90,6 @@ export default function SplashScreen() {
         "-=0.35"
       );
 
-      // 3. Accent line draws in
       tl.fromTo(
         lineRef.current,
         { scaleX: 0 },
@@ -96,7 +97,6 @@ export default function SplashScreen() {
         "-=0.1"
       );
 
-      // 4. School name reveals
       tl.fromTo(
         nameRef.current,
         { y: 20, opacity: 0 },
@@ -104,7 +104,6 @@ export default function SplashScreen() {
         "-=0.15"
       );
 
-      // 5. Slogan fades in
       tl.fromTo(
         sloganRef.current,
         { y: 12, opacity: 0 },
@@ -112,24 +111,21 @@ export default function SplashScreen() {
         "-=0.2"
       );
 
-      // 6. Hold before exit
       tl.to({}, { duration: 0.7 });
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [show]);
 
-  if (dismissed) return null;
+  if (!show) return null;
 
   return (
     <div
       ref={containerRef}
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-primary"
     >
-      {/* Animated corner brackets */}
       <CornerLines />
 
-      {/* Logo */}
       <div ref={logoRef} className="opacity-0">
         <Image
           src="/images/forever_tvet_white_transparent.png"
@@ -141,14 +137,12 @@ export default function SplashScreen() {
         />
       </div>
 
-      {/* Accent line */}
       <div
         ref={lineRef}
         className="mt-5 h-[2px] w-16 origin-center bg-accent"
         style={{ transform: "scaleX(0)" }}
       />
 
-      {/* School name */}
       <h1
         ref={nameRef}
         className="mt-4 font-heading text-xl tracking-[0.25em] text-white uppercase opacity-0 sm:text-2xl"
@@ -156,7 +150,6 @@ export default function SplashScreen() {
         Forever Tvet Institute
       </h1>
 
-      {/* Slogan */}
       <p
         ref={sloganRef}
         className="mt-2 text-sm tracking-widest text-white/70 opacity-0"
