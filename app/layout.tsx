@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import SmoothScroll from "@/components/ui/SmoothScroll"
 import CookieConsent from "@/components/ui/CookieConsent"
+import SplashScreen from "@/components/ui/SplashScreen"
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${aboreto.variable} font-sans antialiased`}>
+        <SplashScreen />
         <SmoothScroll />
         {children}
         <CookieConsent />
