@@ -99,7 +99,7 @@ export default function AcademicsSnippet() {
                 What We Teach
               </span>
               <h2 className="font-heading font-bold text-4xl lg:text-6xl text-body leading-tight">
-                Seven Industry-Ready Programmes
+                Our Programmes
               </h2>
               <p className="text-base lg:text-lg text-gray-500 leading-relaxed mt-6 max-w-md">
                 Each programme moves from theory to simulation to practical operation,
