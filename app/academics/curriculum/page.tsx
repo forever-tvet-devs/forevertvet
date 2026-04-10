@@ -38,11 +38,11 @@ const philosophyHighlights = [
 ];
 
 const programs = [
-  { name: "Heavy Machinery Operation", duration: "28 weeks", level: "Level 3", internship: "Guaranteed", classSize: "20 students", intake: "Jan & Jul" },
-  { name: "Land Survey & Geomatics",   duration: "28 weeks", level: "Level 3", internship: "Guaranteed", classSize: "18 students", intake: "Jan & Jul" },
-  { name: "Industrial Electricity",     duration: "28 weeks", level: "Level 4", internship: "Guaranteed", classSize: "20 students", intake: "Jan & Jul" },
-  { name: "Road Construction Technology", duration: "28 weeks", level: "Level 3", internship: "Guaranteed", classSize: "18 students", intake: "Jan & Jul" },
-  { name: "Computer Engineering",       duration: "32 weeks", level: "Level 4", internship: "Guaranteed", classSize: "22 students", intake: "Jan & Jul" },
+  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "20 students", intake: "Jan & Jul" },
+  { name: "Land Surveying",                          duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "18 students", intake: "Jan & Jul" },
+  { name: "Electrical Technology",                   duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "20 students", intake: "Jan & Jul" },
+  { name: "Public Works",                            duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "18 students", intake: "Jan & Jul" },
+  { name: "Computer Systems & Architecture",         duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "22 students", intake: "Jan & Jul" },
 ];
 
 const certChecks = [

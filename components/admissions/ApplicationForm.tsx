@@ -22,11 +22,11 @@ const empty: FormData = {
 };
 
 const programs = [
-  "Heavy Machinery Operation (RQF Level 3)",
-  "Land Survey & Geomatics (RQF Level 3)",
-  "Industrial Electricity (RQF Level 4)",
-  "Road Construction Technology (RQF Level 3)",
-  "Computer Engineering (RQF Level 4)",
+  "Heavy Machinery Operation & Maintenance (Short Course)",
+  "Land Surveying (Level 3 – Level 5)",
+  "Electrical Technology (Level 3 – Level 5)",
+  "Public Works (Level 3 – Level 5)",
+  "Computer Systems & Architecture (Level 3 – Level 5)",
 ];
 
 const subjectOptions = ["Mathematics", "Physics", "Chemistry", "Biology", "Computer Science", "Geography", "History", "English", "French", "Other"];

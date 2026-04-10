@@ -13,10 +13,10 @@ import { Input } from "@/components/ui/input";
 const initialDepartments: ContentItem[] = [
   {
     id: "dept-1",
-    label: "Heavy Machinery Operation",
-    subtitle: "Level 4 — Jean-Claude Habimana",
+    label: "Heavy Machinery Operation & Maintenance",
+    subtitle: "Short Course — Jean-Claude Habimana",
     status: "published",
-    name: "Heavy Machinery Operation",
+    name: "Heavy Machinery Operation & Maintenance",
     level: "Level 4",
     head: "Jean-Claude Habimana",
     description:
@@ -25,10 +25,10 @@ const initialDepartments: ContentItem[] = [
   },
   {
     id: "dept-2",
-    label: "Land Survey & Geomatics",
-    subtitle: "Level 5 — Marie-Claire Uwimana",
+    label: "Land Surveying",
+    subtitle: "Level 3–5 — Marie-Claire Uwimana",
     status: "published",
-    name: "Land Survey & Geomatics",
+    name: "Land Surveying",
     level: "Level 5",
     head: "Marie-Claire Uwimana",
     description:
@@ -37,10 +37,10 @@ const initialDepartments: ContentItem[] = [
   },
   {
     id: "dept-3",
-    label: "Industrial Electricity",
-    subtitle: "Level 4 — Patrick Ndayisaba",
+    label: "Electrical Technology",
+    subtitle: "Level 3–5 — Patrick Ndayisaba",
     status: "published",
-    name: "Industrial Electricity",
+    name: "Electrical Technology",
     level: "Level 4",
     head: "Patrick Ndayisaba",
     description:
@@ -50,10 +50,10 @@ const initialDepartments: ContentItem[] = [
   },
   {
     id: "dept-4",
-    label: "Road Construction & Maintenance",
-    subtitle: "Level 4 — Emmanuel Mugisha",
+    label: "Public Works",
+    subtitle: "Level 3–5 — Emmanuel Mugisha",
     status: "draft",
-    name: "Road Construction & Maintenance",
+    name: "Public Works",
     level: "Level 4",
     head: "Emmanuel Mugisha",
     description:
@@ -62,10 +62,10 @@ const initialDepartments: ContentItem[] = [
   },
   {
     id: "dept-5",
-    label: "Computer Engineering",
-    subtitle: "Level 5 — Grace Ingabire",
+    label: "Computer Systems & Architecture",
+    subtitle: "Level 3–5 — Grace Ingabire",
     status: "draft",
-    name: "Computer Engineering",
+    name: "Computer Systems & Architecture",
     level: "Level 5",
     head: "Grace Ingabire",
     description:

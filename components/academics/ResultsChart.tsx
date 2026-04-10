@@ -4,11 +4,11 @@ import { useRef, useEffect, useState } from "react";
 import { departmentColors } from "@/components/academics/departmentColors";
 
 const data = [
-  { dept: "Heavy Machinery Operation",    graduates: 140, rate: 97 },
-  { dept: "Land Survey & Geomatics",      graduates: 95,  rate: 92 },
-  { dept: "Industrial Electricity",       graduates: 115, rate: 96 },
-  { dept: "Road Construction Technology", graduates: 88,  rate: 91 },
-  { dept: "Computer Engineering",         graduates: 72,  rate: 94 },
+  { dept: "Heavy Machinery Operation & Maintenance", graduates: 140, rate: 97 },
+  { dept: "Land Surveying",                          graduates: 95,  rate: 92 },
+  { dept: "Electrical Technology",                   graduates: 115, rate: 96 },
+  { dept: "Public Works",                            graduates: 88,  rate: 91 },
+  { dept: "Computer Systems & Architecture",         graduates: 72,  rate: 94 },
 ];
 
 function BarRow({ dept, graduates, rate, triggered }: { dept: string; graduates: number; rate: number; triggered: boolean }) {

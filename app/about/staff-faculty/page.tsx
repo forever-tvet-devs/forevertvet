@@ -20,7 +20,7 @@ const breadcrumb = [
 
 const departments = [
   {
-    name: "Heavy Machinery Operations",
+    name: "Heavy Machinery Operation & Maintenance",
     staff: [
       { name: "Mr. Zhang Yong", role: "Head of Department", initials: "ZY" },
       { name: "Mr. Patrick Ndayisaba", role: "Senior Instructor", initials: "PN" },
@@ -28,15 +28,15 @@ const departments = [
     ],
   },
   {
-    name: "Land Survey & Road Construction",
+    name: "Land Surveying & Public Works",
     staff: [
       { name: "Mr. Li Jun", role: "Head of Department", initials: "LJ" },
       { name: "Ms. Diane Uwamahoro", role: "Instructor — Surveying", initials: "DU" },
-      { name: "Mr. Claude Habimana", role: "Instructor — Road Construction", initials: "CH" },
+      { name: "Mr. Claude Habimana", role: "Instructor — Public Works", initials: "CH" },
     ],
   },
   {
-    name: "Industrial Electricity",
+    name: "Electrical Technology",
     staff: [
       { name: "Mr. Wang Lei", role: "Head of Department", initials: "WL" },
       { name: "Mr. Jean de Dieu Niyonzima", role: "Senior Instructor", initials: "JN" },
@@ -44,7 +44,7 @@ const departments = [
     ],
   },
   {
-    name: "Computer Engineering",
+    name: "Computer Systems & Architecture",
     staff: [
       { name: "Ms. Chen Mei", role: "Head of Department", initials: "CM" },
       { name: "Mr. Yves Irambona", role: "Instructor — Networking", initials: "YI" },

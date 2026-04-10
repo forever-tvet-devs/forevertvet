@@ -20,8 +20,8 @@ const breadcrumb = [
 
 const openings = [
   {
-    title: "Instructor — Heavy Machinery Operations",
-    department: "Heavy Machinery",
+    title: "Instructor — Heavy Machinery Operation & Maintenance",
+    department: "Heavy Machinery Operation & Maintenance",
     type: "Full-Time",
     location: "Kigali Campus",
     posted: "20 Mar 2026",
@@ -29,13 +29,13 @@ const openings = [
       "We are looking for a qualified instructor with hands-on experience operating excavators, bulldozers, and cranes to lead practical training sessions.",
   },
   {
-    title: "Instructor — Industrial Electricity",
-    department: "Industrial Electricity",
+    title: "Instructor — Electrical Technology",
+    department: "Electrical Technology",
     type: "Full-Time",
     location: "Kigali Campus",
     posted: "15 Mar 2026",
     summary:
-      "Seeking an experienced electrician with teaching ability to deliver our Level 3–5 industrial electricity curriculum.",
+      "Seeking an experienced electrician with teaching ability to deliver our Level 3–5 Electrical Technology curriculum.",
   },
   {
     title: "IT Support Technician",

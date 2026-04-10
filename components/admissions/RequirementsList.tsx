@@ -10,8 +10,8 @@ interface Program {
 
 const programs: Program[] = [
   {
-    name: "Heavy Machinery Operation",
-    level: "RQF Level 3",
+    name: "Heavy Machinery Operation & Maintenance",
+    level: "Short Course",
     academic: [
       "S6 certificate (any subject combination)",
       "Basic mathematics proficiency — assessed at intake orientation",
@@ -24,8 +24,8 @@ const programs: Program[] = [
     ],
   },
   {
-    name: "Land Survey & Geomatics",
-    level: "RQF Level 3",
+    name: "Land Surveying",
+    level: "Level 3 – Level 5",
     academic: [
       "S6 certificate with Mathematics (advantageous)",
       "Basic understanding of geography is beneficial",
@@ -38,8 +38,8 @@ const programs: Program[] = [
     ],
   },
   {
-    name: "Industrial Electricity",
-    level: "RQF Level 4",
+    name: "Electrical Technology",
+    level: "Level 3 – Level 5",
     academic: [
       "S6 certificate with Physics and/or Mathematics (required)",
       "Strong numeracy skills — electrical theory is mathematics-intensive",
@@ -52,8 +52,8 @@ const programs: Program[] = [
     ],
   },
   {
-    name: "Road Construction Technology",
-    level: "RQF Level 3",
+    name: "Public Works",
+    level: "Level 3 – Level 5",
     academic: [
       "S6 certificate (any subject combination)",
       "Basic mathematics",
@@ -66,8 +66,8 @@ const programs: Program[] = [
     ],
   },
   {
-    name: "Computer Engineering",
-    level: "RQF Level 4",
+    name: "Computer Systems & Architecture",
+    level: "Level 3 – Level 5",
     academic: [
       "S6 certificate with Mathematics or Physics (required)",
       "Demonstrated logical thinking ability — assessed at intake",

@@ -8,7 +8,7 @@ const testimonials = [
     quote:
       "Forever Tvet Institute changed my son's life. Within three months of graduating he was hired by a major construction company. The practical training here is unlike anything else available in Rwanda.",
     name: "Mrs. Amara Nkosi",
-    role: "Parent — Road Construction Graduate",
+    role: "Parent — Public Works Graduate",
     initials: "AN",
     bg: "#214B82",
   },
@@ -16,7 +16,7 @@ const testimonials = [
     quote:
       "The instruction we get here helps us overcome difficulties we meet in life. The heavy machinery programme gave me a skill employers were calling me for before I even finished. I now operate equipment on major road projects.",
     name: "Jerome Uwimpuhwe",
-    role: "Graduate — Heavy Machinery Programme",
+    role: "Graduate — Heavy Machinery Operation & Maintenance",
     initials: "DM",
     bg: "#117A65",
   },

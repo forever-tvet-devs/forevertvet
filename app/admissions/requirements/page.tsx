@@ -96,7 +96,7 @@ export default function RequirementsPage() {
               <AnimatedText text="Program-Specific Requirements" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
               <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4 max-w-2xl">
-                  Level 4 programs (Industrial Electricity and Computer Engineering) have additional academic prerequisites due to the technical depth of their curriculum.
+                  Each programme has specific academic prerequisites based on its technical requirements.
                 </p>
               </div>
             </div>

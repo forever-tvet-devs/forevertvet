@@ -36,9 +36,9 @@ const areas = [
 ];
 
 const quotes = [
-  { text: "The lab sessions are where it all clicked for me. You stop reading about electricity and start understanding it.", name: "Kwame A.", program: "Industrial Electricity", initials: "KA" },
-  { text: "I joined the coding club in my first week. Three months later I had already built a working app.", name: "Diane U.", program: "Computer Engineering", initials: "DU" },
-  { text: "The internship we did was real work — a real company, real equipment, real responsibility.", name: "Jean-Pierre N.", program: "Heavy Machinery Operation", initials: "JN" },
+  { text: "The lab sessions are where it all clicked for me. You stop reading about electricity and start understanding it.", name: "Kwame A.", program: "Electrical Technology", initials: "KA" },
+  { text: "I joined the coding club in my first week. Three months later I had already built a working app.", name: "Diane U.", program: "Computer Systems & Architecture", initials: "DU" },
+  { text: "The internship we did was real work — a real company, real equipment, real responsibility.", name: "Jean-Pierre N.", program: "Heavy Machinery Operation & Maintenance", initials: "JN" },
 ];
 
 export default function SchoolLifePage() {

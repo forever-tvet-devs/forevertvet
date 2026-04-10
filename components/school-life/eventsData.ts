@@ -52,7 +52,7 @@ export const events: CalendarEvent[] = [
     open: false,
     body: [
       "The Industrial Safety Workshop is a mandatory half-day session delivered to all students enrolled in practical programmes at Forever Tvet Institute. Completion of this workshop is a prerequisite for participation in any lab, workshop, or field activity during the academic year.",
-      "The session covers the legal and regulatory framework for workplace health and safety in Rwanda, with a focus on the specific hazards present in each programme area — including electrical systems, heavy machinery, surveying equipment, and construction environments. Students are taught to identify risks, apply appropriate protective measures, and respond to common workplace incidents.",
+      "The session covers the legal and regulatory framework for workplace health and safety in Rwanda, with a focus on the specific hazards present in each programme area — including electrical systems, heavy machinery, surveying equipment, and public works environments. Students are taught to identify risks, apply appropriate protective measures, and respond to common workplace incidents.",
       "Practical demonstration forms a significant part of the workshop. Students rotate through stations covering correct use of personal protective equipment (PPE), fire extinguisher operation, first aid priorities, and safe equipment shutdown procedures. Instructors assess student understanding through brief practical checks at each station.",
       "A short written component at the end of the session tests retention of the key regulatory and procedural content. Students who do not achieve the required standard are given the opportunity to resit the assessment within five working days. The workshop is delivered by the school's qualified health and safety officer in partnership with programme instructors.",
       "This session is restricted to enrolled students. Parents and visitors are not permitted in the Simulation Lab during active safety training. Students should arrive wearing appropriate footwear and should not bring valuables to the session.",
@@ -70,9 +70,10 @@ export const events: CalendarEvent[] = [
     open: true,
     body: [
       "Forever Tvet Institute's guest lecture series continues with a talk on renewable energy development across Rwanda and the wider East African region. The speaker for this session is a senior engineer with direct experience in the planning, installation, and commissioning of large-scale solar projects in Rwanda.",
+
       "The lecture will cover the current state of Rwanda's energy mix, the country's national targets for renewable capacity expansion, and what the growth trajectory means for the demand for qualified TVET graduates in the electricity and solar sectors. Students will gain insight into the scale and pace of change in an industry they may enter within months of graduating.",
       "A substantial portion of the session is dedicated to the career dimension. The speaker will discuss the specific technical skills that employers are actively looking for, how salaries in the sector have evolved over the past five years, and the pathways available to graduates who want to advance from installation roles into supervisory or design positions.",
-      "The session is open to the public, and prospective students interested in the Industrial Electricity programme are encouraged to attend. Current students from all programmes are welcome. The lecture runs for approximately 60 minutes, followed by a 20-minute open Q&A.",
+      "The session is open to the public, and prospective students interested in the Electrical Technology programme are encouraged to attend. Current students from all programmes are welcome. The lecture runs for approximately 60 minutes, followed by a 20-minute open Q&A.",
       "No registration is required for this event. Seats are available on a first-come, first-served basis. The Lecture Hall accommodates up to 80 attendees. For groups of five or more, please email events@forevertvet.rw in advance so adequate seating can be arranged.",
     ],
   },
@@ -87,8 +88,8 @@ export const events: CalendarEvent[] = [
     description: "Students from all programs compete in a timed coding challenge.",
     open: false,
     body: [
-      "The Inter-Program Coding Challenge is an annual competition open to all Forever Tvet Institute students, regardless of programme. The event is designed to promote computational thinking and problem-solving skills across disciplines — recognising that digital literacy and logic-based reasoning are relevant beyond the Computer Engineering programme.",
-      "The competition runs in two rounds. The first round is a timed individual challenge, where students tackle a set of structured problems covering basic programming logic, data manipulation, and algorithm design. Problems are presented in a way that does not disadvantage students from non-computing backgrounds, though Computer Engineering students are expected to perform at a higher level on the advanced questions.",
+      "The Inter-Program Coding Challenge is an annual competition open to all Forever Tvet Institute students, regardless of programme. The event is designed to promote computational thinking and problem-solving skills across disciplines — recognising that digital literacy and logic-based reasoning are relevant beyond the Computer Systems & Architecture programme.",
+      "The competition runs in two rounds. The first round is a timed individual challenge, where students tackle a set of structured problems covering basic programming logic, data manipulation, and algorithm design. Problems are presented in a way that does not disadvantage students from non-computing backgrounds, though Computer Systems & Architecture students are expected to perform at a higher level on the advanced questions.",
       "The top 10 individual scorers from round one advance to the team round in the afternoon, where they are grouped into pairs to tackle a more complex, open-ended problem. The team round is assessed on both correctness and the clarity of the solution — reflecting real-world expectations that code should be readable and maintainable, not just functional.",
       "Prizes are awarded to the top three finishing individuals and the winning team. Past winners have gone on to represent the school at national-level competitions and have used their challenge performance as evidence of competency during internship interviews.",
       "Participation is capped at 40 students due to the computer lab capacity. Registration closes three days before the event. Students should register via the Dean of Students office. Latecomers will not be permitted entry once the first round timer has started.",
@@ -105,10 +106,10 @@ export const events: CalendarEvent[] = [
     description: "Meet 20+ employers recruiting for internships and graduate roles.",
     open: true,
     body: [
-      "The annual Career Fair is one of the most important events in the Forever Tvet Institute calendar. Each year, the school hosts employers from across the sectors represented in its programmes — construction, industrial electricity, IT and networking, land surveying, and road infrastructure — giving current students and recent graduates direct access to recruiters and hiring managers.",
+      "The annual Career Fair is one of the most important events in the Forever Tvet Institute calendar. Each year, the school hosts employers from across the sectors represented in its programmes — construction, electrical technology, IT and networking, land surveying, and public works — giving current students and recent graduates direct access to recruiters and hiring managers.",
       "This year's event brings together more than 20 confirmed employers. Represented companies include active infrastructure contractors, solar installation firms, IT service providers, and engineering consultancies. Each employer maintains a stand in the Main Hall for the duration of the day and conducts informal conversations, accepts CV submissions, and in some cases carries out brief screening interviews on the spot.",
       "The morning is reserved for current Intake 1 students, who are allocated specific time slots to visit employer stands as a structured part of their programme timetable. The afternoon session is open to the public, including Intake 2 applicants, prospective students, and recent graduates seeking employment or a change of employer.",
-      "At last year's Career Fair, six employers extended conditional offers of internship placement or expressed strong hiring intent before leaving campus. Three Industrial Electricity students received verbal internship offers ahead of the school's formal placement schedule.",
+      "At last year's Career Fair, six employers extended conditional offers of internship placement or expressed strong hiring intent before leaving campus. Three Electrical Technology students received verbal internship offers ahead of the school's formal placement schedule.",
       "A panel discussion is scheduled for 1:00 PM. Four industry professionals — all graduates of vocational training programmes — will discuss career progression, salary benchmarks, and what employers look for when hiring TVET graduates. The panel is open to all attendees and includes a moderated Q&A session.",
       "Students wishing to make the most of the day are encouraged to prepare a concise CV in advance. The Dean of Students office can assist with CV review in the week before the event. Walk-ins are welcome for the afternoon session, but students should carry at least five printed CV copies.",
     ],
@@ -125,7 +126,7 @@ export const events: CalendarEvent[] = [
     open: true,
     body: [
       "Cultural Day is Forever Tvet Institute's annual celebration of the diversity of its student community. The event takes place across the campus grounds and combines student performances, a food fair, a practical project showcase, and community activities into a full-day programme.",
-      "The morning begins with the student project showcase, where teams from each programme display work completed during Phase 1. Computer Engineering students demonstrate working applications and network setups. Industrial Electricity students exhibit wiring boards and solar panel configurations. Land Survey students present field maps produced during their outdoor sessions. The showcase is open to visitors throughout the day and gives families and prospective students a first-hand look at the standard of practical work produced at the school.",
+      "The morning begins with the student project showcase, where teams from each programme display work completed during Phase 1. Computer Systems & Architecture students demonstrate working applications and network setups. Electrical Technology students exhibit wiring boards and solar panel configurations. Land Surveying students present field maps produced during their outdoor sessions. The showcase is open to visitors throughout the day and gives families and prospective students a first-hand look at the standard of practical work produced at the school.",
       "Performances begin at midday. Students from across the intake perform music, spoken word, and dance representing their home provinces and cultural backgrounds. The stage is open to all students — no prior arrangement is required, and spontaneous participation is welcome.",
       "The food fair runs from 11:00 AM to 2:00 PM. Students and staff contribute dishes representing cuisines from across Rwanda and the region. All food is available by donation, with proceeds going to the student welfare fund.",
       "Cultural Day is fully open to the public. Families, prospective students, community members, and alumni are all warmly invited. There is no entrance fee. The event typically concludes between 3:00 PM and 4:00 PM, depending on performance scheduling.",
@@ -151,16 +152,16 @@ export const events: CalendarEvent[] = [
   },
   {
     slug: "land-survey-field-trip",
-    title: "Land Survey Field Trip",
+    title: "Land Surveying Field Trip",
     date: new Date("2026-04-04"),
     dateStr: "April 4, 2026",
     time: "All Day",
     location: "Off-Campus Field Site",
     category: "Academic",
-    description: "Land Survey students conduct a full-day practical field exercise.",
+    description: "Land Surveying students conduct a full-day practical field exercise.",
     open: false,
     body: [
-      "The Land Survey Field Trip is a full-day off-campus exercise for students enrolled in the Land Survey & Geomatics programme. The trip forms part of the Phase 2 curriculum and directly contributes to assessment outcomes for both the practical field competency unit and the documentation and reporting unit.",
+      "The Land Surveying Field Trip is a full-day off-campus exercise for students enrolled in the Land Surveying programme. The trip forms part of the Phase 2 curriculum and directly contributes to assessment outcomes for both the practical field competency unit and the documentation and reporting unit.",
       "Students travel to a designated field site that presents realistic surveying conditions: irregular terrain, varied vegetation, and a defined boundary that requires both GPS-based and total station measurement to accurately record. The exercise mirrors the conditions students are likely to encounter on professional assignments following graduation.",
       "The day is structured around three main tasks: an initial site reconnaissance and planning session led by the programme instructor; a supervised measurement phase where student pairs independently operate total stations, GPS receivers, and field documentation tools; and a final data compilation session where raw measurements are checked, errors are discussed, and initial plans are drafted on-site.",
       "Students are expected to produce a complete field record by the end of the day. Formal reports based on the trip data are submitted within one week of return and are graded as part of the Phase 2 assessment schedule.",
@@ -215,7 +216,7 @@ export const events: CalendarEvent[] = [
     open: true,
     body: [
       "National TVET Day is observed annually across Rwanda as a recognition of the role vocational and technical education plays in the country's economic development. Forever Tvet Institute participates fully in the national celebration, hosting a campus-wide programme that is open to the public.",
-      "The day's programme includes demonstration sessions in each of the school's practical training areas. Visitors are guided through the Heavy Machinery yard, the Solar Technology outdoor facility, the Computer Engineering lab, the Electrical wiring workshops, and the Land Survey field area. Instructors and students explain what they are working on and demonstrate equipment operation.",
+      "The day's programme includes demonstration sessions in each of the school's practical training areas. Visitors are guided through the Heavy Machinery yard, the Solar Technology outdoor facility, the Computer Systems lab, the Electrical Technology workshops, and the Land Surveying field area. Instructors and students explain what they are working on and demonstrate equipment operation.",
       "A formal address in the morning acknowledges the contribution of Rwanda's TVET sector to national workforce development. The event aligns with WDA communications and may include a video message or representative from the Rwanda Workforce Development Authority.",
       "The day also serves as an informal open day for prospective students and families who are considering applying for the next intake. Admissions staff are available throughout the day to answer questions, explain programme requirements, and assist with application queries. Previous graduates are often present as informal ambassadors.",
       "National TVET Day is fully open to the public at no cost. Visitors do not need to register in advance. Groups of ten or more (e.g., schools, community organisations) are asked to notify the school in advance so that guide availability can be planned. Contact events@forevertvet.rw for group visits.",

@@ -11,32 +11,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const departments = [
   {
-    title: "Heavy Machinery Control",
-    desc: "Operate and maintain heavy construction equipment — the only programme of its kind in the region.",
+    title: "Heavy Machinery Operation & Maintenance",
+    desc: "Operate and maintain heavy construction equipment — short course training for rapid industry entry.",
     image: "/images/image2.png",
     color: "#214B82",
   },
   {
-    title: "Land Survey & Mapping",
-    desc: "Precision surveying and geospatial mapping for construction and infrastructure projects.",
+    title: "Land Surveying",
+    desc: "Precision surveying and geospatial mapping for construction and infrastructure projects. Level 3–5.",
     image: "/images/LandSurveyingLecturer.jpg",
     color: "#2D6A4F",
   },
   {
-    title: "Industrial Electricity",
-    desc: "Electrical systems installation, wiring, and maintenance in industrial environments.",
+    title: "Electrical Technology",
+    desc: "Electrical systems installation, wiring, and maintenance in industrial environments. Level 3–5.",
     image: "/images/image2(ElecticalControlCabinate).png",
     color: "#B8860B",
   },
   {
-    title: "Road Construction",
-    desc: "Hands-on training in road-building, earthworks, and civil infrastructure.",
+    title: "Public Works",
+    desc: "Hands-on training in road-building, earthworks, and civil infrastructure. Level 3–5.",
     image: "/images/image1.png",
     color: "#8B4513",
   },
   {
-    title: "Computer Engineering",
-    desc: "Practical IT, hardware, networking, and software skills for the modern job market.",
+    title: "Computer Systems & Architecture",
+    desc: "Practical IT, hardware, networking, and software skills for the modern job market. Level 3–5.",
     image: "/images/SolarPanelsTechnologyImage.png",
     color: "#4A4A8A",
   },

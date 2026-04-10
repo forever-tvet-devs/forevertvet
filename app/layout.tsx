@@ -22,7 +22,7 @@ const aboreto = Aboreto({
 export const metadata: Metadata = {
   title: "Forever Tvet Institute — Vocational Training in Kigali, Rwanda",
   description:
-    "Founded in 2018, Forever Tvet Institute provides industry-ready vocational training in heavy machinery, land survey, industrial electricity, road construction, and computer engineering. Enrolment now open.",
+    "Founded in 2018, Forever Tvet Institute provides industry-ready vocational training in heavy machinery operation & maintenance, land surveying, electrical technology, public works, and computer systems & architecture. Enrolment now open.",
 };
 
 export default function RootLayout({
