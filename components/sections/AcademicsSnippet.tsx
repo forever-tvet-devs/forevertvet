@@ -169,7 +169,7 @@ export default function AcademicsSnippet() {
         <div className="shrink-0 w-full md:w-screen py-16 md:py-0 md:h-full flex items-center justify-center px-3 sm:px-4 md:px-4 lg:px-4">
           <div className="text-center">
             <h3 className="font-heading font-bold text-3xl lg:text-5xl text-body leading-tight mb-6">
-              Ready to Start?
+              Ready to Join Us?
             </h3>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
