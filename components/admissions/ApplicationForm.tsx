@@ -23,10 +23,8 @@ const empty: FormData = {
 
 const programs = [
   "Heavy Machinery Operation & Maintenance (Short Course)",
-  "Land Surveying (Level 3 – Level 5)",
-  "Electrical Technology (Level 3 – Level 5)",
-  "Public Works (Level 3 – Level 5)",
-  "Computer Systems & Architecture (Level 3 – Level 5)",
+  "Solar Technology (Short Course)",
+  "EV Cars (Short Course)",
 ];
 
 const subjectOptions = ["Mathematics", "Physics", "Chemistry", "Biology", "Computer Science", "Geography", "History", "English", "French", "Other"];

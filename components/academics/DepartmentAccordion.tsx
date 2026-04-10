@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, CheckCircle, ArrowRight, Globe, Flask, BookOpen, GraduationCap } from "@/components/ui/Icons";
+import { ChevronDown, CheckCircle, ArrowRight, Globe, Flask, BookOpen, GraduationCap, Sun, Car } from "@/components/ui/Icons";
 import { departmentColors } from "@/components/academics/departmentColors";
 
 interface Department {
@@ -49,6 +49,64 @@ const departments: Department[] = [
     instructorRole: "Lead Instructor, Heavy Machinery",
     instructorYears: 14,
     instructorInitials: "GN",
+  },
+  {
+    name: "Solar Technology",
+    descriptor: "Install, maintain, and commission solar PV systems for residential, commercial, and off-grid applications",
+    duration: "Short Course",
+    level: "Certificate",
+    intake: "Jan & Jul",
+    icon: Sun,
+    subjects: [
+      "Solar PV Fundamentals",
+      "System Sizing & Design",
+      "Panel Installation Techniques",
+      "Inverter & Battery Configuration",
+      "Grid-Tie & Off-Grid Systems",
+      "Electrical Safety for Solar",
+      "Monitoring & Troubleshooting",
+      "Commissioning & Handover",
+    ],
+    careers: [
+      "Solar Installer",
+      "Solar Technician",
+      "Renewable Energy Technician",
+      "Site Supervisor — Solar",
+      "Maintenance Technician",
+    ],
+    instructorName: "Mr. Wang Lei",
+    instructorRole: "Lead Instructor, Solar Technology",
+    instructorYears: 12,
+    instructorInitials: "WL",
+  },
+  {
+    name: "EV Cars",
+    descriptor: "Diagnose, service, and maintain electric vehicles and their high-voltage systems",
+    duration: "Short Course",
+    level: "Certificate",
+    intake: "Jan & Jul",
+    icon: Car,
+    subjects: [
+      "EV Powertrain Fundamentals",
+      "High-Voltage Battery Systems",
+      "Electric Motor Technology",
+      "Charging Infrastructure",
+      "Diagnostic Tools & Software",
+      "EV Safety Protocols",
+      "Regenerative Braking Systems",
+      "Vehicle Electronics & CAN Bus",
+    ],
+    careers: [
+      "EV Technician",
+      "Automotive Electrician",
+      "EV Charging Installer",
+      "Fleet Maintenance Technician",
+      "Diagnostic Specialist",
+    ],
+    instructorName: "Mr. Li Jun",
+    instructorRole: "Lead Instructor, EV Cars",
+    instructorYears: 8,
+    instructorInitials: "LJ",
   },
   {
     name: "Land Surveying",

@@ -17,6 +17,18 @@ const departments = [
     color: "#214B82",
   },
   {
+    title: "Solar Technology",
+    desc: "Install and commission solar PV systems for residential and commercial applications. Short course.",
+    image: "/images/SolarPanelsTechnologyImage.png",
+    color: "#D4880F",
+  },
+  {
+    title: "EV Cars",
+    desc: "Diagnose, service, and maintain electric vehicles and high-voltage battery systems. Short course.",
+    image: "/images/image2.png",
+    color: "#2C7A7B",
+  },
+  {
     title: "Land Surveying",
     desc: "Precision surveying and geospatial mapping for construction and infrastructure projects. Level 3–5.",
     image: "/images/LandSurveyingLecturer.jpg",
@@ -87,7 +99,7 @@ export default function AcademicsSnippet() {
                 What We Teach
               </span>
               <h2 className="font-heading font-bold text-4xl lg:text-6xl text-body leading-tight">
-                Five Industry-Ready Programmes
+                Seven Industry-Ready Programmes
               </h2>
               <p className="text-base lg:text-lg text-gray-500 leading-relaxed mt-6 max-w-md">
                 Each programme moves from theory to simulation to practical operation,

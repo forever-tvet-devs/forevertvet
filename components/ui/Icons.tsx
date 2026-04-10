@@ -53,6 +53,8 @@ import {
   ChatCircle,
   SignIn,
   Bell as PhosphorBell,
+  SunDim,
+  Car as PhosphorCar,
 } from "@phosphor-icons/react";
 
 type IconProps = { size?: number; className?: string };
@@ -109,3 +111,5 @@ export const Zap = wrap(Lightning);
 export const MessageCircle = wrap(ChatCircle);
 export const LogIn = wrap(SignIn);
 export const Bell = wrap(PhosphorBell);
+export const Sun = wrap(SunDim);
+export const Car = wrap(PhosphorCar);

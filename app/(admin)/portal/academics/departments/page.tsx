@@ -25,6 +25,30 @@ const initialDepartments: ContentItem[] = [
   },
   {
     id: "dept-2",
+    label: "Solar Technology",
+    subtitle: "Short Course — Wang Lei",
+    status: "published",
+    name: "Solar Technology",
+    level: "Certificate",
+    head: "Wang Lei",
+    description:
+      "<p>Installation, maintenance, and commissioning of solar PV systems for residential, commercial, and off-grid applications.</p>",
+    programs: "Solar PV Installation\nSystem Design & Sizing\nGrid-Tie & Off-Grid Systems",
+  },
+  {
+    id: "dept-3",
+    label: "EV Cars",
+    subtitle: "Short Course — Li Jun",
+    status: "published",
+    name: "EV Cars",
+    level: "Certificate",
+    head: "Li Jun",
+    description:
+      "<p>Diagnosis, servicing, and maintenance of electric vehicles and their high-voltage battery and powertrain systems.</p>",
+    programs: "EV Powertrain Diagnostics\nBattery Systems\nCharging Infrastructure",
+  },
+  {
+    id: "dept-4a",
     label: "Land Surveying",
     subtitle: "Level 3–5 — Marie-Claire Uwimana",
     status: "published",
@@ -36,7 +60,7 @@ const initialDepartments: ContentItem[] = [
     programs: "Topographic Surveying\nGIS & Remote Sensing",
   },
   {
-    id: "dept-3",
+    id: "dept-5",
     label: "Electrical Technology",
     subtitle: "Level 3–5 — Patrick Ndayisaba",
     status: "published",
@@ -49,7 +73,7 @@ const initialDepartments: ContentItem[] = [
       "Electrical Installation\nIndustrial Wiring\nPLC Programming\nElectrical Maintenance",
   },
   {
-    id: "dept-4",
+    id: "dept-6",
     label: "Public Works",
     subtitle: "Level 3–5 — Emmanuel Mugisha",
     status: "draft",
@@ -61,7 +85,7 @@ const initialDepartments: ContentItem[] = [
     programs: "Road Construction Techniques\nAsphalt & Concrete Works",
   },
   {
-    id: "dept-5",
+    id: "dept-7",
     label: "Computer Systems & Architecture",
     subtitle: "Level 3–5 — Grace Ingabire",
     status: "draft",

@@ -23,8 +23,8 @@ const breadcrumb = [
 
 const committeeRoles = [
   { icon: Users,  role: "Head Parent",                              desc: "Overall representative. Chairs all meetings. Direct liaison with school administration." },
-  { icon: Shield, role: "Deputy Head Parent (Technical Programs)",  desc: "Represents parents of Heavy Machinery Operation & Maintenance, Electrical Technology, and Public Works students." },
-  { icon: Shield, role: "Deputy Head Parent (Survey & Computing)",  desc: "Represents parents of Land Surveying and Computer Systems & Architecture students." },
+  { icon: Shield, role: "Deputy Head Parent (Short Courses)",       desc: "Represents parents of Heavy Machinery, Solar Technology, and EV Cars students." },
+  { icon: Shield, role: "Deputy Head Parent (3-Year Programmes)",  desc: "Represents parents of Computer Systems & Architecture, Electrical Technology, Land Surveying, and Public Works students." },
   { icon: Users,  role: "Class Representatives (×5)",              desc: "One per program. Collects and escalates class-level concerns to the Head Parent." },
   { icon: Mail,   role: "Secretary",                                desc: "Records minutes and manages communication with the broader parent body between meetings." },
 ];

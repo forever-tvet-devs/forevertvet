@@ -10,7 +10,7 @@ import { CheckCircle, Download, ArrowRight } from "@/components/ui/Icons";
 export const metadata: Metadata = {
   title: "Entry Requirements — Forever Tvet Institute",
   description:
-    "Entry requirements for all five Forever Tvet Institute programs. Find out what qualifications and documents you need to apply.",
+    "Entry requirements for Forever Tvet Institute short courses. 3-year programmes are appointed by NESA.",
 };
 
 const breadcrumb = [
@@ -61,12 +61,12 @@ export default function RequirementsPage() {
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div>
-              <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Programs</span>
+              <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Short Courses</span>
             </div>
             <AnimatedText text="General Entry Requirements" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
             <div>
               <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-5 mb-8">
-                The following requirements apply to every applicant, regardless of which program you choose. Meeting these requirements means you are eligible to apply — selection is then based on your application review.
+                The following requirements apply to applicants for our short course programmes. Meeting these requirements means you are eligible to apply — selection is then based on your application review. Our 3-year programmes (Level 3–5) are appointed by NESA.
               </p>
             </div>
 
@@ -91,12 +91,12 @@ export default function RequirementsPage() {
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <div>
-                <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">By Program</span>
+                <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">By Programme</span>
               </div>
-              <AnimatedText text="Program-Specific Requirements" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
+              <AnimatedText text="Programme-Specific Requirements" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
               <div>
                 <p className="text-base text-gray-500 leading-relaxed mt-4 max-w-2xl">
-                  Each programme has specific academic prerequisites based on its technical requirements.
+                  Short courses have specific academic and physical prerequisites. 3-year programmes (Level 3–5) are placed through NESA — no direct application is required.
                 </p>
               </div>
             </div>
