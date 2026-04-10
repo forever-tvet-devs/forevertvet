@@ -168,7 +168,7 @@ export default function ApplicationForm() {
             <Field label="Year of Completion *">
               <select className={selectCls} value={data.yearCompleted} onChange={(e) => set("yearCompleted", e.target.value)}>
                 <option value="">Select year…</option>
-                {Array.from({ length: 11 }, (_, i) => 2025 - i).map((y) => <option key={y}>{y}</option>)}
+                {Array.from({ length: new Date().getFullYear() - 1988 + 1 }, (_, i) => new Date().getFullYear() - i).map((y) => <option key={y}>{y}</option>)}
               </select>
             </Field>
             <Field label="Certificate Type *">
