@@ -26,7 +26,7 @@ const departments: Department[] = [
     descriptor: "Operate and maintain heavy construction and mining equipment to industry standards",
     duration: "Short Course",
     level: "Certificate",
-    intake: "Jan & Jul",
+    intake: "Contact School",
     icon: GraduationCap,
     subjects: [
       "Equipment Safety & Regulations",
@@ -55,7 +55,7 @@ const departments: Department[] = [
     descriptor: "Install, maintain, and commission solar PV systems for residential, commercial, and off-grid applications",
     duration: "Short Course",
     level: "Certificate",
-    intake: "Jan & Jul",
+    intake: "Contact School",
     icon: Sun,
     subjects: [
       "Solar PV Fundamentals",
@@ -84,7 +84,7 @@ const departments: Department[] = [
     descriptor: "Diagnose, service, and maintain electric vehicles and their high-voltage systems",
     duration: "Short Course",
     level: "Certificate",
-    intake: "Jan & Jul",
+    intake: "Contact School",
     icon: Car,
     subjects: [
       "EV Powertrain Fundamentals",
@@ -113,7 +113,7 @@ const departments: Department[] = [
     descriptor: "Master the tools and techniques of modern land measurement, mapping, and GIS",
     duration: "3 Years",
     level: "Level 3 – Level 5",
-    intake: "Jan & Jul",
+    intake: "Appointed by NESA",
     icon: Globe,
     subjects: [
       "Plane Surveying",
@@ -143,7 +143,7 @@ const departments: Department[] = [
     descriptor: "Design, install, and maintain industrial electrical systems to national safety codes",
     duration: "3 Years",
     level: "Level 3 – Level 5",
-    intake: "Jan & Jul",
+    intake: "Appointed by NESA",
     icon: Flask,
     subjects: [
       "AC/DC Circuit Theory",
@@ -173,7 +173,7 @@ const departments: Department[] = [
     descriptor: "Plan, construct, and supervise road and civil infrastructure projects from base to finish",
     duration: "3 Years",
     level: "Level 3 – Level 5",
-    intake: "Jan & Jul",
+    intake: "Appointed by NESA",
     icon: BookOpen,
     subjects: [
       "Road Design Fundamentals",
@@ -202,7 +202,7 @@ const departments: Department[] = [
     descriptor: "Build, maintain, and troubleshoot computer hardware and network infrastructure",
     duration: "3 Years",
     level: "Level 3 – Level 5",
-    intake: "Jan & Jul",
+    intake: "Appointed by NESA",
     icon: GraduationCap,
     subjects: [
       "Computer Architecture",

@@ -38,9 +38,9 @@ const philosophyHighlights = [
 ];
 
 const programs = [
-  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "20 students", intake: "Jan & Jul" },
-  { name: "Solar Technology",                        duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "20 students", intake: "Jan & Jul" },
-  { name: "EV Cars",                                 duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "18 students", intake: "Jan & Jul" },
+  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "20 students", intake: "Contact School" },
+  { name: "Solar Technology",                        duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "20 students", intake: "Contact School" },
+  { name: "EV Cars",                                 duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "18 students", intake: "Contact School" },
   { name: "Computer Systems & Architecture",         duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "22 students", intake: "Appointed by NESA" },
   { name: "Electrical Technology",                   duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "20 students", intake: "Appointed by NESA" },
   { name: "Land Surveying",                          duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "18 students", intake: "Appointed by NESA" },
