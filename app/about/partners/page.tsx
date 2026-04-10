@@ -22,22 +22,22 @@ const industryPartners = [
   {
     name: "Rwanda Transport Development Agency",
     sector: "Infrastructure",
-    desc: "A key employer of our road construction and heavy machinery graduates, providing internship placements and direct employment pathways.",
+    desc: "A key employer of our Public Works and Heavy Machinery Operation & Maintenance graduates, providing internship placements and direct employment pathways.",
   },
   {
     name: "Kigali Construction Consortium",
     sector: "Construction",
-    desc: "Partners with our civil engineering programs to ensure curriculum relevance and absorb our top graduates each year.",
+    desc: "Partners with our Public Works programme to ensure curriculum relevance and absorb our top graduates each year.",
   },
   {
     name: "Rwanda Energy Group",
     sector: "Energy",
-    desc: "Collaborates on our industrial electricity curriculum and provides apprenticeship opportunities for final-year students.",
+    desc: "Collaborates on our Electrical Technology curriculum and provides apprenticeship opportunities for final-year students.",
   },
   {
     name: "MTN Rwanda",
     sector: "Telecommunications",
-    desc: "Supports our computer engineering and ICT programs through curriculum input, guest lectures, and graduate recruitment.",
+    desc: "Supports our Computer Systems & Architecture programme through curriculum input, guest lectures, and graduate recruitment.",
   },
   {
     name: "Prime Holdings Ltd",
@@ -47,7 +47,7 @@ const industryPartners = [
   {
     name: "Techno Brain Rwanda",
     sector: "Technology",
-    desc: "Partners with our computer engineering department to deliver software-focused modules and internship placements.",
+    desc: "Partners with our Computer Systems & Architecture department to deliver software-focused modules and internship placements.",
   },
 ];
 

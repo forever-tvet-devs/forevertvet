@@ -1,9 +1,11 @@
 const programs = [
-  { name: "Heavy Machinery Operation", duration: "28 weeks", level: "RQF 3", fee: "RWF 850,000", reg: "RWF 50,000" },
-  { name: "Land Survey & Geomatics",   duration: "28 weeks", level: "RQF 3", fee: "RWF 820,000", reg: "RWF 50,000" },
-  { name: "Industrial Electricity",     duration: "28 weeks", level: "RQF 4", fee: "RWF 920,000", reg: "RWF 50,000" },
-  { name: "Road Construction Technology", duration: "28 weeks", level: "RQF 3", fee: "RWF 800,000", reg: "RWF 50,000" },
-  { name: "Computer Engineering",       duration: "32 weeks", level: "RQF 4", fee: "RWF 980,000", reg: "RWF 50,000" },
+  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", fee: "RWF 850,000", reg: "RWF 50,000" },
+  { name: "Solar Technology",                        duration: "Short Course", level: "Certificate", fee: "RWF 750,000", reg: "RWF 50,000" },
+  { name: "EV Cars",                                 duration: "Short Course", level: "Certificate", fee: "RWF 800,000", reg: "RWF 50,000" },
+  { name: "Computer Systems & Architecture",         duration: "3 Years",      level: "Level 3–5",    fee: "RWF 980,000", reg: "RWF 50,000" },
+  { name: "Electrical Technology",                   duration: "3 Years",      level: "Level 3–5",    fee: "RWF 920,000", reg: "RWF 50,000" },
+  { name: "Land Surveying",                          duration: "3 Years",      level: "Level 3–5",    fee: "RWF 820,000", reg: "RWF 50,000" },
+  { name: "Public Works",                            duration: "3 Years",      level: "Level 3–5",    fee: "RWF 800,000", reg: "RWF 50,000" },
 ];
 
 const headers = ["Program", "Duration", "Level", "Total Fee (RWF)", "Registration", "Payment Options"];

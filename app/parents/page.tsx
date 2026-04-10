@@ -23,8 +23,8 @@ const breadcrumb = [
 
 const committeeRoles = [
   { icon: Users,  role: "Head Parent",                              desc: "Overall representative. Chairs all meetings. Direct liaison with school administration." },
-  { icon: Shield, role: "Deputy Head Parent (Technical Programs)",  desc: "Represents parents of Heavy Machinery, Industrial Electricity, and Road Construction students." },
-  { icon: Shield, role: "Deputy Head Parent (Survey & Computing)",  desc: "Represents parents of Land Survey and Computer Engineering students." },
+  { icon: Shield, role: "Deputy Head Parent (Short Courses)",       desc: "Represents parents of Heavy Machinery, Solar Technology, and EV Cars students." },
+  { icon: Shield, role: "Deputy Head Parent (3-Year Programmes)",  desc: "Represents parents of Computer Systems & Architecture, Electrical Technology, Land Surveying, and Public Works students." },
   { icon: Users,  role: "Class Representatives (×5)",              desc: "One per program. Collects and escalates class-level concerns to the Head Parent." },
   { icon: Mail,   role: "Secretary",                                desc: "Records minutes and manages communication with the broader parent body between meetings." },
 ];
@@ -154,7 +154,7 @@ export default function ParentsPage() {
                 />
                 <div>
                   <p className="text-base text-gray-600 leading-relaxed mt-5">
-                    Mme. Uwimana is a qualified accountant with over 15 years of experience in Rwanda's public and private sectors. She is the parent of a current Industrial Electricity student at Forever Tvet Institute.
+                    Mme. Uwimana is a qualified accountant with over 15 years of experience in Rwanda's public and private sectors. She is the parent of a current Electrical Technology student at Forever Tvet Institute.
                   </p>
                   <p className="text-base text-gray-600 leading-relaxed mt-4">
                     As Head Parent, she chairs the monthly Parent Committee meetings, liaises directly with the Headmaster and Dean of Students on all parent-raised concerns, and formally represents the parent body at school governance events.

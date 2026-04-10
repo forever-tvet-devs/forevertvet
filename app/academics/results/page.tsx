@@ -35,7 +35,7 @@ const examResults = [
 const alumni = [
   {
     name: "Eugène Niyonkuru",
-    program: "Heavy Machinery",
+    program: "Heavy Machinery Operation & Maintenance",
     year: "2022",
     role: "Senior Equipment Operator",
     employer: "Kigali Roads Ltd.",
@@ -45,7 +45,7 @@ const alumni = [
   },
   {
     name: "Marie-Claire Umutoniwase",
-    program: "Industrial Electricity",
+    program: "Electrical Technology",
     year: "2023",
     role: "Electrical Technician",
     employer: "RwandaEnergy Corp",
@@ -55,7 +55,7 @@ const alumni = [
   },
   {
     name: "Théodore Hakizimana",
-    program: "Computer Engineering",
+    program: "Computer Systems & Architecture",
     year: "2023",
     role: "Network Engineer",
     employer: "MTN Rwanda",

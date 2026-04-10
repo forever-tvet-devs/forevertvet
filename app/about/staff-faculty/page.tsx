@@ -20,7 +20,7 @@ const breadcrumb = [
 
 const departments = [
   {
-    name: "Heavy Machinery Operations",
+    name: "Heavy Machinery Operation & Maintenance",
     staff: [
       { name: "Mr. Zhang Yong", role: "Head of Department", initials: "ZY" },
       { name: "Mr. Patrick Ndayisaba", role: "Senior Instructor", initials: "PN" },
@@ -28,15 +28,29 @@ const departments = [
     ],
   },
   {
-    name: "Land Survey & Road Construction",
+    name: "Solar Technology",
     staff: [
-      { name: "Mr. Li Jun", role: "Head of Department", initials: "LJ" },
-      { name: "Ms. Diane Uwamahoro", role: "Instructor — Surveying", initials: "DU" },
-      { name: "Mr. Claude Habimana", role: "Instructor — Road Construction", initials: "CH" },
+      { name: "Mr. Wang Lei", role: "Head of Department", initials: "WL" },
+      { name: "Mr. Théophile Nshuti", role: "Senior Instructor", initials: "TN" },
     ],
   },
   {
-    name: "Industrial Electricity",
+    name: "EV Cars",
+    staff: [
+      { name: "Mr. Li Jun", role: "Head of Department", initials: "LJ" },
+      { name: "Mr. Fidèle Kamanzi", role: "Instructor — Diagnostics", initials: "FK" },
+    ],
+  },
+  {
+    name: "Land Surveying & Public Works",
+    staff: [
+      { name: "Ms. Diane Uwamahoro", role: "Head of Department — Surveying", initials: "DU" },
+      { name: "Mr. Claude Habimana", role: "Head of Department — Public Works", initials: "CH" },
+      { name: "Mr. Jean-Paul Mukiza", role: "Senior Instructor", initials: "JM" },
+    ],
+  },
+  {
+    name: "Electrical Technology",
     staff: [
       { name: "Mr. Wang Lei", role: "Head of Department", initials: "WL" },
       { name: "Mr. Jean de Dieu Niyonzima", role: "Senior Instructor", initials: "JN" },
@@ -44,7 +58,7 @@ const departments = [
     ],
   },
   {
-    name: "Computer Engineering",
+    name: "Computer Systems & Architecture",
     staff: [
       { name: "Ms. Chen Mei", role: "Head of Department", initials: "CM" },
       { name: "Mr. Yves Irambona", role: "Instructor — Networking", initials: "YI" },
@@ -122,8 +136,8 @@ export default function StaffFacultyPage() {
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
               {[
-                { value: "30+", label: "Teaching Staff" },
-                { value: "5", label: "Departments" },
+                { value: "40+", label: "Teaching Staff" },
+                { value: "7", label: "Departments" },
                 { value: "2", label: "Countries Represented" },
                 { value: "100%", label: "Industry Experienced" },
               ].map((stat, i) => (

@@ -12,9 +12,9 @@ interface Facility {
 const facilities: Facility[] = [
   {
     name: "Electrical Simulation Lab",
-    tag: "Industrial Electricity",
+    tag: "Electrical Technology",
     image: "/images/image2(ElecticalControlCabinate).png",
-    description: "The centrepiece of our industrial electricity program. Equipped with full-scale switchboards, circuit breakers, motor control panels, and PLC training boards — mirroring what students will encounter in industry from day one.",
+    description: "The centrepiece of our electrical technology program. Equipped with full-scale switchboards, circuit breakers, motor control panels, and PLC training boards — mirroring what students will encounter in industry from day one.",
     features: [
       "12 individual training stations",
       "Motor control and PLC boards",
@@ -36,7 +36,7 @@ const facilities: Facility[] = [
   },
   {
     name: "Survey Field Site",
-    tag: "Land Survey & Geomatics",
+    tag: "Land Surveying",
     image: "/images/LandSurveyingLecturer.jpg",
     description: "Land surveying is practiced outdoors. Our dedicated field site provides a controlled environment for total station work, leveling, traverse surveys, and boundary marking using professional-grade instruments.",
     features: [
@@ -47,8 +47,8 @@ const facilities: Facility[] = [
     ],
   },
   {
-    name: "Computer Engineering Lab",
-    tag: "Computer Engineering",
+    name: "Computer Systems Lab",
+    tag: "Computer Systems & Architecture",
     image: "/images/PeopleLookAtTrainingDevice.png",
     description: "30 workstations running professional software — from networking simulators to hardware diagnostic tools. Students work on real machines in a structured environment that replicates an industry IT department.",
     features: [
@@ -60,7 +60,7 @@ const facilities: Facility[] = [
   },
   {
     name: "Heavy Machinery Training Area",
-    tag: "Heavy Machinery Operation",
+    tag: "Heavy Machinery Operation & Maintenance",
     image: "/images/image4.jpg",
     description: "Operating heavy equipment safely requires structured practice before entering a live site. Our training area gives students supervised access to industry machinery in a controlled, safety-first environment.",
     features: [

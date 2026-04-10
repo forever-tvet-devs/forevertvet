@@ -51,7 +51,7 @@ export default function SportsPage() {
                 <AnimatedText text="Fit Body, Sharp Mind" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
                 <div>
                   <p className="text-base text-gray-600 leading-relaxed mt-5">
-                    Technical training demands physical endurance — particularly for programs like Heavy Machinery, Industrial Electricity, and Land Survey where fieldwork is intensive. Sport builds the stamina, discipline, and mental resilience students carry into their careers.
+                    Technical training demands physical endurance — particularly for programs like Heavy Machinery Operation & Maintenance, Electrical Technology, and Land Surveying where fieldwork is intensive. Sport builds the stamina, discipline, and mental resilience students carry into their careers.
                   </p>
                   <p className="text-base text-gray-600 leading-relaxed mt-4">
                     Beyond individual fitness, team sport develops the collaboration and communication skills that employers value most. Students who train together work together — and that makes a difference in every professional environment.

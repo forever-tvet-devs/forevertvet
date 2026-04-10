@@ -33,7 +33,7 @@ const timeline = [
   {
     year: "2020",
     title: "Curriculum Expansion",
-    desc: "Added Industrial Electricity and Road Construction programs, bringing our total to five vocational tracks.",
+    desc: "Added Electrical Technology and Public Works programs, expanding our vocational training offer.",
   },
   {
     year: "2021",
@@ -43,7 +43,7 @@ const timeline = [
   {
     year: "2022",
     title: "New Training Facilities",
-    desc: "Opened our expanded heavy machinery simulation lab and land survey training field — the most advanced of their kind in East Africa.",
+    desc: "Opened our expanded heavy machinery simulation lab and land surveying training field — the most advanced of their kind in East Africa.",
   },
   {
     year: "2023",

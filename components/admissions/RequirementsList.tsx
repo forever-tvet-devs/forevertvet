@@ -1,4 +1,4 @@
-import { CheckCircle } from "@/components/ui/Icons";
+import { CheckCircle, Info } from "@/components/ui/Icons";
 import { departmentColors } from "@/components/academics/departmentColors";
 
 interface Program {
@@ -8,10 +8,10 @@ interface Program {
   physical: string[];
 }
 
-const programs: Program[] = [
+const shortCourses: Program[] = [
   {
-    name: "Heavy Machinery Operation",
-    level: "RQF Level 3",
+    name: "Heavy Machinery Operation & Maintenance",
+    level: "Short Course",
     academic: [
       "S6 certificate (any subject combination)",
       "Basic mathematics proficiency — assessed at intake orientation",
@@ -24,72 +24,51 @@ const programs: Program[] = [
     ],
   },
   {
-    name: "Land Survey & Geomatics",
-    level: "RQF Level 3",
-    academic: [
-      "S6 certificate with Mathematics (advantageous)",
-      "Basic understanding of geography is beneficial",
-      "English literacy",
-    ],
-    physical: [
-      "Good eyesight — corrective lenses are acceptable",
-      "Ability to work outdoors in varying weather conditions",
-      "Physical fitness for extended fieldwork sessions",
-    ],
-  },
-  {
-    name: "Industrial Electricity",
-    level: "RQF Level 4",
-    academic: [
-      "S6 certificate with Physics and/or Mathematics (required)",
-      "Strong numeracy skills — electrical theory is mathematics-intensive",
-      "English literacy — technical materials are in English",
-    ],
-    physical: [
-      "No known cardiac conditions — working with live electrical systems",
-      "Normal colour vision — essential for electrical wiring identification",
-      "Good manual dexterity for precise wiring and assembly work",
-    ],
-  },
-  {
-    name: "Road Construction Technology",
-    level: "RQF Level 3",
+    name: "Solar Technology",
+    level: "Short Course",
     academic: [
       "S6 certificate (any subject combination)",
-      "Basic mathematics",
+      "Basic understanding of electrical concepts (advantageous)",
       "English literacy",
     ],
     physical: [
-      "Physical fitness for outdoor site work",
-      "Ability to work in direct sunlight for extended periods",
-      "No severe respiratory conditions affecting outdoor dust exposure",
+      "Physical fitness for rooftop and outdoor installation work",
+      "Ability to work at height — ladder and scaffolding access required",
+      "Normal colour vision for cable identification",
     ],
   },
   {
-    name: "Computer Engineering",
-    level: "RQF Level 4",
+    name: "EV Cars",
+    level: "Short Course",
     academic: [
-      "S6 certificate with Mathematics or Physics (required)",
-      "Demonstrated logical thinking ability — assessed at intake",
+      "S6 certificate (any subject combination)",
+      "Basic understanding of automotive or electrical systems (advantageous)",
       "English literacy — technical documentation is in English",
     ],
     physical: [
-      "Normal or corrected vision for extended screen-based work",
-      "Good manual dexterity for hardware assembly and cabling",
-      "No conditions limiting fine motor skills in hands or fingers",
+      "Good manual dexterity for working with vehicle components",
+      "No known cardiac conditions — high-voltage battery systems",
+      "Normal or corrected vision for diagnostic work",
     ],
   },
+];
+
+const nesaProgrammes = [
+  "Computer Systems & Architecture",
+  "Electrical Technology",
+  "Land Surveying",
+  "Public Works",
 ];
 
 export default function RequirementsList() {
   return (
     <div className="space-y-5">
-      {programs.map((prog, i) => {
+      {/* Short courses with requirements */}
+      {shortCourses.map((prog, i) => {
         const color = departmentColors[prog.name];
         return (
           <div key={i}>
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-              {/* Header */}
               <div className="flex items-center gap-4 p-6 pb-5">
                 <div className="w-1.5 self-stretch rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
                 <div className="flex items-center gap-3 flex-wrap">
@@ -103,7 +82,6 @@ export default function RequirementsList() {
                 </div>
               </div>
 
-              {/* Requirements columns */}
               <div className="grid md:grid-cols-2 gap-6 px-6 pb-6 pt-0">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
@@ -140,6 +118,32 @@ export default function RequirementsList() {
           </div>
         );
       })}
+
+      {/* NESA-appointed programmes */}
+      <div className="bg-primary/5 rounded-xl border border-primary/10 p-6">
+        <div className="flex items-start gap-3 mb-4">
+          <Info size={20} className="text-primary flex-shrink-0 mt-0.5" />
+          <div>
+            <h3 className="font-heading font-semibold text-lg text-primary">
+              3-Year Programmes (Level 3 – Level 5)
+            </h3>
+            <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+              Students for the following programmes are appointed by <strong>NESA</strong> (National Examination and School Inspection Authority). There is no direct application or entry requirements process through the school — placement is managed centrally by NESA.
+            </p>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-3 mt-4">
+          {nesaProgrammes.map((name) => {
+            const color = departmentColors[name];
+            return (
+              <div key={name} className="flex items-center gap-3 bg-white rounded-lg px-4 py-3 border border-gray-100">
+                <div className="w-1.5 h-8 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+                <span className="text-sm font-semibold text-primary">{name}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

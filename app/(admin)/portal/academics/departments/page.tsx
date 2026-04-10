@@ -13,10 +13,10 @@ import { Input } from "@/components/ui/input";
 const initialDepartments: ContentItem[] = [
   {
     id: "dept-1",
-    label: "Heavy Machinery Operation",
-    subtitle: "Level 4 — Jean-Claude Habimana",
+    label: "Heavy Machinery Operation & Maintenance",
+    subtitle: "Short Course — Jean-Claude Habimana",
     status: "published",
-    name: "Heavy Machinery Operation",
+    name: "Heavy Machinery Operation & Maintenance",
     level: "Level 4",
     head: "Jean-Claude Habimana",
     description:
@@ -25,10 +25,34 @@ const initialDepartments: ContentItem[] = [
   },
   {
     id: "dept-2",
-    label: "Land Survey & Geomatics",
-    subtitle: "Level 5 — Marie-Claire Uwimana",
+    label: "Solar Technology",
+    subtitle: "Short Course — Wang Lei",
     status: "published",
-    name: "Land Survey & Geomatics",
+    name: "Solar Technology",
+    level: "Certificate",
+    head: "Wang Lei",
+    description:
+      "<p>Installation, maintenance, and commissioning of solar PV systems for residential, commercial, and off-grid applications.</p>",
+    programs: "Solar PV Installation\nSystem Design & Sizing\nGrid-Tie & Off-Grid Systems",
+  },
+  {
+    id: "dept-3",
+    label: "EV Cars",
+    subtitle: "Short Course — Li Jun",
+    status: "published",
+    name: "EV Cars",
+    level: "Certificate",
+    head: "Li Jun",
+    description:
+      "<p>Diagnosis, servicing, and maintenance of electric vehicles and their high-voltage battery and powertrain systems.</p>",
+    programs: "EV Powertrain Diagnostics\nBattery Systems\nCharging Infrastructure",
+  },
+  {
+    id: "dept-4a",
+    label: "Land Surveying",
+    subtitle: "Level 3–5 — Marie-Claire Uwimana",
+    status: "published",
+    name: "Land Surveying",
     level: "Level 5",
     head: "Marie-Claire Uwimana",
     description:
@@ -36,11 +60,11 @@ const initialDepartments: ContentItem[] = [
     programs: "Topographic Surveying\nGIS & Remote Sensing",
   },
   {
-    id: "dept-3",
-    label: "Industrial Electricity",
-    subtitle: "Level 4 — Patrick Ndayisaba",
+    id: "dept-5",
+    label: "Electrical Technology",
+    subtitle: "Level 3–5 — Patrick Ndayisaba",
     status: "published",
-    name: "Industrial Electricity",
+    name: "Electrical Technology",
     level: "Level 4",
     head: "Patrick Ndayisaba",
     description:
@@ -49,11 +73,11 @@ const initialDepartments: ContentItem[] = [
       "Electrical Installation\nIndustrial Wiring\nPLC Programming\nElectrical Maintenance",
   },
   {
-    id: "dept-4",
-    label: "Road Construction & Maintenance",
-    subtitle: "Level 4 — Emmanuel Mugisha",
+    id: "dept-6",
+    label: "Public Works",
+    subtitle: "Level 3–5 — Emmanuel Mugisha",
     status: "draft",
-    name: "Road Construction & Maintenance",
+    name: "Public Works",
     level: "Level 4",
     head: "Emmanuel Mugisha",
     description:
@@ -61,11 +85,11 @@ const initialDepartments: ContentItem[] = [
     programs: "Road Construction Techniques\nAsphalt & Concrete Works",
   },
   {
-    id: "dept-5",
-    label: "Computer Engineering",
-    subtitle: "Level 5 — Grace Ingabire",
+    id: "dept-7",
+    label: "Computer Systems & Architecture",
+    subtitle: "Level 3–5 — Grace Ingabire",
     status: "draft",
-    name: "Computer Engineering",
+    name: "Computer Systems & Architecture",
     level: "Level 5",
     head: "Grace Ingabire",
     description:

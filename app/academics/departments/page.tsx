@@ -10,7 +10,7 @@ import { ArrowRight } from "@/components/ui/Icons";
 export const metadata: Metadata = {
   title: "Departments & Subjects — Forever Tvet Institute",
   description:
-    "Explore Forever Tvet Institute's five vocational departments — from Heavy Machinery to Computer Engineering. Find the right program for your career.",
+    "Explore Forever Tvet Institute's vocational programmes — short courses in Heavy Machinery, Solar, and EV Cars, plus 3-year programmes in Computer Systems, Electrical Technology, Land Surveying, and Public Works.",
 };
 
 const breadcrumb = [

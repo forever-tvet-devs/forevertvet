@@ -11,32 +11,44 @@ gsap.registerPlugin(ScrollTrigger);
 
 const departments = [
   {
-    title: "Heavy Machinery Control",
-    desc: "Operate and maintain heavy construction equipment — the only programme of its kind in the region.",
+    title: "Heavy Machinery Operation & Maintenance",
+    desc: "Operate and maintain heavy construction equipment — short course training for rapid industry entry.",
     image: "/images/image2.png",
     color: "#214B82",
   },
   {
-    title: "Land Survey & Mapping",
-    desc: "Precision surveying and geospatial mapping for construction and infrastructure projects.",
+    title: "Solar Technology",
+    desc: "Install and commission solar PV systems for residential and commercial applications. Short course.",
+    image: "/images/SolarPanelsTechnologyImage.png",
+    color: "#D4880F",
+  },
+  {
+    title: "EV Cars",
+    desc: "Diagnose, service, and maintain electric vehicles and high-voltage battery systems. Short course.",
+    image: "/images/image2.png",
+    color: "#2C7A7B",
+  },
+  {
+    title: "Land Surveying",
+    desc: "Precision surveying and geospatial mapping for construction and infrastructure projects. Level 3–5.",
     image: "/images/LandSurveyingLecturer.jpg",
     color: "#2D6A4F",
   },
   {
-    title: "Industrial Electricity",
-    desc: "Electrical systems installation, wiring, and maintenance in industrial environments.",
+    title: "Electrical Technology",
+    desc: "Electrical systems installation, wiring, and maintenance in industrial environments. Level 3–5.",
     image: "/images/image2(ElecticalControlCabinate).png",
     color: "#B8860B",
   },
   {
-    title: "Road Construction",
-    desc: "Hands-on training in road-building, earthworks, and civil infrastructure.",
+    title: "Public Works",
+    desc: "Hands-on training in road-building, earthworks, and civil infrastructure. Level 3–5.",
     image: "/images/image1.png",
     color: "#8B4513",
   },
   {
-    title: "Computer Engineering",
-    desc: "Practical IT, hardware, networking, and software skills for the modern job market.",
+    title: "Computer Systems & Architecture",
+    desc: "Practical IT, hardware, networking, and software skills for the modern job market. Level 3–5.",
     image: "/images/SolarPanelsTechnologyImage.png",
     color: "#4A4A8A",
   },
@@ -87,7 +99,7 @@ export default function AcademicsSnippet() {
                 What We Teach
               </span>
               <h2 className="font-heading font-bold text-4xl lg:text-6xl text-body leading-tight">
-                Five Industry-Ready Programmes
+                Our Programmes
               </h2>
               <p className="text-base lg:text-lg text-gray-500 leading-relaxed mt-6 max-w-md">
                 Each programme moves from theory to simulation to practical operation,
@@ -157,7 +169,7 @@ export default function AcademicsSnippet() {
         <div className="shrink-0 w-full md:w-screen py-16 md:py-0 md:h-full flex items-center justify-center px-3 sm:px-4 md:px-4 lg:px-4">
           <div className="text-center">
             <h3 className="font-heading font-bold text-3xl lg:text-5xl text-body leading-tight mb-6">
-              Ready to Start?
+              Ready to Join Us?
             </h3>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

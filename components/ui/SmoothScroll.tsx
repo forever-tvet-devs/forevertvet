@@ -18,7 +18,22 @@ export default function SmoothScroll() {
 
     requestAnimationFrame(raf);
 
-    return () => lenis.destroy();
+    // Pause Lenis when the cursor is over an iframe to prevent scroll conflicts
+    const onEnter = (e: Event) => {
+      if ((e.target as HTMLElement).tagName === "IFRAME") lenis.stop();
+    };
+    const onLeave = (e: Event) => {
+      if ((e.target as HTMLElement).tagName === "IFRAME") lenis.start();
+    };
+
+    document.addEventListener("pointerenter", onEnter, true);
+    document.addEventListener("pointerleave", onLeave, true);
+
+    return () => {
+      document.removeEventListener("pointerenter", onEnter, true);
+      document.removeEventListener("pointerleave", onLeave, true);
+      lenis.destroy();
+    };
   }, []);
 
   return null;

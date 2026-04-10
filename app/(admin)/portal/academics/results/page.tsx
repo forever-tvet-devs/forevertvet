@@ -48,10 +48,10 @@ const initialResults: ContentItem[] = [
   },
   {
     id: "res-4",
-    label: "Skills Competition — Heavy Machinery",
+    label: "Skills Competition — Heavy Machinery Operation & Maintenance",
     subtitle: "2024 — Awards — Gold Medal",
     status: "draft",
-    title: "Skills Competition — Heavy Machinery",
+    title: "Skills Competition — Heavy Machinery Operation & Maintenance",
     year: "2024",
     category: "Awards",
     value: "Gold Medal",

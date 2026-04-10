@@ -65,8 +65,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-white/50 leading-relaxed max-w-xs mb-6">
-              Nationally accredited TVET programmes in Heavy Machinery, Land Survey, Industrial Electricity,
-              Road Construction, and Computer Engineering. Preparing Rwanda's workforce since 2018.
+              Nationally accredited TVET programmes — short courses in Heavy Machinery, Solar Technology, and EV Cars, plus 3-year programmes in Computer Systems & Architecture, Electrical Technology, Land Surveying, and Public Works. Preparing Rwanda's workforce since 2018.
             </p>
 
             {/* Contact snippet */}
