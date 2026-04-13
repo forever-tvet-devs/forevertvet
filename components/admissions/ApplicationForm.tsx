@@ -86,7 +86,7 @@ export default function ApplicationForm() {
   const canNext = () => {
     if (step === 1) return data.firstName && data.lastName && data.email && data.phone && data.nationalId && data.dob && data.gender;
     if (step === 2) return data.schoolName && data.yearCompleted && data.certType && data.priorVocational;
-    if (step === 3) return data.program && data.intake && data.payment && data.hearAboutUs;
+    if (step === 3) return data.program && data.intake && data.hearAboutUs;
     if (step === 4) return data.declaration;
     return true;
   };
