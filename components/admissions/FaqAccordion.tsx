@@ -28,8 +28,6 @@ const faqs: Faq[] = [
   // Fees & Payment
   { category: "Fees & Payment", question: "What does the total fee include?", answer: "The total fee covers full program tuition, all lab and equipment usage, learning materials, your internship placement service, the national RQF certification exam fee, and certificate issuance. There are no hidden extras." },
   { category: "Fees & Payment", question: "Is the registration fee refundable?", answer: "No. The registration fee of RWF 50,000 is non-refundable. It is deducted from your total program fee once you enrol. It secures your place in the intake." },
-  { category: "Fees & Payment", question: "What happens if I cannot pay my second instalment on time?", answer: "Contact the finance office as early as possible — do not wait until the due date. We handle genuine hardship cases with empathy and may be able to arrange a short extension. Continued non-payment without communication may affect your ability to continue to the next phase." },
-  { category: "Fees & Payment", question: "Are there scholarships available?", answer: "Yes. A limited number of partial merit scholarships covering 25–50% of program fees are awarded each intake. Apply via the standard application form and indicate your interest in scholarship consideration in the relevant field." },
   { category: "Fees & Payment", question: "Can fees be paid by a sponsor or employer?", answer: "Yes. Corporate or institutional sponsors can pay on behalf of a student. Contact our finance office for a sponsorship invoice and the details of our bank account. We issue official receipts for all payments." },
 
   // Programs

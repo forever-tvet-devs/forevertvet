@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
 import ApplicationForm from "@/components/admissions/ApplicationForm";
-import { CheckCircle, Shield, Award, Users, ArrowRight } from "@/components/ui/Icons";
+import { CheckCircle, Shield, Users, ArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
   title: "Apply Online — Forever Tvet Institute",
@@ -22,7 +22,6 @@ const breadcrumb = [
 const trustPoints = [
   { icon: CheckCircle, text: "Takes 15–20 minutes to complete" },
   { icon: Shield,      text: "Your data is kept secure and confidential" },
-  { icon: Award,       text: "Merit scholarships available — indicate interest in the form" },
   { icon: Users,       text: "Our team reviews every application personally" },
 ];
 

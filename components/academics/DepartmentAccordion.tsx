@@ -2,232 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, CheckCircle, ArrowRight, Globe, Flask, BookOpen, GraduationCap, Sun, Car } from "@/components/ui/Icons";
-import { departmentColors } from "@/components/academics/departmentColors";
-
-interface Department {
-  name: string;
-  descriptor: string;
-  duration: string;
-  level: string;
-  intake: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
-  subjects: string[];
-  careers: string[];
-  instructorName: string;
-  instructorRole: string;
-  instructorYears: number;
-  instructorInitials: string;
-}
-
-const departments: Department[] = [
-  {
-    name: "Heavy Machinery Operation & Maintenance",
-    descriptor: "Operate and maintain heavy construction and mining equipment to industry standards",
-    duration: "Short Course",
-    level: "Certificate",
-    intake: "Contact School",
-    icon: GraduationCap,
-    subjects: [
-      "Equipment Safety & Regulations",
-      "Hydraulic Systems",
-      "Engine Maintenance",
-      "Load Calculations",
-      "Operational Procedures",
-      "Pre-Shift Inspections",
-      "Emergency Protocols",
-      "Operator Certification Prep",
-    ],
-    careers: [
-      "Equipment Operator",
-      "Site Supervisor",
-      "Plant Manager",
-      "Maintenance Technician",
-      "Heavy Equipment Inspector",
-    ],
-    instructorName: "Mr. Gaspard Niyitegeka",
-    instructorRole: "Lead Instructor, Heavy Machinery",
-    instructorYears: 14,
-    instructorInitials: "GN",
-  },
-  {
-    name: "Solar Technology",
-    descriptor: "Install, maintain, and commission solar PV systems for residential, commercial, and off-grid applications",
-    duration: "Short Course",
-    level: "Certificate",
-    intake: "Contact School",
-    icon: Sun,
-    subjects: [
-      "Solar PV Fundamentals",
-      "System Sizing & Design",
-      "Panel Installation Techniques",
-      "Inverter & Battery Configuration",
-      "Grid-Tie & Off-Grid Systems",
-      "Electrical Safety for Solar",
-      "Monitoring & Troubleshooting",
-      "Commissioning & Handover",
-    ],
-    careers: [
-      "Solar Installer",
-      "Solar Technician",
-      "Renewable Energy Technician",
-      "Site Supervisor — Solar",
-      "Maintenance Technician",
-    ],
-    instructorName: "Mr. Wang Lei",
-    instructorRole: "Lead Instructor, Solar Technology",
-    instructorYears: 12,
-    instructorInitials: "WL",
-  },
-  {
-    name: "EV Cars",
-    descriptor: "Diagnose, service, and maintain electric vehicles and their high-voltage systems",
-    duration: "Short Course",
-    level: "Certificate",
-    intake: "Contact School",
-    icon: Car,
-    subjects: [
-      "EV Powertrain Fundamentals",
-      "High-Voltage Battery Systems",
-      "Electric Motor Technology",
-      "Charging Infrastructure",
-      "Diagnostic Tools & Software",
-      "EV Safety Protocols",
-      "Regenerative Braking Systems",
-      "Vehicle Electronics & CAN Bus",
-    ],
-    careers: [
-      "EV Technician",
-      "Automotive Electrician",
-      "EV Charging Installer",
-      "Fleet Maintenance Technician",
-      "Diagnostic Specialist",
-    ],
-    instructorName: "Mr. Li Jun",
-    instructorRole: "Lead Instructor, EV Cars",
-    instructorYears: 8,
-    instructorInitials: "LJ",
-  },
-  {
-    name: "Land Surveying",
-    descriptor: "Master the tools and techniques of modern land measurement, mapping, and GIS",
-    duration: "3 Years",
-    level: "Level 3 – Level 5",
-    intake: "Appointed by NESA",
-    icon: Globe,
-    subjects: [
-      "Plane Surveying",
-      "Total Station Operation",
-      "GPS & GNSS Systems",
-      "GIS Fundamentals",
-      "Cadastral Surveying",
-      "Topographic Mapping",
-      "AutoCAD for Surveyors",
-      "Legal Framework for Land",
-    ],
-    careers: [
-      "Land Surveyor",
-      "GIS Analyst",
-      "Cadastral Officer",
-      "Site Engineer",
-      "Mapping Technician",
-      "Urban Planner Support",
-    ],
-    instructorName: "Ms. Yvette Mukamugema",
-    instructorRole: "Lead Instructor, Land Surveying",
-    instructorYears: 11,
-    instructorInitials: "YM",
-  },
-  {
-    name: "Electrical Technology",
-    descriptor: "Design, install, and maintain industrial electrical systems to national safety codes",
-    duration: "3 Years",
-    level: "Level 3 – Level 5",
-    intake: "Appointed by NESA",
-    icon: Flask,
-    subjects: [
-      "AC/DC Circuit Theory",
-      "Electrical Wiring Standards",
-      "Motor Control Systems",
-      "PLC Programming Basics",
-      "Solar PV Installation",
-      "Industrial Panel Building",
-      "Fault Diagnosis",
-      "Rwanda Electrical Codes",
-    ],
-    careers: [
-      "Electrician",
-      "Electrical Technician",
-      "PLC Programmer",
-      "Solar Installer",
-      "Panel Builder",
-      "Maintenance Engineer",
-    ],
-    instructorName: "Mr. Théodore Nsengiyumva",
-    instructorRole: "Lead Instructor, Electrical Technology",
-    instructorYears: 16,
-    instructorInitials: "TN",
-  },
-  {
-    name: "Public Works",
-    descriptor: "Plan, construct, and supervise road and civil infrastructure projects from base to finish",
-    duration: "3 Years",
-    level: "Level 3 – Level 5",
-    intake: "Appointed by NESA",
-    icon: BookOpen,
-    subjects: [
-      "Road Design Fundamentals",
-      "Soil Mechanics",
-      "Bituminous Materials",
-      "Road Geometry",
-      "Drainage Systems",
-      "Quality Control Testing",
-      "Compaction & Paving",
-      "Construction Project Management",
-    ],
-    careers: [
-      "Road Construction Technician",
-      "Site Supervisor",
-      "Quality Control Inspector",
-      "Civil Works Foreman",
-      "Road Safety Auditor",
-    ],
-    instructorName: "Mr. Innocent Habimana",
-    instructorRole: "Lead Instructor, Public Works",
-    instructorYears: 13,
-    instructorInitials: "IH",
-  },
-  {
-    name: "Computer Systems & Architecture",
-    descriptor: "Build, maintain, and troubleshoot computer hardware and network infrastructure",
-    duration: "3 Years",
-    level: "Level 3 – Level 5",
-    intake: "Appointed by NESA",
-    icon: GraduationCap,
-    subjects: [
-      "Computer Architecture",
-      "Network Fundamentals",
-      "Operating Systems",
-      "Hardware Troubleshooting",
-      "Structured Cabling",
-      "Cybersecurity Basics",
-      "Database Introduction",
-      "Cloud Computing Essentials",
-    ],
-    careers: [
-      "IT Technician",
-      "Network Engineer",
-      "Systems Administrator",
-      "Hardware Specialist",
-      "Help Desk Analyst",
-      "IT Support Officer",
-    ],
-    instructorName: "Ms. Clarisse Umurerwa",
-    instructorRole: "Lead Instructor, Computer Systems & Architecture",
-    instructorYears: 9,
-    instructorInitials: "CU",
-  },
-];
+import { ChevronDown, CheckCircle, ArrowRight } from "@/components/ui/Icons";
+import { departments } from "@/components/academics/departmentsData";
 
 export default function DepartmentAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -236,7 +12,6 @@ export default function DepartmentAccordion() {
     <div className="space-y-4">
       {departments.map((dept, i) => {
         const Icon = dept.icon;
-        const color = departmentColors[dept.name];
         const isOpen = openIndex === i;
 
         return (
@@ -249,14 +24,11 @@ export default function DepartmentAccordion() {
                 aria-expanded={isOpen}
               >
                 {/* Color strip */}
-                <div className="self-stretch w-1 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+                <div className="self-stretch w-1 rounded-full flex-shrink-0 bg-primary" />
 
                 {/* Icon */}
-                <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: `${color}20` }}
-                >
-                  <span style={{ color }}><Icon size={24} /></span>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 bg-primary/10">
+                  <span className="text-primary"><Icon size={24} /></span>
                 </div>
 
                 {/* Text */}
@@ -303,7 +75,7 @@ export default function DepartmentAccordion() {
                       <ul className="space-y-2">
                         {dept.subjects.map((subject) => (
                           <li key={subject} className="flex items-center gap-2.5">
-                            <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+                            <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-primary" />
                             <span className="text-sm text-gray-600">{subject}</span>
                           </li>
                         ))}
@@ -318,7 +90,7 @@ export default function DepartmentAccordion() {
                       <ul className="space-y-2">
                         {dept.careers.map((career) => (
                           <li key={career} className="flex items-center gap-2.5">
-                            <CheckCircle size={14} className="flex-shrink-0 text-green-600" />
+                            <CheckCircle size={14} className="flex-shrink-0 text-primary" />
                             <span className="text-sm text-gray-600">{career}</span>
                           </li>
                         ))}
@@ -329,23 +101,20 @@ export default function DepartmentAccordion() {
                   {/* Instructor strip */}
                   <div className="mt-6 pt-5 border-t border-gray-100 flex items-center justify-between flex-wrap gap-4">
                     <div className="flex items-center gap-3">
-                      <div
-                        className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                        style={{ backgroundColor: color }}
-                      >
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 bg-primary">
                         {dept.instructorInitials}
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-primary">{dept.instructorName}</p>
-                        <p className="text-xs text-gray-400">{dept.instructorRole} · {dept.instructorYears} years industry experience</p>
+                        <p className="text-xs text-gray-400">{dept.instructorRole}</p>
                       </div>
                     </div>
 
                     <Link
-                      href="/academics/curriculum"
+                      href={`/academics/courses/${dept.slug}`}
                       className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-accent transition-colors group/link"
                     >
-                      View Full Curriculum
+                      View Full Details
                       <ArrowRight size={14} className="group-hover/link:translate-x-0.5 transition-transform" />
                     </Link>
                   </div>

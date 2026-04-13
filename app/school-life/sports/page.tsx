@@ -41,7 +41,7 @@ export default function SportsPage() {
 
         {/* Philosophy + Stats */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-14 items-start">
               {/* Copy */}
               <div>
@@ -82,7 +82,7 @@ export default function SportsPage() {
 
         {/* Sports List */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Sports</span>
@@ -97,7 +97,7 @@ export default function SportsPage() {
 
         {/* Annual Competition */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div>
@@ -169,7 +169,7 @@ export default function SportsPage() {
             <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Apply Now</Link>
-                <Link href="/academics/departments" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">See All Programs</Link>
+                <Link href="/academics/courses" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">See All Programs</Link>
               </div>
             </div>
           </div>

@@ -17,7 +17,6 @@ const navItems = [
       { label: "Vision & Mission", desc: "Our purpose and values", href: "/about/vision-mission" },
       { label: "Meet the Headmaster", desc: "A message from leadership", href: "/about/headmaster" },
       { label: "Our Leadership Team", desc: "The team guiding our institution", href: "/about/leadership" },
-      { label: "Accreditation", desc: "Our certifications & standards", href: "/about/accreditations" },
       { label: "Our Partners", desc: "Industry & academic partnerships", href: "/about/partners" },
     ],
   },
@@ -26,8 +25,7 @@ const navItems = [
     href: "/academics",
     dropdown: [
       { label: "Curriculum Overview", desc: "What and how we teach", href: "/academics/curriculum" },
-      { label: "Departments & Subjects", desc: "All academic areas", href: "/academics/departments" },
-      { label: "Academic Calendar", desc: "Dates and schedules", href: "/academics/calendar" },
+      { label: "Our Courses", desc: "All academic areas", href: "/academics/courses" },
       { label: "Results & Achievements", desc: "Our track record", href: "/academics/results" },
     ],
   },
@@ -45,7 +43,6 @@ const navItems = [
     href: "/school-life",
     dropdown: [
       { label: "Gallery", desc: "Photos from campus life", href: "/school-life/gallery" },
-      { label: "360° Virtual Tour", desc: "Explore our facilities", href: "/school-life/virtual-tour" },
       { label: "Clubs & Extracurriculars", desc: "Beyond the classroom", href: "/school-life/clubs" },
       { label: "Facilities", desc: "Our world-class infrastructure", href: "/school-life/facilities" },
       { label: "Parents Corner", desc: "Resources for parents", href: "/parents" },

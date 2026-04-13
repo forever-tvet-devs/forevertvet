@@ -2,7 +2,8 @@
 
 import { useRef, useEffect } from "react";
 import Link from "next/link";
-import { Clock, MapPin, ArrowRight, Calendar } from "@/components/ui/Icons";
+import Image from "next/image";
+import { Clock, MapPin, ArrowRight } from "@/components/ui/Icons";
 import { events } from "@/components/school-life/eventsData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,7 +22,6 @@ export default function UpcomingEvents() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Stagger in the event cards
       gsap.fromTo(
         ".event-card",
         { y: 40, opacity: 0 },
@@ -39,7 +39,6 @@ export default function UpcomingEvents() {
         }
       );
 
-      // Animate the accent line
       gsap.fromTo(
         ".events-accent-line",
         { scaleX: 0 },
@@ -100,32 +99,37 @@ export default function UpcomingEvents() {
             <Link
               key={event.slug}
               href={`/school-life/events/${event.slug}`}
-              className="event-card group flex flex-col rounded-2xl overflow-hidden opacity-0 h-full"
+              className="event-card group flex flex-col rounded-2xl overflow-hidden opacity-0 h-full bg-white/[0.06]"
             >
-              {/* Date header */}
-              <div className="bg-white/10 backdrop-blur-sm px-5 py-4 flex items-center gap-4">
-                <div className="shrink-0">
-                  <span className="font-heading font-black text-3xl text-accent leading-none block">
+              {/* Image */}
+              <div className="relative aspect-[16/10] overflow-hidden flex-shrink-0">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Date badge */}
+                <div className="absolute top-3 left-3 bg-primary/90 backdrop-blur-sm text-white rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
+                  <span className="font-heading font-black text-lg leading-none block">
                     {String(event.date.getDate()).padStart(2, "0")}
                   </span>
-                  <span className="text-[10px] font-semibold tracking-widest uppercase text-white/50 block mt-0.5">
-                    {MONTHS[event.date.getMonth()]} {event.date.getFullYear()}
+                  <span className="text-[9px] uppercase tracking-wide opacity-80 block mt-0.5">
+                    {MONTHS[event.date.getMonth()]}
                   </span>
-                </div>
-                <div className="w-px h-9 bg-white/10" />
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-sm text-white leading-snug line-clamp-2 group-hover:text-accent transition-colors duration-200">
-                    {event.title}
-                  </h3>
                 </div>
               </div>
 
               {/* Details */}
-              <div className="bg-white/[0.06] px-5 py-4 flex-1 flex flex-col border-t border-white/[0.06]">
-                <p className="text-xs text-white/50 leading-relaxed line-clamp-2">
+              <div className="px-4 py-4 flex-1 flex flex-col">
+                <h3 className="font-semibold text-sm text-white leading-snug line-clamp-2 group-hover:text-accent transition-colors duration-200 mb-2">
+                  {event.title}
+                </h3>
+                <p className="text-xs text-white/50 leading-relaxed line-clamp-2 mb-3 flex-1">
                   {event.description}
                 </p>
-                <div className="flex flex-wrap items-center gap-3 mt-auto pt-3">
+                <div className="flex flex-wrap items-center gap-3 mt-auto">
                   <span className="flex items-center gap-1.5 text-[11px] text-white/40">
                     <Clock size={11} />
                     {event.time}
@@ -134,17 +138,8 @@ export default function UpcomingEvents() {
                     <MapPin size={11} />
                     {event.location}
                   </span>
-                  {event.open && (
-                    <span className="flex items-center gap-1.5 text-[11px] font-medium text-accent/80">
-                      <Calendar size={11} />
-                      Open to public
-                    </span>
-                  )}
                 </div>
               </div>
-
-              {/* Hover accent bar */}
-              <div className="h-[2px] bg-accent/0 group-hover:bg-accent transition-colors duration-300" />
             </Link>
           ))}
         </div>

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import ClubsGrid from "@/components/school-life/ClubsGrid";
-import { Users, Star, Briefcase } from "@/components/ui/Icons";
+import { clubs } from "@/components/school-life/clubsData";
+import { ArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
   title: "Clubs & Extracurriculars — Forever Tvet Institute",
@@ -17,12 +18,6 @@ const breadcrumb = [
   { label: "Home", href: "/" },
   { label: "School Life", href: "/school-life" },
   { label: "Clubs & Extracurriculars", href: "/school-life/clubs" },
-];
-
-const benefits = [
-  { icon: Star,      title: "Build Soft Skills",    desc: "Leadership, communication, and teamwork developed outside the lecture hall in real, collaborative settings." },
-  { icon: Users,     title: "Expand Your Network",  desc: "Connect with peers across all programs and intake years — the colleagues of your future career." },
-  { icon: Briefcase, title: "Strengthen Your CV",   desc: "Employers value well-rounded graduates who took initiative and engaged with campus life beyond their studies." },
 ];
 
 export default function ClubsPage() {
@@ -38,71 +33,70 @@ export default function ClubsPage() {
           backgroundImage="/images/image1.png"
         />
 
-        {/* Why Join */}
+        {/* Clubs List */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <div className="text-center mb-12">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+            <div className="text-center mb-16 lg:mb-20">
               <div>
-                <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Why It Matters</span>
+                <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
+                  Our Clubs
+                </span>
               </div>
-              <AnimatedText text="Why Join a Club?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
+              <AnimatedText
+                text="Explore Our Clubs"
+                as="h2"
+                className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight"
+                baseDelay={100}
+                stagger={60}
+              />
+              <div>
+                <p className="text-base lg:text-lg text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+                  Each club is open to every student. Find one that matches your interests and get involved.
+                </p>
+              </div>
             </div>
-            <div className="grid sm:grid-cols-3 gap-5">
-              {benefits.map((b, i) => {
-                const Icon = b.icon;
+
+            <div className="space-y-24 lg:space-y-32">
+              {clubs.map((club, i) => {
+                const isEven = i % 2 === 0;
                 return (
-                  <div key={i}>
-                    <div className="rounded-xl bg-gray-50 border border-gray-100 p-6 text-center h-full">
-                      <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <Icon size={22} className="text-accent" />
+                  <div key={club.slug} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    {/* Content */}
+                    <div className={isEven ? "lg:order-1" : "lg:order-2"}>
+                      <h3 className="font-heading font-bold text-2xl lg:text-3xl text-primary leading-tight mb-3">
+                        {club.name}
+                      </h3>
+                      <p className="text-base text-gray-600 leading-relaxed mb-5">
+                        {club.description}
+                      </p>
+                      <p className="text-sm text-gray-400 mb-6">
+                        Meets: {club.meets}
+                      </p>
+                      <Link
+                        href={`/school-life/clubs/${club.slug}`}
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors group shadow-sm"
+                      >
+                        View Full Details
+                        <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+                      </Link>
+                    </div>
+
+                    {/* Image */}
+                    <div className={isEven ? "lg:order-2" : "lg:order-1"}>
+                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                        <Image
+                          src={club.image}
+                          alt={club.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-primary" />
                       </div>
-                      <p className="font-semibold text-primary text-sm mb-2">{b.title}</p>
-                      <p className="text-xs text-gray-500 leading-relaxed">{b.desc}</p>
                     </div>
                   </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Clubs Grid */}
-        <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <div className="text-center mb-12">
-              <div>
-                <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">All Clubs</span>
-              </div>
-              <AnimatedText text="Find Your Community" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
-              <div>
-                <p className="text-base text-gray-500 leading-relaxed mt-4 max-w-xl mx-auto">
-                  Use the filters to find clubs that match your interests. All clubs are free to join and open to every enrolled student.
-                </p>
-              </div>
-            </div>
-            <ClubsGrid />
-          </div>
-        </section>
-
-        {/* Start a Club */}
-        <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-2xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <div>
-              <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Start Something New</span>
-            </div>
-            <AnimatedText text="Don't See Your Interest?" as="h2" className="font-heading font-bold text-2xl lg:text-3xl text-body leading-tight" baseDelay={100} stagger={60} />
-            <div>
-              <p className="text-base text-gray-600 leading-relaxed mt-5 mb-7">
-                Any student can propose a new club. Bring 5 friends and an idea to the Dean of Students — we will provide the space, the time, and the support to make it happen.
-              </p>
-            </div>
-            <div>
-              <Link
-                href="/contact"
-                className="bg-primary inline-block px-7 py-3 text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors text-sm shadow-sm"
-              >
-                Contact the Dean of Students
-              </Link>
             </div>
           </div>
         </section>

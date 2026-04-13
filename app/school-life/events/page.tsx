@@ -33,7 +33,7 @@ export default function EventsPage() {
 
         {/* Intro */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Calendar</span>
             </div>
@@ -48,7 +48,7 @@ export default function EventsPage() {
 
         {/* Events calendar */}
         <section className="py-4 pb-20 lg:pb-28 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <EventsCalendar />
           </div>
         </section>

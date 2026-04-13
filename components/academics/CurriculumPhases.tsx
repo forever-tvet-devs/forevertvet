@@ -41,15 +41,7 @@ export default function CurriculumPhases() {
             <div className="flex-1">
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 h-full flex flex-col gap-4 hover:shadow-md transition-shadow duration-200">
                 {/* Header */}
-                <div className="flex items-start justify-between gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <span className="text-xs font-bold text-white">{phase.number}</span>
-                  </div>
-                  <span className="text-xs font-semibold rounded-full bg-primary/15 text-amber-700 px-3 py-1 whitespace-nowrap">
-                    {phase.duration}
-                  </span>
-                </div>
-
+                
                 {/* Icon + Name */}
                 <div>
                   <Icon size={24} className="text-accent mb-2" />
@@ -63,7 +55,7 @@ export default function CurriculumPhases() {
 
             {/* Connector arrow — desktop only, not after last item */}
             {i < phases.length - 1 && (
-              <div className="hidden lg:flex items-center justify-center px-2 flex-shrink-0 text-gray-300">
+              <div className="hidden lg:flex items-center justify-center px-2 shrink-0 text-gray-300">
                 <ChevronRight size={22} />
               </div>
             )}

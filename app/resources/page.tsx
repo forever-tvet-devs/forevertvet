@@ -25,7 +25,7 @@ const categories = [
     resources: [
       { name: "Admissions Guide 2026", type: "PDF", description: "Everything you need to know about applying to Forever Tvet Institute." },
       { name: "Programme Brochure", type: "PDF", description: "Detailed overview of all five departments and their curricula." },
-      { name: "Fees Structure & Payment Guide", type: "PDF", description: "Full breakdown of tuition fees, payment schedules, and financial aid options." },
+      { name: "Fees Structure", type: "PDF", description: "Full breakdown of tuition fees for all programs." },
     ],
   },
   {
@@ -33,7 +33,6 @@ const categories = [
     icon: FileText,
     resources: [
       { name: "Student Handbook 2025–2026", type: "PDF", description: "Campus policies, academic regulations, and student responsibilities." },
-      { name: "Academic Calendar", type: "PDF", description: "Key dates, exam periods, holidays, and intake schedules." },
       { name: "Workshop Safety Manual", type: "PDF", description: "Mandatory safety protocols for all practical training sessions." },
     ],
   },
@@ -62,7 +61,7 @@ export default function ResourcesPage() {
 
         {/* Resources */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-14">
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Library</span>
               <AnimatedText

@@ -51,58 +51,52 @@ export default async function NewsDetailPage({ params }: Props) {
       <main className="pt-[70px]">
 
         {/* Hero */}
-        <div className="relative w-full aspect-[16/7] lg:aspect-[16/6] overflow-hidden bg-primary">
+        <div className="relative min-h-[420px] lg:min-h-[520px] overflow-hidden bg-primary">
           <Image
             src={post.imageSrc}
             alt={post.title}
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-60"
+            className="object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
-
-          {/* Content overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end">
-            <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 pb-10 lg:pb-14 w-full">
-              <div>
-                <Link
-                  href="/news"
-                  className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-medium transition-colors mb-4"
-                >
-                  <ChevronLeft size={14} /> Back to News
-                </Link>
-              </div>
-
-              <div>
-                <div className="flex flex-wrap items-center gap-3 mb-4">
-                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${post.categoryColor}`}>
-                    {post.category}
-                  </span>
-                  <span className="flex items-center gap-1.5 text-xs text-white/60">
-                    <Calendar size={12} /> {post.date}
-                  </span>
-                  <span className="flex items-center gap-1.5 text-xs text-white/60">
-                    <Clock size={12} /> {post.readTime}
-                  </span>
-                </div>
-              </div>
-
-              <AnimatedText
-                text={post.title}
-                as="h1"
-                className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight"
-                baseDelay={200}
-                stagger={40}
-                triggerOnScroll={false}
-              />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30" />
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20 flex flex-col justify-end min-h-[420px] lg:min-h-[520px]">
+            <div>
+              <Link
+                href="/news"
+                className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-medium transition-colors mb-6"
+              >
+                <ChevronLeft size={14} /> Back to News
+              </Link>
             </div>
+
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className={`text-xs font-semibold px-3 py-1 rounded-full ${post.categoryColor}`}>
+                {post.category}
+              </span>
+              <span className="flex items-center gap-1.5 text-xs text-white/60">
+                <Calendar size={12} /> {post.date}
+              </span>
+              <span className="flex items-center gap-1.5 text-xs text-white/60">
+                <Clock size={12} /> {post.readTime}
+              </span>
+            </div>
+
+            <AnimatedText
+              text={post.title}
+              as="h1"
+              className="font-heading font-bold text-2xl sm:text-3xl lg:text-5xl text-white leading-tight max-w-4xl"
+              baseDelay={200}
+              stagger={40}
+              triggerOnScroll={false}
+            />
           </div>
         </div>
 
         {/* Article body */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
 
             {/* Excerpt — styled as lead paragraph */}
             <div>
@@ -147,7 +141,7 @@ export default async function NewsDetailPage({ params }: Props) {
         {/* Related articles */}
         {fallbackRelated.length > 0 && (
           <section className="py-16 lg:py-20 bg-gray-50">
-            <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
               <div className="flex items-end justify-between gap-4 mb-8">
                 <div>
                   <div>

@@ -38,13 +38,13 @@ const philosophyHighlights = [
 ];
 
 const programs = [
-  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "20 students", intake: "Contact School" },
-  { name: "Solar Technology",                        duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "20 students", intake: "Contact School" },
-  { name: "EV Cars",                                 duration: "Short Course", level: "Certificate", internship: "Guaranteed", classSize: "18 students", intake: "Contact School" },
-  { name: "Computer Systems & Architecture",         duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "22 students", intake: "Appointed by NESA" },
-  { name: "Electrical Technology",                   duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "20 students", intake: "Appointed by NESA" },
-  { name: "Land Surveying",                          duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "18 students", intake: "Appointed by NESA" },
-  { name: "Public Works",                            duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", classSize: "18 students", intake: "Appointed by NESA" },
+  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", internship: "Guaranteed", intake: "Contact School" },
+  { name: "Solar Technology",                        duration: "Short Course", level: "Certificate", internship: "Guaranteed", intake: "Contact School" },
+  { name: "EV Cars",                                 duration: "Short Course", level: "Certificate", internship: "Guaranteed", intake: "Contact School" },
+  { name: "Computer Systems & Architecture",         duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", intake: "Appointed by NESA" },
+  { name: "Electrical Technology",                   duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", intake: "Appointed by NESA" },
+  { name: "Land Surveying",                          duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", intake: "Appointed by NESA" },
+  { name: "Public Works",                            duration: "3 Years",      level: "Level 3–5",    internship: "Guaranteed", intake: "Appointed by NESA" },
 ];
 
 const certChecks = [
@@ -57,7 +57,7 @@ export default function CurriculumPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-[70px]">
+      <main className="pt-17.5">
         {/* Hero */}
         <PageHeroBanner
           label="How We Teach"
@@ -69,7 +69,7 @@ export default function CurriculumPage() {
 
         {/* Philosophy */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Our Approach
@@ -176,7 +176,7 @@ export default function CurriculumPage() {
                       { label: "Industry Supervisor Report", pct: "20%", desc: "A structured performance review submitted by your internship employer at the end of Phase 4." },
                     ].map((item) => (
                       <div key={item.label} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
-                        <div className="w-14 text-center flex-shrink-0">
+                        <div className="w-14 text-center shrink-0">
                           <span className="font-heading font-bold text-2xl text-accent">{item.pct}</span>
                         </div>
                         <div>
@@ -188,15 +188,6 @@ export default function CurriculumPage() {
                   </div>
                 </div>
 
-                <div>
-                  <Link
-                    href="/about/accreditations"
-                    className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group"
-                  >
-                    View Accreditations
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
               </div>
 
               {/* Right — cert card */}
@@ -218,13 +209,12 @@ export default function CurriculumPage() {
                     <span className="inline-block rounded-full bg-primary text-primary text-xs px-4 py-1.5 font-semibold mb-6">
                       RQF Level 3 / Level 4
                     </span>
-
                     <div className="border-t border-white/15 my-5" />
 
                     <ul className="space-y-3">
                       {certChecks.map((check) => (
                         <li key={check} className="flex items-center gap-3">
-                          <CheckCircle size={16} className="text-accent flex-shrink-0" />
+                          <CheckCircle size={16} className="text-accent shrink-0" />
                           <span className="text-sm text-white/90">{check}</span>
                         </li>
                       ))}
@@ -265,7 +255,7 @@ export default function CurriculumPage() {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-primary text-white text-xs uppercase tracking-wide">
-                      {["Program", "Duration", "RQF Level", "Internship", "Class Size", "Intake"].map((h) => (
+                      {["Program", "Duration", "RQF Level", "Internship", "Intake"].map((h) => (
                         <th key={h} scope="col" className="py-4 px-4 text-left font-semibold">{h}</th>
                       ))}
                     </tr>
@@ -279,7 +269,6 @@ export default function CurriculumPage() {
                         <td className="py-4 px-4 text-center">
                           <span className="rounded-full bg-green-100 text-green-700 text-xs px-2.5 py-0.5 font-medium">{p.internship}</span>
                         </td>
-                        <td className="py-4 px-4 text-gray-600 text-center">{p.classSize}</td>
                         <td className="py-4 px-4 text-gray-600 text-center">{p.intake}</td>
                       </tr>
                     ))}
@@ -291,10 +280,10 @@ export default function CurriculumPage() {
             <div>
               <div className="text-center mt-8">
                 <Link
-                  href="/academics/departments"
+                  href="/academics/courses"
                   className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group"
                 >
-                  Explore Departments in Detail
+                  Explore Our Courses
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

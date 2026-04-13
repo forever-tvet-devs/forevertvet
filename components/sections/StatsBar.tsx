@@ -1,6 +1,6 @@
 const stats = [
   { value: "500+",  label: "Graduates Placed" },
-  { value: "150+",  label: "Students Enrolled" },
+  { value: "96%",   label: "Pass Rate" },
   { value: "5",     label: "Vocational Programs" },
   { value: "2018",  label: "Year Established" },
 ];

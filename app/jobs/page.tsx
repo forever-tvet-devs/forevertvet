@@ -72,7 +72,7 @@ export default function JobsPage() {
 
         {/* Openings */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Opportunities</span>
               <AnimatedText

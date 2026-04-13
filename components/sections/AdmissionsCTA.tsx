@@ -31,7 +31,7 @@ export default function AdmissionsCTA() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
         <span className="text-xs font-semibold tracking-widest uppercase text-white/50">
           Academic Year 2026–2027
         </span>

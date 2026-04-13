@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -18,55 +19,33 @@ const breadcrumb = [
   { label: "Our Partners", href: "/about/partners" },
 ];
 
-const industryPartners = [
-  {
-    name: "Rwanda Transport Development Agency",
-    sector: "Infrastructure",
-    desc: "A key employer of our Public Works and Heavy Machinery Operation & Maintenance graduates, providing internship placements and direct employment pathways.",
-  },
-  {
-    name: "Kigali Construction Consortium",
-    sector: "Construction",
-    desc: "Partners with our Public Works programme to ensure curriculum relevance and absorb our top graduates each year.",
-  },
-  {
-    name: "Rwanda Energy Group",
-    sector: "Energy",
-    desc: "Collaborates on our Electrical Technology curriculum and provides apprenticeship opportunities for final-year students.",
-  },
-  {
-    name: "MTN Rwanda",
-    sector: "Telecommunications",
-    desc: "Supports our Computer Systems & Architecture programme through curriculum input, guest lectures, and graduate recruitment.",
-  },
-  {
-    name: "Prime Holdings Ltd",
-    sector: "Real Estate & Development",
-    desc: "One of our earliest industry partners, absorbing graduates from multiple departments since our second cohort in 2019.",
-  },
-  {
-    name: "Techno Brain Rwanda",
-    sector: "Technology",
-    desc: "Partners with our Computer Systems & Architecture department to deliver software-focused modules and internship placements.",
-  },
-];
-
-const academicPartners = [
-  {
-    name: "Beijing Forever Technology Co., Ltd.",
-    country: "China",
-    desc: "Our founding institution and primary academic partner — contributing curriculum frameworks, faculty exchanges, and quality assurance expertise.",
-  },
-  {
-    name: "Rwanda TVET Board",
-    country: "Rwanda",
-    desc: "The national body that accredits our programs and ensures alignment with Rwanda's national skills development agenda.",
-  },
-  {
-    name: "Integrated Polytechnic Regional Centre (IPRC) Kigali",
-    country: "Rwanda",
-    desc: "Academic collaboration on shared curriculum standards and student exchange opportunities.",
-  },
+const partners = [
+  { name: "Rwanda TVET Board", logo: "/images/Partners/rtb-logo.jpg", url: "#" },
+  { name: "State Grid", logo: "/images/Partners/state_grid.jpg", url: "#" },
+  { name: "Rwanda Energy Group", logo: "/images/Partners/REG-logo.png", url: "#" },
+  { name: "NPD", logo: "/images/Partners/npd-logo.png", url: "#" },
+  { name: "China Southern Power Grid", logo: "/images/Partners/china_southern_power_grid_company_limited_logo.jpg", url: "#" },
+  { name: "WDA", logo: "/images/Partners/WDA.jpeg", url: "#" },
+  { name: "JTJS", logo: "/images/Partners/jtjs0.png", url: "#" },
+  { name: "CCCC", logo: "/images/Partners/cccc2-768x432.jpg", url: "#" },
+  { name: "Beijing Forever Technology", logo: "/images/Partners/1361904.png", url: "#" },
+  { name: "CECEP", logo: "/images/Partners/CECEP-logo.jpg", url: "#" },
+  { name: "China Railway Group", logo: "/images/Partners/China_Railway_Group_logo.png", url: "#" },
+  { name: "SNPTC", logo: "/images/Partners/State_Nuclear_Power_Technology_Company_(SNPTC).svg.png", url: "#" },
+  { name: "SPIC", logo: "/images/Partners/spic-logo.png", url: "#" },
+  { name: "China Datang Corporation", logo: "/images/Partners/ChinaDatangCorporationLogo.png", url: "#" },
+  { name: "Zhengzhou University", logo: "/images/Partners/zhengzouh.jpg", url: "#" },
+  { name: "Shanghai University of Electric Power", logo: "/images/Partners/Shanghai_University_of_Electric_Power_logo.png", url: "#" },
+  { name: "Jinhua", logo: "/images/Partners/jinhua.webp", url: "#" },
+  { name: "Xilin", logo: "/images/Partners/xilin.jpg", url: "#" },
+  { name: "Swisscontact", logo: "/images/Partners/swis-contact.png", url: "#" },
+  { name: "Horizon Energy", logo: "/images/Partners/horizon-energy.png", url: "#" },
+  { name: "Fondazione Marcegaglia", logo: "/images/Partners/fondazione-marcegaglia.png", url: "#" },
+  { name: "GIZ", logo: "/images/Partners/giz.jpg", url: "#" },
+  { name: "Maison Shalom", logo: "/images/Partners/xmaison-shaloM.png", url: "#" },
+  { name: "Real Contractors", logo: "/images/Partners/real-contractors.jpg", url: "#" },
+  { name: "FDI", logo: "/images/Partners/fdi.jpg", url: "#" },
+  { name: "Praxis Ruanda BIWE", logo: "/images/Partners/Praxis_Ruanda-BIWE_logo.gif", url: "#" },
 ];
 
 export default function PartnersPage() {
@@ -83,95 +62,44 @@ export default function PartnersPage() {
           backgroundImage="/images/image2.png"
         />
 
-        {/* Intro */}
+        {/* Partners Grid */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <div className="max-w-3xl mb-16">
+            <div className="text-center mb-16">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
-                  Why Partnerships Matter
+                  Trusted By Industry
                 </span>
               </div>
               <AnimatedText
-                text="Connected to Industry from Day One"
+                text="Companies & Institutions We Work With"
                 as="h2"
                 className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight"
                 baseDelay={100}
                 stagger={60}
               />
-              <div>
-                <p className="text-base lg:text-lg text-gray-500 mt-4 leading-relaxed">
-                  Our partnerships aren't just logos on a page — they shape what we teach, how we teach it, and where our graduates go. Every program at Forever Tvet Institute is built in close collaboration with the employers who hire our students.
-                </p>
-              </div>
             </div>
 
-            {/* Industry Partners */}
-            <div className="mb-20">
-              <div>
-                <h3 className="font-heading font-bold text-2xl text-body mb-8 pb-4 border-b border-gray-100">
-                  Industry Partners
-                </h3>
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {industryPartners.map((partner, i) => (
-                  <div key={i}>
-                    <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow duration-200 h-full flex flex-col">
-                      <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-3">
-                        {partner.sector}
-                      </span>
-                      <h4 className="font-heading font-bold text-lg text-body mb-2">{partner.name}</h4>
-                      <p className="text-sm text-gray-500 leading-relaxed flex-1">{partner.desc}</p>
-                    </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+              {partners.map((partner) => (
+                <a
+                  key={partner.name}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-xl border border-gray-100 p-5 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200"
+                >
+                  <div className="w-full h-20 flex items-center justify-center mb-3">
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={140}
+                      height={56}
+                      className="max-h-16 w-auto object-contain"
+                    />
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Academic Partners */}
-            <div>
-              <div>
-                <h3 className="font-heading font-bold text-2xl text-body mb-8 pb-4 border-b border-gray-100">
-                  Academic & Institutional Partners
-                </h3>
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {academicPartners.map((partner, i) => (
-                  <div key={i}>
-                    <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:shadow-md transition-shadow duration-200 h-full flex flex-col">
-                      <span className="text-xs font-semibold tracking-widest uppercase text-primary block mb-3">
-                        {partner.country}
-                      </span>
-                      <h4 className="font-heading font-bold text-lg text-body mb-2">{partner.name}</h4>
-                      <p className="text-sm text-gray-500 leading-relaxed flex-1">{partner.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats */}
-        <section className="bg-primary-dark py-14">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
-              {[
-                { value: "30+", label: "Industry Partners" },
-                { value: "3", label: "Academic Partners" },
-                { value: "94%", label: "Graduate Employment Rate" },
-                { value: "2019", label: "First Partnership Signed" },
-              ].map((stat, i) => (
-                <div key={i}>
-                  <div className={`flex flex-col items-center text-center lg:px-8 ${i < 3 ? "lg:border-r lg:border-white/10" : ""}`}>
-                    <span className="font-heading font-bold text-4xl lg:text-5xl text-accent leading-none">
-                      {stat.value}
-                    </span>
-                    <span className="text-xs font-semibold tracking-widest uppercase text-white/50 mt-2">
-                      {stat.label}
-                    </span>
-                  </div>
-                </div>
+                  <p className="text-xs font-semibold text-primary leading-snug">{partner.name}</p>
+                </a>
               ))}
             </div>
           </div>

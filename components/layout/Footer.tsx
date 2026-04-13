@@ -7,13 +7,11 @@ const about = [
   { label: "Vision & Mission", href: "/about/vision-mission" },
   { label: "Headmaster",       href: "/about/headmaster" },
   { label: "Staff & Faculty",  href: "/about/staff-faculty" },
-  { label: "Accreditations",   href: "/about/accreditations" },
 ];
 
 const programmes = [
   { label: "Curriculum Overview",   href: "/academics/curriculum" },
-  { label: "Departments",           href: "/academics/departments" },
-  { label: "Academic Calendar",     href: "/academics/calendar" },
+  { label: "Our Courses",            href: "/academics/courses" },
   { label: "Results",               href: "/academics/results" },
 ];
 
@@ -32,7 +30,6 @@ const schoolLife = [
   { label: "Clubs",            href: "/school-life/clubs" },
   { label: "Sports",           href: "/school-life/sports" },
   { label: "Facilities",       href: "/school-life/facilities" },
-  { label: "Virtual Tour",     href: "/school-life/virtual-tour" },
 ];
 
 const socials = [

@@ -59,8 +59,7 @@ export default function GalleryPage() {
             <div><p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">Photos only tell part of the story. Visit us to experience campus life for yourself.</p></div>
             <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Book a Campus Visit</Link>
-                <Link href="/school-life/virtual-tour" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">Take Virtual Tour</Link>
+                <Link href="/school-life/facilities" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">View Facilities</Link>
               </div>
             </div>
           </div>

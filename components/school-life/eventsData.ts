@@ -9,6 +9,7 @@ export interface CalendarEvent {
   location: string;
   category: EventCategory;
   description: string;
+  image: string;
   open: boolean;
   body: string[];
 }
@@ -31,6 +32,7 @@ export const events: CalendarEvent[] = [
     location: "Main Hall",
     category: "Ceremony",
     description: "Welcoming ceremony for Intake 1 students and families.",
+    image: "/images/image1.png",
     open: true,
     body: [
       "Orientation Day marks the official beginning of the academic year at Forever Tvet Institute. The day is designed to help new students transition from the application process into active student life, and to give families a clear picture of what the year ahead will involve.",
@@ -49,6 +51,7 @@ export const events: CalendarEvent[] = [
     location: "Simulation Lab",
     category: "Academic",
     description: "Mandatory health and safety briefing for all practical programs.",
+    image: "/images/PeopleLookAtTrainingDevice.png",
     open: false,
     body: [
       "The Industrial Safety Workshop is a mandatory half-day session delivered to all students enrolled in practical programmes at Forever Tvet Institute. Completion of this workshop is a prerequisite for participation in any lab, workshop, or field activity during the academic year.",
@@ -67,6 +70,7 @@ export const events: CalendarEvent[] = [
     location: "Lecture Hall",
     category: "Academic",
     description: "Industry expert talk on the growth of renewables in East Africa.",
+    image: "/images/SolarPanelsTechnologyImage.png",
     open: true,
     body: [
       "Forever Tvet Institute's guest lecture series continues with a talk on renewable energy development across Rwanda and the wider East African region. The speaker for this session is a senior engineer with direct experience in the planning, installation, and commissioning of large-scale solar projects in Rwanda.",
@@ -86,6 +90,7 @@ export const events: CalendarEvent[] = [
     location: "Computer Lab",
     category: "Competition",
     description: "Students from all programs compete in a timed coding challenge.",
+    image: "/images/image2.png",
     open: false,
     body: [
       "The Inter-Program Coding Challenge is an annual competition open to all Forever Tvet Institute students, regardless of programme. The event is designed to promote computational thinking and problem-solving skills across disciplines — recognising that digital literacy and logic-based reasoning are relevant beyond the Computer Systems & Architecture programme.",
@@ -104,6 +109,7 @@ export const events: CalendarEvent[] = [
     location: "Main Hall",
     category: "Career",
     description: "Meet 20+ employers recruiting for internships and graduate roles.",
+    image: "/images/image4.jpg",
     open: true,
     body: [
       "The annual Career Fair is one of the most important events in the Forever Tvet Institute calendar. Each year, the school hosts employers from across the sectors represented in its programmes — construction, electrical technology, IT and networking, land surveying, and public works — giving current students and recent graduates direct access to recruiters and hiring managers.",
@@ -123,6 +129,7 @@ export const events: CalendarEvent[] = [
     location: "Campus Grounds",
     category: "Social",
     description: "Celebrating the diversity of our student community with performances, food, and student projects.",
+    image: "/images/image1.png",
     open: true,
     body: [
       "Cultural Day is Forever Tvet Institute's annual celebration of the diversity of its student community. The event takes place across the campus grounds and combines student performances, a food fair, a practical project showcase, and community activities into a full-day programme.",
@@ -141,6 +148,7 @@ export const events: CalendarEvent[] = [
     location: "Main Hall",
     category: "Ceremony",
     description: "Marking the transition of Intake 1 students into Phase 2 of their programs.",
+    image: "/images/image2.png",
     open: false,
     body: [
       "The Phase 2 Commencement ceremony marks a significant transition in the academic journey of Intake 1 students at Forever Tvet Institute. Having completed Phase 1 — which covers foundational theory, safety protocols, and introductory practical skills — students formally move into Phase 2, where the depth and complexity of both theoretical and practical work increases substantially.",
@@ -159,6 +167,7 @@ export const events: CalendarEvent[] = [
     location: "Off-Campus Field Site",
     category: "Academic",
     description: "Land Surveying students conduct a full-day practical field exercise.",
+    image: "/images/LandSurveyingLecturer.jpg",
     open: false,
     body: [
       "The Land Surveying Field Trip is a full-day off-campus exercise for students enrolled in the Land Surveying programme. The trip forms part of the Phase 2 curriculum and directly contributes to assessment outcomes for both the practical field competency unit and the documentation and reporting unit.",
@@ -177,6 +186,7 @@ export const events: CalendarEvent[] = [
     location: "Student Common Room",
     category: "Career",
     description: "Graduates and current students connect over career stories and opportunities.",
+    image: "/images/PeopleLookAtTrainingDevice.png",
     open: false,
     body: [
       "The Alumni Networking Evening brings together graduates of Forever Tvet Institute and current students in an informal setting designed to facilitate genuine career conversations. Unlike the structured Career Fair, this event is intimate and conversational — giving students the opportunity to ask candid questions of people who have recently navigated the same transition they are approaching.",
@@ -195,6 +205,7 @@ export const events: CalendarEvent[] = [
     location: "Main Hall",
     category: "Ceremony",
     description: "Formal send-off for students beginning their industry internship placements.",
+    image: "/images/image4.jpg",
     open: false,
     body: [
       "Internship Launch Day is the formal ceremony marking the beginning of Phase 3 for Intake 1 students — the industry internship placement that forms the final and most significant practical component of their programme.",
@@ -213,6 +224,7 @@ export const events: CalendarEvent[] = [
     location: "Campus Grounds",
     category: "Ceremony",
     description: "Forever Tvet joins institutions across Rwanda in celebrating vocational education.",
+    image: "/images/image2(ElecticalControlCabinate).png",
     open: true,
     body: [
       "National TVET Day is observed annually across Rwanda as a recognition of the role vocational and technical education plays in the country's economic development. Forever Tvet Institute participates fully in the national celebration, hosting a campus-wide programme that is open to the public.",
@@ -231,6 +243,7 @@ export const events: CalendarEvent[] = [
     location: "Main Hall",
     category: "Ceremony",
     description: "Certificate presentation for all Intake 1 graduates. Families warmly welcome.",
+    image: "/images/image1.png",
     open: true,
     body: [
       "The Graduation Ceremony is the most significant event in the Forever Tvet Institute calendar — the moment when students who have completed all programme requirements, passed their national RQF examinations, and fulfilled their internship placement obligations receive their official certificates.",
