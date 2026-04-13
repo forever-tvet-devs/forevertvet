@@ -140,8 +140,8 @@ export default function CurriculumPage() {
             </div>
 
             <CurriculumPhases />
-          </div>
-        </section>
+          </div> 
+        </section> 
 
         {/* Assessment & Certification */}
         <section className="py-20 lg:py-28 bg-white">
