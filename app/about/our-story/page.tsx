@@ -23,7 +23,7 @@ const timeline = [
   {
     year: "2018",
     title: "Foundation Year",
-    desc: "Forever Tvet Institute was founded by Beijing Forever Technology Co., Ltd. with an inaugural cohort of 80 students across three programs.",
+    desc: "Forever Tvet Institute was founded by Beijing Forever Technology Co., Ltd. with an inaugural cohort across three programs.",
   },
   {
     year: "2019",
@@ -160,7 +160,7 @@ export default function OurStoryPage() {
 
         {/* Timeline */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-16">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedText from "@/components/ui/AnimatedText";
@@ -52,9 +53,17 @@ export default async function EventDetailPage({ params }: Props) {
       <main className="pt-[70px]">
 
         {/* Hero banner */}
-        <div className="bg-primary relative overflow-hidden">
-          <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
-          <div className="relative max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20">
+        <div className="relative min-h-[420px] lg:min-h-[520px] overflow-hidden bg-primary">
+          <Image
+            src={event.image}
+            alt={event.title}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30" />
+          <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20 flex flex-col justify-end min-h-[420px] lg:min-h-[520px]">
             <div>
               <Link
                 href="/school-life/events"
@@ -108,7 +117,7 @@ export default async function EventDetailPage({ params }: Props) {
 
         {/* Content + sidebar */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-[1fr_260px] gap-12 items-start">
 
               {/* Body */}
@@ -235,7 +244,7 @@ export default async function EventDetailPage({ params }: Props) {
         {/* Related events */}
         {related.length > 0 && (
           <section className="py-16 lg:py-20 bg-gray-50">
-            <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
               <div className="flex items-end justify-between gap-4 mb-8">
                 <div>
                   <div>

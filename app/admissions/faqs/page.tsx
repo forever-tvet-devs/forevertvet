@@ -58,7 +58,7 @@ export default function FaqsPage() {
 
         {/* Intro */}
         <section className="py-16 lg:py-20 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Find Your Answer</span>
             </div>
@@ -79,14 +79,14 @@ export default function FaqsPage() {
 
         {/* FAQ Accordion */}
         <section className="pb-20 lg:pb-28 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <FaqAccordion />
           </div>
         </section>
 
         {/* Still Have a Question */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Get in Touch</span>

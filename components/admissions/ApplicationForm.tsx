@@ -10,14 +10,14 @@ type FormData = {
   schoolName: string; yearCompleted: string; certType: string;
   subjects: string[]; priorVocational: string; priorVocationalDetail: string;
   program: string; secondChoice: string; intake: string;
-  payment: string; scholarship: string; scholarshipReason: string; hearAboutUs: string;
+  hearAboutUs: string;
   declaration: boolean;
 };
 
 const empty: FormData = {
   firstName: "", lastName: "", dob: "", gender: "", nationalId: "", phone: "", email: "", district: "",
   schoolName: "", yearCompleted: "", certType: "", subjects: [], priorVocational: "", priorVocationalDetail: "",
-  program: "", secondChoice: "", intake: "", payment: "", scholarship: "", scholarshipReason: "", hearAboutUs: "",
+  program: "", secondChoice: "", intake: "", hearAboutUs: "",
   declaration: false,
 };
 
@@ -240,33 +240,7 @@ export default function ApplicationForm() {
                 <option>July 2026</option>
               </select>
             </Field>
-            <Field label="Payment Plan *">
-              <select className={selectCls} value={data.payment} onChange={(e) => set("payment", e.target.value)}>
-                <option value="">Select…</option>
-                <option>Full Payment (save RWF 20,000)</option>
-                <option>Two Instalments</option>
-              </select>
-            </Field>
           </div>
-          <Field label="Applying for a Scholarship? *">
-            <select className={selectCls} value={data.scholarship} onChange={(e) => set("scholarship", e.target.value)}>
-              <option value="">Select…</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </Field>
-          {data.scholarship === "Yes" && (
-            <Field label="Scholarship motivation (max 150 words) *">
-              <textarea
-                className={inputCls + " resize-none"}
-                rows={4}
-                value={data.scholarshipReason}
-                onChange={(e) => set("scholarshipReason", e.target.value)}
-                placeholder="Briefly explain your financial situation and why you are applying for scholarship consideration…"
-                maxLength={900}
-              />
-            </Field>
-          )}
           <Field label="How did you hear about us? *">
             <select className={selectCls} value={data.hearAboutUs} onChange={(e) => set("hearAboutUs", e.target.value)}>
               <option value="">Select…</option>
@@ -308,8 +282,6 @@ export default function ApplicationForm() {
                 ["Preferred Program", data.program],
                 ["Second Choice", data.secondChoice || "None"],
                 ["Intake", data.intake],
-                ["Payment Plan", data.payment],
-                ["Scholarship", data.scholarship],
                 ["Heard Via", data.hearAboutUs],
               ],
             },

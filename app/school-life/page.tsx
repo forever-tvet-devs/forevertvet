@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
 import {
-  Camera, Play, Palette, Building, Calendar, Trophy,
+  Camera, Palette, Building, Calendar, Trophy,
   Users, Star, BookOpen, ArrowRight,
 } from "@/components/ui/Icons";
 
@@ -28,7 +28,6 @@ const highlights = [
 
 const areas = [
   { icon: Camera,   label: "Gallery",                href: "/school-life/gallery",      desc: "Photos from campus life and student moments" },
-  { icon: Play,     label: "Virtual Tour",           href: "/school-life/virtual-tour", desc: "Explore our facilities from anywhere in the world" },
   { icon: Palette,  label: "Clubs & Extracurriculars", href: "/school-life/clubs",       desc: "Find your community outside the lecture room" },
   { icon: Building, label: "Facilities",             href: "/school-life/facilities",   desc: "Discover the infrastructure behind great training" },
   { icon: Calendar, label: "Events",                 href: "/school-life/events",       desc: "Competitions, ceremonies, guest talks, and more" },
@@ -56,7 +55,7 @@ export default function SchoolLifePage() {
 
         {/* Life Snapshot */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Why It Matters</span>
@@ -125,7 +124,7 @@ export default function SchoolLifePage() {
 
         {/* Student Voices */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Student Life</span>
@@ -164,7 +163,7 @@ export default function SchoolLifePage() {
             <div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/admissions/apply" className="px-8 py-3.5 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-md">Apply Now</Link>
-                <Link href="/academics/departments" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">Explore Programs</Link>
+                <Link href="/academics/courses" className="px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">Explore Programs</Link>
               </div>
             </div>
           </div>

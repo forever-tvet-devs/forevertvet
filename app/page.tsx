@@ -12,6 +12,7 @@ import PartnersMarquee from "@/components/sections/PartnersMarquee";
 import AdmissionsCTA from "@/components/sections/AdmissionsCTA";
 import ContactSnippet from "@/components/sections/ContactSnippet";
 
+
 export default function Home() {
   return (
     <>

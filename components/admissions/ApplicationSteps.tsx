@@ -16,7 +16,7 @@ const steps: Step[] = [
     duration: "~2 min",
     description:
       "Browse our five vocational programs and select the one that best matches your career goals. Each program leads directly to a specific set of roles in high-demand industries. If you are unsure, our admissions team can help you decide.",
-    action: { label: "Explore Programs", href: "/academics/departments" },
+    action: { label: "Explore Programs", href: "/academics/courses" },
   },
   {
     number: 2,

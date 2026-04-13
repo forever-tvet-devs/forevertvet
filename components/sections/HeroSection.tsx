@@ -36,7 +36,7 @@ const slides = [
     alt: "Solar panel technology training",
     heading: "Future-Ready Training",
     tagline: "From heavy machinery to renewable energy",
-    cta: { label: "Explore Departments", href: "/academics/departments" },
+    cta: { label: "Explore Courses", href: "/academics/courses" },
   },
 ];
 

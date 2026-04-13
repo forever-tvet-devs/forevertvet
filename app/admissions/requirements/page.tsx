@@ -59,7 +59,7 @@ export default function RequirementsPage() {
 
         {/* General Requirements */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Short Courses</span>
             </div>
@@ -88,7 +88,7 @@ export default function RequirementsPage() {
 
         {/* Per-Program Requirements */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">By Programme</span>
@@ -106,7 +106,7 @@ export default function RequirementsPage() {
 
         {/* Document Checklist */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Documents</span>
@@ -171,7 +171,7 @@ export default function RequirementsPage() {
                 <Link href="/contact" className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group text-sm">
                   Contact Admissions <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/academics/departments" className="inline-flex items-center gap-2 text-gray-500 font-semibold hover:text-primary transition-colors text-sm">
+                <Link href="/academics/courses" className="inline-flex items-center gap-2 text-gray-500 font-semibold hover:text-primary transition-colors text-sm">
                   View All Programs <ArrowRight size={16} />
                 </Link>
               </div>

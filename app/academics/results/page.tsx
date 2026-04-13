@@ -27,9 +27,9 @@ const headlineStats = [
 ];
 
 const examResults = [
-  { year: "2022", cohort: 68,  sat: 68,  pass: "91%", distinction: "22%" },
-  { year: "2023", cohort: 97,  sat: 97,  pass: "93%", distinction: "27%" },
-  { year: "2024", cohort: 124, sat: 124, pass: "96%", distinction: "31%" },
+  { year: "2022", pass: "91%", distinction: "22%" },
+  { year: "2023", pass: "93%", distinction: "27%" },
+  { year: "2024", pass: "96%", distinction: "31%" },
 ];
 
 const alumni = [
@@ -123,7 +123,7 @@ export default function ResultsPage() {
 
         {/* Employment by Department */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -154,7 +154,7 @@ export default function ResultsPage() {
 
         {/* Exam Results */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-10">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -175,7 +175,7 @@ export default function ResultsPage() {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-primary text-white text-xs uppercase tracking-wide">
-                      {["Year", "Cohort Size", "Sat Exams", "Pass Rate", "Distinction Rate"].map((h) => (
+                      {["Year", "Pass Rate", "Distinction Rate"].map((h) => (
                         <th key={h} scope="col" className="py-4 px-4 text-center font-semibold">{h}</th>
                       ))}
                     </tr>
@@ -184,8 +184,6 @@ export default function ResultsPage() {
                     {examResults.map((row, i) => (
                       <tr key={row.year} className={`${i % 2 === 0 ? "bg-white" : "bg-gray-50"} hover:bg-primary/5 transition-colors`}>
                         <td className="py-4 px-4 text-center font-semibold text-primary">{row.year}</td>
-                        <td className="py-4 px-4 text-center text-gray-600">{row.cohort}</td>
-                        <td className="py-4 px-4 text-center text-gray-600">{row.sat}</td>
                         <td className="py-4 px-4 text-center">
                           <span className="font-heading font-bold text-base text-primary">{row.pass}</span>
                         </td>
@@ -199,15 +197,6 @@ export default function ResultsPage() {
               </div>
             </div>
 
-            {/* Auditor quote */}
-            <div>
-              <blockquote className="border-l-4 border-accent pl-6 mt-8 italic text-gray-700 text-base lg:text-lg leading-relaxed">
-                "Forever Tvet consistently demonstrates pass rates in the top quartile of registered TVET institutions in Rwanda, with year-on-year improvement across all assessment categories."
-                <footer className="mt-2 text-sm text-gray-400 not-italic">
-                  — Rwanda WDA Quality Audit Report, 2024
-                </footer>
-              </blockquote>
-            </div>
           </div>
         </section>
 
@@ -331,7 +320,7 @@ export default function ResultsPage() {
                   Apply Now
                 </Link>
                 <Link
-                  href="/academics/departments"
+                  href="/academics/courses"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-white/60 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
                 >
                   Explore Programs

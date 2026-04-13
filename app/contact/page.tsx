@@ -59,7 +59,7 @@ const departments = [
   {
     icon: Briefcase,
     name: "Finance Office",
-    for: "Fee payments, receipts, instalment plans, sponsorship invoices",
+    for: "Fee payments, receipts, sponsorship invoices",
     email: "finance@forevertvet.rw",
     hours: "Mon – Fri, 8:00 AM – 3:30 PM",
   },
@@ -108,7 +108,7 @@ export default function ContactPage() {
 
         {/* Quick Contact Strip */}
         <section className="py-14 lg:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {quickTiles.map((tile, i) => {
                 const Icon = tile.icon;
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
         {/* Contact Form + Sidebar */}
         <section className="py-12 lg:py-20 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid lg:grid-cols-[1fr_300px] gap-10 items-start">
 
               {/* Form */}
@@ -217,7 +217,7 @@ export default function ContactPage() {
 
         {/* Map */}
         <section id="map" className="py-16 lg:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-8">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Location</span>
@@ -259,10 +259,10 @@ export default function ContactPage() {
 
         {/* Department Directory */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <div>
-                <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Departments</span>
+                <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Our Courses</span>
               </div>
               <AnimatedText text="Contact the Right Department" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight" baseDelay={100} stagger={60} />
               <div>

@@ -48,13 +48,6 @@ const announcements = [
     category: "Policy",
   },
   {
-    date: "5 Feb 2026",
-    title: "Scholarship Applications Open for 2026",
-    summary:
-      "Merit-based and need-based scholarship applications are now being accepted for the 2026 academic year. Speak with the Student Affairs office for eligibility details.",
-    category: "Financial Aid",
-  },
-  {
     date: "20 Jan 2026",
     title: "Welcome Back — Intake 1, 2026",
     summary:
@@ -68,7 +61,6 @@ const categoryColors: Record<string, string> = {
   Academic: "bg-green-50 text-green-700",
   General: "bg-gray-100 text-gray-700",
   Policy: "bg-amber-50 text-amber-700",
-  "Financial Aid": "bg-purple-50 text-purple-700",
 };
 
 export default function AnnouncementsPage() {
@@ -86,7 +78,7 @@ export default function AnnouncementsPage() {
 
         {/* Announcements list */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">Latest</span>
               <AnimatedText

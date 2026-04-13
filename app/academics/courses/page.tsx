@@ -4,11 +4,11 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHeroBanner from "@/components/about/PageHeroBanner";
 import AnimatedText from "@/components/ui/AnimatedText";
-import DepartmentAccordion from "@/components/academics/DepartmentAccordion";
+import DepartmentList from "@/components/academics/DepartmentList";
 import { ArrowRight } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
-  title: "Departments & Subjects — Forever Tvet Institute",
+  title: "Our Courses — Forever Tvet Institute",
   description:
     "Explore Forever Tvet Institute's vocational programmes — short courses in Heavy Machinery, Solar, and EV Cars, plus 3-year programmes in Computer Systems, Electrical Technology, Land Surveying, and Public Works.",
 };
@@ -16,33 +16,27 @@ export const metadata: Metadata = {
 const breadcrumb = [
   { label: "Home", href: "/" },
   { label: "Academics", href: "/academics" },
-  { label: "Departments & Subjects", href: "/academics/departments" },
+  { label: "Our Courses", href: "/academics/courses" },
 ];
 
-const instructorStats = [
-  { value: "5+ yrs", label: "Minimum Industry Experience" },
-  { value: "100%",   label: "Re-Trained Every 2 Years" },
-  { value: "8:1",    label: "Student-to-Instructor Ratio" },
-];
-
-export default function DepartmentsPage() {
+export default function CoursesPage() {
   return (
     <>
       <Navbar />
       <main className="pt-[70px]">
         {/* Hero */}
         <PageHeroBanner
-          label="Academic Departments"
-          title="Departments & Subjects"
-          subCopy="Five specialist departments, each designed around a specific industry — with curriculum written by the people who work in it."
+          label="What We Offer"
+          title="Our Courses"
+          subCopy="Seven specialist courses, each designed around a specific industry — with curriculum written by the people who work in it."
           breadcrumb={breadcrumb}
           backgroundImage="/images/image2.png"
         />
 
-        {/* Department Accordion */}
+        {/* Course List */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
-            <div className="mb-12">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+            <div className="text-center mb-16 lg:mb-20">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                   Our Programs
@@ -50,7 +44,7 @@ export default function DepartmentsPage() {
               </div>
 
               <AnimatedText
-                text="The People Behind Your Education"
+                text="Explore Our Courses"
                 as="h2"
                 className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight"
                 baseDelay={100}
@@ -58,49 +52,13 @@ export default function DepartmentsPage() {
               />
 
               <div>
-                <p className="text-base lg:text-lg text-gray-500 mt-4 max-w-2xl leading-relaxed">
-                  Click on any department to expand the full subject list, career pathways, and lead instructor profile. Every program is structured around the job it leads to.
+                <p className="text-base lg:text-lg text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+                  Each course is built around a specific industry — with curriculum written by the people who work in it.
                 </p>
               </div>
             </div>
 
-            <DepartmentAccordion />
-          </div>
-        </section>
-
-        {/* Instructor Quality Promise */}
-        <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
-            <div>
-              <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
-                Our Instructors
-              </span>
-            </div>
-
-            <AnimatedText
-              text="Every Instructor Has Done the Job"
-              as="h2"
-              className="font-heading font-bold text-3xl lg:text-4xl text-body leading-tight"
-              baseDelay={100}
-              stagger={60}
-            />
-
-            <div>
-              <p className="text-base lg:text-lg text-gray-600 leading-relaxed mt-6 max-w-2xl mx-auto">
-                We do not hire people who have only ever taught. Every instructor in every department has spent significant time working in the industry they now teach — a minimum of five years in the field before they ever entered a classroom.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-3 gap-5 mt-10">
-              {instructorStats.map((stat, i) => (
-                <div key={i}>
-                  <div className="rounded-xl bg-white border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-200">
-                    <p className="font-heading font-bold text-3xl text-accent">{stat.value}</p>
-                    <p className="text-xs text-gray-500 uppercase tracking-wide mt-1 leading-snug">{stat.label}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <DepartmentList />
           </div>
         </section>
 
@@ -123,7 +81,7 @@ export default function DepartmentsPage() {
             />
             <div>
               <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
-                Not sure which department fits your career goals? Talk to our admissions team — they will help you decide.
+                Not sure which course fits your career goals? Talk to our admissions team — they will help you decide.
               </p>
             </div>
             <div>

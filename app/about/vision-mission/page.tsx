@@ -91,7 +91,7 @@ export default function VisionMissionPage() {
 
         {/* Mission Statement */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-8">
                 Our Mission
@@ -217,7 +217,7 @@ export default function VisionMissionPage() {
 
         {/* Strategic Goals */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-14">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">

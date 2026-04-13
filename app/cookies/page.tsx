@@ -87,7 +87,7 @@ export default function CookiesPage() {
 
         {/* Last updated */}
         <section className="py-6 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <p className="text-xs text-gray-400">
               Last updated: April 2026
             </p>
@@ -96,7 +96,7 @@ export default function CookiesPage() {
 
         {/* Intro */}
         <section className="py-16 lg:py-24 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <AnimatedText
                 text="How We Use Cookies"

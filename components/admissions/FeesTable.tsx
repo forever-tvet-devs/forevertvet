@@ -1,14 +1,14 @@
 const programs = [
-  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", fee: "RWF 850,000", reg: "RWF 50,000" },
-  { name: "Solar Technology",                        duration: "Short Course", level: "Certificate", fee: "RWF 750,000", reg: "RWF 50,000" },
-  { name: "EV Cars",                                 duration: "Short Course", level: "Certificate", fee: "RWF 800,000", reg: "RWF 50,000" },
-  { name: "Computer Systems & Architecture",         duration: "3 Years",      level: "Level 3–5",    fee: "RWF 980,000", reg: "RWF 50,000" },
-  { name: "Electrical Technology",                   duration: "3 Years",      level: "Level 3–5",    fee: "RWF 920,000", reg: "RWF 50,000" },
-  { name: "Land Surveying",                          duration: "3 Years",      level: "Level 3–5",    fee: "RWF 820,000", reg: "RWF 50,000" },
-  { name: "Public Works",                            duration: "3 Years",      level: "Level 3–5",    fee: "RWF 800,000", reg: "RWF 50,000" },
+  { name: "Heavy Machinery Operation & Maintenance", duration: "Short Course", level: "Certificate", fee: "RWF 850,000" },
+  { name: "Solar Technology",                        duration: "Short Course", level: "Certificate", fee: "RWF 750,000" },
+  { name: "EV Cars",                                 duration: "Short Course", level: "Certificate", fee: "RWF 800,000" },
+  { name: "Computer Systems & Architecture",         duration: "3 Years",      level: "Level 3–5",    fee: "RWF 980,000" },
+  { name: "Electrical Technology",                   duration: "3 Years",      level: "Level 3–5",    fee: "RWF 920,000" },
+  { name: "Land Surveying",                          duration: "3 Years",      level: "Level 3–5",    fee: "RWF 820,000" },
+  { name: "Public Works",                            duration: "3 Years",      level: "Level 3–5",    fee: "RWF 800,000" },
 ];
 
-const headers = ["Program", "Duration", "Level", "Total Fee (RWF)", "Registration", "Payment Options"];
+const headers = ["Program", "Duration", "Level", "Total Fee (RWF)"];
 
 export default function FeesTable() {
   return (
@@ -32,12 +32,6 @@ export default function FeesTable() {
                 <td className="py-4 px-4">
                   <span className="font-heading font-bold text-base text-primary">{p.fee}</span>
                 </td>
-                <td className="py-4 px-4 text-gray-600">{p.reg}</td>
-                <td className="py-4 px-4">
-                  <span className="text-xs rounded-full bg-green-100 text-green-700 px-2.5 py-1 font-medium whitespace-nowrap">
-                    Full / 2 Instalments
-                  </span>
-                </td>
               </tr>
             ))}
           </tbody>
@@ -57,7 +51,6 @@ export default function FeesTable() {
                 { label: "Duration", value: p.duration },
                 { label: "Level", value: p.level },
                 { label: "Total Fee", value: p.fee },
-                { label: "Registration", value: p.reg },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="text-gray-400 uppercase tracking-wide">{item.label}</p>

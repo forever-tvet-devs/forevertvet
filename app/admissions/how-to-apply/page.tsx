@@ -51,10 +51,6 @@ const miniFaqs = [
     q: "Can I apply if I did not finish secondary school?",
     a: "Minimum requirement is a secondary school certificate or equivalent. Contact us to discuss your situation.",
   },
-  {
-    q: "Is financial assistance available?",
-    a: "Yes. We offer a payment plan option and merit scholarships. See our Fees page for full details.",
-  },
 ];
 
 export default function HowToApplyPage() {
@@ -72,7 +68,7 @@ export default function HowToApplyPage() {
 
         {/* Before You Apply */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Before You Begin
@@ -118,7 +114,7 @@ export default function HowToApplyPage() {
 
         {/* Steps */}
         <section className="py-20 lg:py-28 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -144,7 +140,7 @@ export default function HowToApplyPage() {
 
         {/* Intake Dates */}
         <section className="py-20 lg:py-28 bg-white">
-          <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="text-center mb-12">
               <div>
                 <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
@@ -200,7 +196,7 @@ export default function HowToApplyPage() {
 
         {/* Mini FAQs */}
         <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent block mb-4">
                 Quick Answers
