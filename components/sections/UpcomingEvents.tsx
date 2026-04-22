@@ -63,11 +63,25 @@ export default function UpcomingEvents() {
       {/* Subtle pattern */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)",
-          backgroundSize: "24px 24px",
-        }}
+     
+      />
+
+      {/* Decorative patterns */}
+      {/* <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="absolute -top-48 -left-52 w-[800px] h-auto opacity-[0.06] pointer-events-none select-none"
+        aria-hidden="true"
+      /> */}
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -bottom-48 -right-48 w-[1250px] h-auto opacity-[0.05] pointer-events-none select-none"
+        aria-hidden="true"
       />
 
       <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">

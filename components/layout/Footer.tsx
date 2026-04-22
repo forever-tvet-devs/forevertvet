@@ -43,10 +43,28 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ background: "#163560" }}>
+    <footer style={{ background: "#163560" }} className="relative overflow-hidden">
+
+      {/* Decorative patterns */}
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -top-47 -right-40 w-[750px] h-auto opacity-[0.06] pointer-events-none select-none"
+        aria-hidden="true"
+      />
+      {/* <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="absolute -bottom-48 -left-44 w-[700px] h-auto opacity-[0.05] pointer-events-none select-none"
+        aria-hidden="true"
+      /> */}
 
       {/* Main footer body */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 pt-16 pb-10">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 pt-16 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
 
           {/* Brand column — spans 2 on lg */}

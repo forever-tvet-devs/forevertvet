@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "@/components/ui/Icons";
 
@@ -13,14 +14,7 @@ export default function AdmissionsCTA() {
         }}
       />
 
-      {/* Subtle dot overlay */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-[0.05]"
-        style={{
-          backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-        }}
-      />
+    
 
       {/* Decorative glow */}
       <div
@@ -28,6 +22,17 @@ export default function AdmissionsCTA() {
         style={{
           background: "radial-gradient(circle at top right, rgba(212,168,67,0.15) 0%, transparent 70%)",
         }}
+      />
+
+      {/* Decorative patterns */}
+  
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -top-44 -right-40 w-[780px] h-auto opacity-[0.05] pointer-events-none select-none z-[1]"
+        aria-hidden="true"
       />
 
       {/* Content */}
