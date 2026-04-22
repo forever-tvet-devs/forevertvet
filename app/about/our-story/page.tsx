@@ -208,8 +208,16 @@ export default function OurStoryPage() {
         </section>
 
         {/* Stats Strip */}
-        <section className="bg-primary-dark py-14">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+        <section className="bg-primary-dark py-14 relative overflow-hidden">
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -top-32 -right-32 w-[600px] h-auto opacity-[0.06] pointer-events-none select-none"
+        aria-hidden="true"
+      />
+          <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
               {aboutStats.map((stat, i) => (
                 <div key={i}>
@@ -228,7 +236,7 @@ export default function OurStoryPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 lg:py-24 bg-primary">
+        <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           {/* Subtle pattern */}
           <div
             className="absolute inset-0 opacity-5 pointer-events-none"
@@ -237,6 +245,14 @@ export default function OurStoryPage() {
               backgroundSize: "24px 24px",
             }}
           />
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -bottom-44 -left-40 w-[780px] h-auto opacity-[0.05] pointer-events-none select-none"
+        aria-hidden="true"
+      />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText
               text="Ready to Be Part of Our Story?"

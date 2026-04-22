@@ -43,6 +43,14 @@ export default async function DepartmentDetailPage({ params }: Props) {
         {/* Hero */}
         <div className="bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -bottom-44 -left-40 w-[780px] h-auto opacity-[0.05] pointer-events-none select-none"
+        aria-hidden="true"
+      />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 py-16 lg:py-20">
             <div>
               <Link

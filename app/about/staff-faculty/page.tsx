@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -132,8 +133,16 @@ export default function StaffFacultyPage() {
         </section>
 
         {/* Stats */}
-        <section className="bg-primary-dark py-14">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
+        <section className="bg-primary-dark py-14 relative overflow-hidden">
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -top-32 -right-32 w-[600px] h-auto opacity-[0.06] pointer-events-none select-none"
+        aria-hidden="true"
+      />
+          <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
               {[
                 { value: "40+", label: "Teaching Staff" },
@@ -153,6 +162,14 @@ export default function StaffFacultyPage() {
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: "repeating-linear-gradient(-45deg,#D4A843 0,#D4A843 1px,transparent 0,transparent 50%)", backgroundSize: "24px 24px" }} />
+      <Image
+        src="/images/fti-bg-pattern.png"
+        alt=""
+        width={495}
+        height={504}
+        className="hidden lg:block absolute -bottom-44 -left-40 w-[780px] h-auto opacity-[0.05] pointer-events-none select-none"
+        aria-hidden="true"
+      />
           <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-4 lg:px-4 text-center">
             <AnimatedText text="Interested in Joining Our Team?" as="h2" className="font-heading font-bold text-3xl lg:text-4xl text-white leading-tight mb-4" baseDelay={0} stagger={55} />
             <p className="text-base lg:text-lg text-white/75 max-w-xl mx-auto mb-8">
